@@ -83,7 +83,7 @@ in
 
   # network
   networking.wireless.enable = true;
-  networking.networkmanager.enable = true
+  networking.networkmanager.enable = true;
 
   hardware.enableRedistributableFirmware = true;
 
