@@ -1,7 +1,13 @@
-{ pkgs, config, ... }:
+{ inputs, outputs, pkgs, config, ... }:
 let ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in
 {
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+  ] ++ (builtins.attrValues outputs.nixosModules);
+
+  home-manager.extraSpecialArgs = { inherit inputs outputs; };
+
   users.users.jr = {
     isNormalUser = true;
     #shell = pkgs.
