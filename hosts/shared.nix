@@ -82,7 +82,7 @@ in
   };
 
   # wired network
-  networking.wireless.enable = false;
+  networking.wireless.enable = lib.mkDefault false;
   networking.networkmanager.enable = true;
 
   hardware.enableRedistributableFirmware = true;
