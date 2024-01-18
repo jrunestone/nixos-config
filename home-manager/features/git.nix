@@ -1,5 +1,5 @@
 { pkgs, lib, config, ... }: {
-  home.packages = [ git ];
+  home.packages = [ pkgs.git ];
   programs.git = {
     enable = true;
     package = pkgs.gitAndTools.gitFull;
