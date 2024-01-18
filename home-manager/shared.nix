@@ -37,5 +37,5 @@ in {
     };
 
     #colorScheme = lib.mkOverride 1499 colorSchemes.nord;
-  }
+  };
 }
