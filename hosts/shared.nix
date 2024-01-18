@@ -81,8 +81,8 @@ in
     #media-session.enable = true;
   };
 
-  # network
-  networking.wireless.enable = true;
+  # wired network
+  networking.wireless.enable = false;
   networking.networkmanager.enable = true;
 
   hardware.enableRedistributableFirmware = true;
