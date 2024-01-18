@@ -36,6 +36,6 @@ in {
       FLAKE = "$HOME/Documents/NixConfig";
     };
 
-    colorscheme = lib.mkOverride 1499 colorSchemes.nord;
+    #colorScheme = lib.mkOverride 1499 colorSchemes.nord;
   };
 }
