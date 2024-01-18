@@ -11,7 +11,7 @@ in {
   };
 
   #wallpaper = pkgs.wallpapers.aurora-borealis-water-mountain;
-  #colorscheme = lib.mkDefault colorSchemes.tokyo-city-terminal-dark;
+  #colorScheme = lib.mkDefault colorSchemes.tokyo-city-terminal-dark;
 
   #  ------   -----   ------
   # | DP-3 | | DP-1| | DP-2 |
