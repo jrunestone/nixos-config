@@ -7,9 +7,13 @@
     hardware.url = "github:nixos/nixos-hardware";
     nix-colors.url = "github:misterio77/nix-colors";
 
-    # Home manager
     home-manager = {
       url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprland = {
+      url = "github:hyprwm/hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

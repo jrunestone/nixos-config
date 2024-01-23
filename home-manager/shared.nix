@@ -4,6 +4,7 @@ in {
   imports = [
     inputs.nix-colors.homeManagerModule
     ./features/git.nix
+    ./features/hyprland.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
@@ -24,7 +25,6 @@ in {
 
   programs = {
     home-manager.enable = true;
-    git.enable = true;
   };
 
   home = {

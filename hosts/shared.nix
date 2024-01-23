@@ -1,10 +1,11 @@
 { inputs, lib, outputs, pkgs, config, ... }: let 
-cfg = config.system.nixos;
-ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
+  cfg = config.system.nixos;
+  ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
+    ./features/hyprland.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   home-manager.extraSpecialArgs = { inherit inputs outputs; };
