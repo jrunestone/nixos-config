@@ -1,5 +1,6 @@
-{ inputs, outputs, pkgs, config, ... }:
-let ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
+{ inputs, lib, outputs, pkgs, config, ... }: let 
+cfg = config.system.nixos;
+ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in
 {
   imports = [
@@ -89,4 +90,6 @@ in
 
   # user
   home-manager.users.jr = import ../home-manager/${config.networking.hostName}.nix;
+
+  system.nixos.label = lib.concatStringsSep "-" ((lib.sort (x: y: x < y) cfg.tags) ++ [ "${cfg.version}.${inputs.self.sourceInfo.shortRev or "dirty"}" ]);
 }
