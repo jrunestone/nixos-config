@@ -6,7 +6,6 @@
 
     ./hardware-configuration.nix
     ../shared.nix
-    ../features/wireless.nix
   ];
 
   networking = {
