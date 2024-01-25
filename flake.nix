@@ -33,14 +33,8 @@
       inherit lib;
       nixosModules = import ./modules/nixos;
       homeManagerModules = import ./modules/home-manager;
-      templates = import ./templates;
-
       overlays = import ./overlays { inherit inputs outputs; };
-      hydraJobs = import ./hydra.nix { inherit inputs outputs; };
-
       packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
-      devShells = forEachSystem (pkgs: import ./shell.nix { inherit pkgs; });
-      formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
 
       # NixOS configuration entrypoint
       # Available through 'nixos-rebuild --flake .#your-hostname'

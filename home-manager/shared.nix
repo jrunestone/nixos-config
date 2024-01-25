@@ -5,6 +5,7 @@ in {
     inputs.nix-colors.homeManagerModule
     ./features/git.nix
     ./features/hyprland.nix
+    ./features/neofetch.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
