@@ -6,6 +6,7 @@ in {
     ./features/git.nix
     ./features/hyprland.nix
     ./features/neofetch.nix
+    ./features/blackbox.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
