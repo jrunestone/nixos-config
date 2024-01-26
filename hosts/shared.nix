@@ -5,7 +5,6 @@ in
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    ./features/hyprland.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   home-manager.extraSpecialArgs = { inherit inputs outputs; };

@@ -7,6 +7,7 @@ in {
     ./features/hyprland.nix
     ./features/neofetch.nix
     ./features/blackbox.nix
+    ./features/starship.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
