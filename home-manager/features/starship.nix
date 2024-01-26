@@ -5,7 +5,7 @@
     enable = true;
   };
 
-  programs.bash.promptInit = ''
+  programs.bash.initExtra = ''
     eval "$(starship init bash)"
   '';
 }
