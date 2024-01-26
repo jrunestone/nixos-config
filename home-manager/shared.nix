@@ -6,6 +6,7 @@ in {
     ./features/git.nix
     ./features/hyprland.nix
     ./features/neofetch.nix
+    ./features/bash.nix
     ./features/blackbox.nix
     ./features/starship.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules);
