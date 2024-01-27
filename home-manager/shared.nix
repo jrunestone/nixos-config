@@ -9,6 +9,7 @@ in {
     ./features/git.nix
     ./features/hyprland.nix
     ./features/neofetch.nix
+    ./features/spotify.nix
     ./features/rider.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 

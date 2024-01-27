@@ -6,9 +6,7 @@
 * Blackbox config
 * Starship config
 * docker
-* Rider
 * Vscode
-* Spotify
 * Obsidian
 * Vivaldi
 * Protonpass
