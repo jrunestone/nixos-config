@@ -5,7 +5,7 @@
 * Wallpaper
 * Blackbox config
 * Starship config
-* dotnet
+* docker
 * Rider
 * Vscode
 * Spotify

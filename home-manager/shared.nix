@@ -3,12 +3,13 @@
 in {
   imports = [
     inputs.nix-colors.homeManagerModule
-    ./features/git.nix
-    ./features/hyprland.nix
-    ./features/neofetch.nix
     ./features/bash.nix
     ./features/blackbox.nix
     ./features/starship.nix
+    ./features/git.nix
+    ./features/hyprland.nix
+    ./features/neofetch.nix
+    ./features/rider.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
