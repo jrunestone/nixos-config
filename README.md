@@ -10,7 +10,6 @@
 * Obsidian
 * Vivaldi
 * Protonpass
-* Slack
 * 1Pass (dev-env?)
 * PWA (dev-envs?)
     * Outlook
