@@ -12,12 +12,5 @@
     hostName = "jr-home";
   };
 
-  services.hardware.openrgb.enable = true;
-
-  hardware = {
-    opengl.enable = true;
-    opentabletdriver.enable = true;
-  };
-
   system.stateVersion = "23.11";
 }
