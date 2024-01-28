@@ -4,9 +4,11 @@
 * Theme
 * Wallpaper
 * Blackbox config
-* Starship config
-* docker
-* Vscode
+* alias
+    * ls
+    * git
+* docker/podman
+* Vscode/neovim/helix
 * Obsidian
 * Vivaldi
 * Protonpass
@@ -15,5 +17,3 @@
     * Outlook
     * Teams
 * Dotfiles
-    * bashrc
-    * rider/vscode
