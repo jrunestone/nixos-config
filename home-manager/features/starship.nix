@@ -29,12 +29,12 @@
       disabled = false;
       time_format = "%R";
       style = "bg:#33658A fg:#FFFFFF";
-      format = "[  $time ]($style)";
+      format = "[ 󱑔 $time ]($style)";
     };
 
     cmd_duration = {
       style = "bg:#DA627D fg:#FFFFFF";
-      format = "[ ⏱ $duration ]($style)";
+      format = "[  $duration ]($style)";
     };
 
     status = {
