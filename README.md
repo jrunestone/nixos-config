@@ -3,6 +3,7 @@
     * waybar
 * Theme
 * Wallpaper
+* direnv/dircolors
 * alias
     * git
 * docker/podman

@@ -10,7 +10,7 @@
   '';
 
   programs.starship.settings = {
-    format = "[ 󰆚 ](fg:#FFFFFF bg:#DA627D)[](fg:#DA627D bg:#d62d53)$directory[](fg:#d62d53 bg:#06969A)$nix_shell[](fg:#06969A bg:#FCA17D)$git_branch$git_status$git_state[](fg:#FCA17D bg:#33658A)$time$cmd_duration$status[ ](fg:#33658A)$line_break$character";
+    format = "[ 󰆚 ](fg:#FFFFFF bg:#DA627D)[](fg:#DA627D bg:#d62d53)$directory[](fg:#d62d53 bg:#06969A)$nix_shell[](fg:#06969A bg:#FCA17D)$git_branch$git_status$git_state[](fg:#FCA17D bg:#33658A)$time[](fg:#33658A bg:#DA627D)$cmd_duration$status[](fg:#DA627D)$line_break$character";
 
     character = {
       success_symbol = "[\\$](fg:#FFFFFF)";
@@ -33,14 +33,14 @@
     };
 
     cmd_duration = {
-      style = "bg:#33658A fg:#FCA17D";
-      format = "[⏱ $duration ]($style)";
+      style = "bg:#DA627D fg:#FFFFFF";
+      format = "[ ⏱ $duration ]($style)";
     };
 
     status = {
       disabled = false;
-      style = "bg:#d62d53 fg:#FFFFFF";
-      format = "[ $status ]($style)";
+      style = "bg:#DA627D fg:#FFFFFF";
+      format = "[  $status ]($style)";
     };
 
     git_status = {
