@@ -2,6 +2,10 @@
   programs.bash = {
     enable = true;
 
+    shellAliases = {
+      ls = "ls -lah";
+    };
+
     initExtra = ''
       # autocd
       shopt -s autocd

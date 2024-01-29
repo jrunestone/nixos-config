@@ -3,12 +3,10 @@
     * waybar
 * Theme
 * Wallpaper
-* Blackbox config
 * alias
-    * ls
     * git
 * docker/podman
-* Vscode/neovim/helix
+* Vscode/neovim
 * Obsidian
 * Vivaldi
 * Protonpass
@@ -16,4 +14,3 @@
 * PWA (dev-envs?)
     * Outlook
     * Teams
-* Dotfiles

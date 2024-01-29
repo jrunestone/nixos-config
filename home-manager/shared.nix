@@ -3,10 +3,12 @@
 in {
   imports = [
     inputs.nix-colors.homeManagerModule
+    ./features/git.nix
+    ./features/nerdfonts.nix
     ./features/bash.nix
+    ./features/fzf.nix
     ./features/blackbox.nix
     ./features/starship.nix
-    ./features/git.nix
     ./features/hyprland.nix
     ./features/neofetch.nix
     ./features/spotify.nix
