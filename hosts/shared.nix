@@ -17,6 +17,7 @@ in
 
   users.users.jr = {
     isNormalUser = true;
+    #shell = pkgs.bash;
     extraGroups = [
       "wheel"
       "video"

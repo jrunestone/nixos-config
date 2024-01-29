@@ -41,4 +41,7 @@
   services.printing.enable = true;
 
   hardware.enableRedistributableFirmware = true;
+
+  # enable font dir
+  fonts.fontDir.enable = true;
 }

@@ -10,7 +10,7 @@
   '';
 
   programs.starship.settings = {
-    format = "[ 󰆚 ](fg:#FFFFFF bg:#DA627D)[](fg:#DA627D bg:#d62d53)$directory[](fg:#d62d53 bg:#06969A)$nix_shell[](fg:#06969A bg:#FCA17D)$git_branch$git_status$git_state[](fg:#FCA17D bg:#33658A)$time$cmd_duration$status[ ](fg:#33658A)$line_break$character"
+    format = "[ 󰆚 ](fg:#FFFFFF bg:#DA627D)[](fg:#DA627D bg:#d62d53)$directory[](fg:#d62d53 bg:#06969A)$nix_shell[](fg:#06969A bg:#FCA17D)$git_branch$git_status$git_state[](fg:#FCA17D bg:#33658A)$time$cmd_duration$status[ ](fg:#33658A)$line_break$character";
 
     character = {
       success_symbol = "[\\$](fg:#FFFFFF)";
@@ -19,7 +19,7 @@
 
     directory = {
       style = "bg:#d62d53 fg:#FFFFFF";
-      format = "[ 󰆚  $path ]($style)";
+      format = "[ $path ]($style)";
       truncate_to_repo = false;
       truncation_length = 10;
       truncation_symbol = "…/";
@@ -39,7 +39,7 @@
 
     status = {
       disabled = false;
-      style = "bg:#33658A fg:red";
+      style = "bg:#d62d53 fg:#FFFFFF";
       format = "[ $status ]($style)";
     };
 
@@ -59,7 +59,7 @@
     };
 
     git_branch = {
-      symbol = "\uE0A0";
+      symbol = "";
       style = "bg:#FCA17D fg:#FFFFFF";
       format = "[ $symbol $branch ]($style)";
     };

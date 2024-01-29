@@ -3,6 +3,7 @@
 in {
   imports = [
     inputs.nix-colors.homeManagerModule
+    ./features/xdg.nix
     ./features/git.nix
     ./features/nerdfonts.nix
     ./features/bash.nix
