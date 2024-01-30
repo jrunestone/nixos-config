@@ -10,7 +10,7 @@
   '';
 
   programs.starship.settings = {
-    format = "[ 󰆚 ](fg:#FFFFFF bg:#DA627D)[](fg:#DA627D bg:#d62d53)$directory[](fg:#d62d53 bg:#06969A)$nix_shell[](fg:#06969A bg:#FCA17D)$git_branch$git_status$git_state[](fg:#FCA17D bg:#33658A)$time[](fg:#33658A bg:#DA627D)$cmd_duration$status[](fg:#DA627D)$line_break$character";
+    format = "[ 󰆚 $nix_shell](fg:#FFFFFF bg:#DA627D)[](fg:#DA627D bg:#d62d53)$directory[](fg:#d62d53 bg:#FCA17D)$git_branch$git_status$git_state[](fg:#FCA17D bg:#33658A)$time[](fg:#33658A bg:#DA627D)$cmd_duration$status[](fg:#DA627D)$line_break$character";
 
     character = {
       success_symbol = "[\\$](fg:#FFFFFF)";
@@ -70,9 +70,9 @@
     };
 
     nix_shell = {
-      symbol = "nix/";
-      style = "bg:#06969A fg:#FFFFFF";
-      format = "[ $symbol$state( \($name\))]($style)";
+      symbol = "nix-shell/";
+      style = "bg:#DA627D fg:#FFFFFF";
+      format = "[\\[$symbol$state\\] ]($style)";
     };
 
     c = {
