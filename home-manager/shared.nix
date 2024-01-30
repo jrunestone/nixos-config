@@ -8,6 +8,7 @@ in {
     ./features/nerdfonts.nix
     ./features/bash.nix
     ./features/fzf.nix
+    ./features/blesh.nix
     ./features/blackbox.nix
     ./features/starship.nix
     ./features/hyprland.nix
