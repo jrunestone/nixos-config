@@ -34,7 +34,7 @@
 
     cmd_duration = {
       style = "bg:#DA627D fg:#FFFFFF";
-      format = "[  $duration ]($style)";
+      format = "[ ⏱ $duration ]($style)";
     };
 
     status = {
