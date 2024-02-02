@@ -4,7 +4,6 @@
   };
 
   programs.bash.initExtra = ''
-      eval "$(dircolors ${xdf.configFile.dircolors})"
-    '';
-  };
+    eval "$(dircolors ${xdf.configFile.dircolors})"
+  '';
 }
