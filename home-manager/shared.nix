@@ -9,6 +9,7 @@ in {
     ./features/bash.nix
     ./features/fzf.nix
     ./features/blesh.nix
+    ./features/dircolors.nix
     ./features/blackbox.nix
     ./features/starship.nix
     ./features/hyprland.nix
