@@ -3,7 +3,7 @@
     enable = true;
 
     shellAliases = {
-      ls = "ls -lah";
+      ls = "ls -lah --color=auto";
     };
 
     initExtra = ''
