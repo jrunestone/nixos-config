@@ -1,9 +1,10 @@
 * Steam
 * Hyprland
     * waybar
+* gtk4?
 * Theme
+    Nordic
 * Wallpaper
-* direnv/dircolors
 * alias
     * git
 * docker/podman

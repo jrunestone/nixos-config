@@ -9,8 +9,8 @@
       headerbar-drag-area = true;
       font = "FiraCode Nerd Font 14";
       terminal-bell = false;
-      opacity = lib.hm.gvariant.mkUint32 90;
-      theme-dark = "Solarized Dark";
+      opacity = lib.hm.gvariant.mkUint32 80;
+      theme-dark = "base16: Twilight (dark)";
     };
   };
 }
