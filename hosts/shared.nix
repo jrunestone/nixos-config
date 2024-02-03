@@ -9,7 +9,6 @@ in
     ./features/gfx.nix
     ./features/wired.nix
     ./features/pipewire.nix
-    ./features/dotnet.nix
 #    ./features/hyprland.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 

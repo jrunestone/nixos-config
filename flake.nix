@@ -40,29 +40,31 @@
       # Available through 'nixos-rebuild --flake .#your-hostname'
       nixosConfigurations = {
         jr-home = lib.nixosSystem {
-          modules = [ ./hosts/jr-home ];
           specialArgs = { inherit inputs outputs; };
+          modules = [ 
+            ./hosts/jr-home 
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.jr = import ./home-manager/jr-home.nix;
+              extraSpecialArgs = { inherit inputs outputs; };
+            }
+          ];
         };
 
         jr-work = lib.nixosSystem {
-          modules = [ ./hosts/jr-work ];
           specialArgs = { inherit inputs outputs; };
-        };
-      };
-
-      # Standalone home-manager configuration entrypoint
-      # Available through 'home-manager --flake .#your-username@your-hostname'
-      homeConfigurations = {
-        "jr@jr-home" = lib.homeManagerConfiguration {
-          modules = [ ./home-manager/jr-home.nix ];
-          pkgs = pkgsFor.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-        };
-
-        "jr@jr-work" = lib.homeManagerConfiguration {
-          modules = [ ./home-manager/jr-work.nix ];
-          pkgs = pkgsFor.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ 
+            ./hosts/jr-work 
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.jr = import ./home-manager/jr-work.nix;
+              extraSpecialArgs = { inherit inputs outputs; };
+            }
+          ];
         };
       };
     };
