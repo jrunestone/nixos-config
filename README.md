@@ -4,6 +4,8 @@
 * gtk4?
 * Theme
     Nordic
+    Adwaita color scheme instead?
+    gsettings theme prefer-dark
 * Wallpaper
 * alias
     * git
@@ -16,3 +18,4 @@
 * PWA (dev-envs?)
     * Outlook
     * Teams
+* SSH key 
