@@ -12,7 +12,7 @@ in {
     ./features/dircolors.nix
     ./features/blackbox.nix
     ./features/starship.nix
-    ./features/hyprland.nix
+#    ./features/hyprland.nix
     ./features/neofetch.nix
     ./features/spotify.nix
     ./features/slack.nix

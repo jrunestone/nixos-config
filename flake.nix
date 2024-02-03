@@ -39,8 +39,13 @@
       # NixOS configuration entrypoint
       # Available through 'nixos-rebuild --flake .#your-hostname'
       nixosConfigurations = {
-        jr-home =  lib.nixosSystem {
+        jr-home = lib.nixosSystem {
           modules = [ ./hosts/jr-home ];
+          specialArgs = { inherit inputs outputs; };
+        };
+
+        jr-work = lib.nixosSystem {
+          modules = [ ./hosts/jr-work ];
           specialArgs = { inherit inputs outputs; };
         };
       };
@@ -50,6 +55,12 @@
       homeConfigurations = {
         "jr@jr-home" = lib.homeManagerConfiguration {
           modules = [ ./home-manager/jr-home.nix ];
+          pkgs = pkgsFor.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+        };
+
+        "jr@jr-work" = lib.homeManagerConfiguration {
+          modules = [ ./home-manager/jr-work.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };

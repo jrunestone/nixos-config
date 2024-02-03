@@ -10,7 +10,7 @@ in
     ./features/wired.nix
     ./features/pipewire.nix
     ./features/dotnet.nix
-    ./features/hyprland.nix
+#    ./features/hyprland.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   home-manager.extraSpecialArgs = { inherit inputs outputs; };
