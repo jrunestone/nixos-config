@@ -10,5 +10,7 @@
     extraConfig = {
       init.defaultBranch = "main";
     };
+
+    userName = "Johan Runsten";
   };
 }

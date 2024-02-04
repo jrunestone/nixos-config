@@ -1,8 +1,5 @@
-{ inputs, lib, pkgs, config, outputs, ... }: let
-  inherit (inputs.nix-colors) colorSchemes;
-in {
+{ inputs, lib, pkgs, config, outputs, ... }: {
   imports = [
-    inputs.nix-colors.homeManagerModule
     ./features/xdg.nix
     ./features/git.nix
     ./features/nerdfonts.nix
@@ -42,12 +39,7 @@ in {
   home = {
     username = lib.mkDefault "jr";
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
-    stateVersion = lib.mkDefault "23.11";
+    stateVersion = lib.mkDefault "24.05";
     sessionPath = [ "$HOME/.local/bin" ];
-    sessionVariables = {
-      FLAKE = "$HOME/Documents/NixConfig";
-    };
-
-    #colorScheme = lib.mkOverride 1499 colorSchemes.nord;
   };
 }
