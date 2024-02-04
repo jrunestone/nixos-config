@@ -48,7 +48,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.jr = import ./home-manager/jr-home.nix;
-              extraSpecialArgs = { inherit inputs outputs; };
+              home-manager.extraSpecialArgs = { inherit inputs outputs; };
             }
           ];
         };
@@ -62,7 +62,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.jr = import ./home-manager/jr-work.nix;
-              extraSpecialArgs = { inherit inputs outputs; };
+              home-manager.extraSpecialArgs = { inherit inputs outputs; };
             }
           ];
         };
