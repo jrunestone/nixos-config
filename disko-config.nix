@@ -13,13 +13,12 @@
               name = "ESP";
               size = "512M";
               type = "EF00";
-              bootable = true;
 
               content = {
                 type = "filesystem";
                 format = "vfat";
                 mountpoint = "/boot";
-                mountOptions = ["umask=0077"]
+                mountOptions = ["umask=0077"];
               };
             };
 
@@ -30,7 +29,7 @@
                 type = "filesystem";
                 format = "ext4";
                 mountpoint = "/nix";
-                mountOptions = ["noatime" "nodev"];
+                mountOptions = ["noatime"];
               };
             };
           };
@@ -42,5 +41,11 @@
         mountOptions = ["mode=755" "noatime" "nodev" "size=8G"]; # will not reserve 8gb
       };
     };
+  };
+
+  fileSystems = {
+    "/".neededForBoot = true;
+    "/boot".neededForBoot = true;
+    "/nix".neededForBoot = true;
   };
 }

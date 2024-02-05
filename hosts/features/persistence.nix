@@ -1,5 +1,9 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
-  fileSystems."/nix".neededForBoot = true;
+  fileSystems = {
+    "/".neededForBoot = true;
+    "/boot".neededForBoot = true;
+    "/nix".neededForBoot = true;
+  };
   
   environment.persistence."/nix/persist/system" = {
     hideMounts = true;
