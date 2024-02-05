@@ -13,6 +13,14 @@ in
 #    ./features/hyprland.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
+  nixpkgs = {
+    overlays = builtins.attrValues outputs.overlays;
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
+  };
+
   security.sudo.extraConfig = ''
     Defaults lecture = never
   '';
