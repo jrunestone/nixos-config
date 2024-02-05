@@ -46,46 +46,21 @@
         jr-home = lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [ 
-            impermanence.nixosModules.impermanence
-            disko.nixosModules.disko
             ./hosts/jr-home
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.users.username.imports = [ ./home-manager/jr-home.nix ];
-            }
           ];
         };
 
         jr-work = lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [ 
-            impermanence.nixosModules.impermanence
-            disko.nixosModules.disko
             ./hosts/jr-work
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.users.username.imports = [ ./home-manager/jr-work.nix ];
-            }
           ];
         };
 
         jr-vm = lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [ 
-            impermanence.nixosModules.impermanence
-            disko.nixosModules.disko
-            (import ./disko-config.nix { disk = "/dev/sda"; })
             ./hosts/jr-vm
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.users.username.imports = [ ./home-manager/jr-vm.nix ];
-            }
           ];
         };
       };

@@ -1,4 +1,8 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
+  imports = [
+    inputs.impermanence.nixosModules.impermanence
+  ];
+
   fileSystems."/nix".neededForBoot = true;
   programs.fuse.userAllowOther = true;
   

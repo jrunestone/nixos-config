@@ -1,6 +1,5 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   imports = [
-    inputs.impermanence.nixosModules.home-manager.impermanence
     ./features/git.nix
     ./features/xdg.nix
     ./features/gnome.nix

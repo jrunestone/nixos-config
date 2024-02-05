@@ -3,6 +3,8 @@
 in
 {
   imports = [
+    inputs.home-manager.nixosModules.home-manager
+    inputs.disko.nixosModules.disko
     ./features/basic.nix
     ./features/persistence.nix
     ./features/gfx.nix
@@ -32,6 +34,8 @@ in
     hashedPasswordFile = "/nix/persist/system/passwords/jr";
   };
 
-  # home-manager.users.jr = import ../home-manager/${config.networking.hostName}.nix;
-  # home-manager.extraSpecialArgs = { inherit inputs outputs; };
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.extraSpecialArgs = { inherit inputs outputs; };
+  home-manager.users.jr = import ../home-manager/${config.networking.hostName}.nix;
 }
