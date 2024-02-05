@@ -47,12 +47,12 @@ User is hard-coded to "jr" in flake for all hosts.
 
 1. Run installer iso
 2. Exit installer into cmd
-3. `sudo su`
-6. `git clone https://github.com/jrunestone/nixos-config.git /etc/nixos/nixos-config`
-4. `nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko /etc/nixos/nixos-config/disko-config.nix --arg disk '"/dev/nvme0n1"' --arg pp '""'`
-5. `mkdir -p {/mnt/nix/persist/system/passwords, /mnt/nix/persist/user}
-6. `mv /etc/nixos/nixos-config /mnt/etc/nixos/`
+6. `git clone https://github.com/jrunestone/nixos-config.git`
+5. `sudo su`
+4. `nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko /home/nixos/nixos-config/disko-config.nix --arg disk '"/dev/<disk>"'`
+5. `mkdir -p {/mnt/etc/nixos,/mnt/nix/persist/system/passwords/jr,/mnt/nix/persist/user}`
+6. `mv nixos-config /mnt/nix/persist`
 5. `nixos-generate-config --no-filesystems --root /mnt` and copy hardware-info.nix to repo/host if new host
 8. `mkpasswd -m sha-512 "<password>" > /mnt/nix/persist/system/passwords/jr`
-9. `nixos-install --root /mnt --flake /mnt/etc/nixos/nixos-config/#jr-home`
+9. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/nixos-config/#<host>`
 10. `reboot`

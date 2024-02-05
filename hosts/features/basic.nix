@@ -1,10 +1,8 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   # bootloader
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "nodev"; # uefi
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.useOSProber = true;
-  boot.loader.grub.configurationLimit = 10;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.configurationLimit = 15;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   time.timeZone = "Europe/Stockholm";
 
@@ -32,8 +30,10 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "se";
-    xkbVariant = "";
+    xkb = {
+      layout = "se";
+      variant = "";
+    };
   };
 
   # Configure console keymap

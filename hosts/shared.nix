@@ -17,8 +17,10 @@ in
   '';
 
   users.mutableUsers = false;
+
   users.users.jr = {
     isNormalUser = true;
+  
     extraGroups = [
       "wheel"
       "video"
@@ -27,7 +29,8 @@ in
       "networkmanager"
       "docker"
     ];
-    passwordFile = "/nix/persist/system/passwords/jr";
+  
+    hashedPasswordFile = "/nix/persist/system/passwords/jr";
   };
 
   home-manager.users.jr = import ../home-manager/${config.networking.hostName}.nix;

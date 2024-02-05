@@ -2,18 +2,18 @@
   imports = [
     ./features/xdg.nix
     ./features/git.nix
-    ./features/nerdfonts.nix
-    ./features/bash.nix
-    ./features/fzf.nix
-    ./features/blesh.nix
-    ./features/dircolors.nix
-    ./features/blackbox.nix
-    ./features/starship.nix
+#    ./features/nerdfonts.nix
+#    ./features/bash.nix
+#    ./features/fzf.nix
+#    ./features/blesh.nix
+#    ./features/dircolors.nix
+#    ./features/blackbox.nix
+#    ./features/starship.nix
 #    ./features/hyprland.nix
-    ./features/neofetch.nix
-    ./features/spotify.nix
-    ./features/slack.nix
-    ./features/rider.nix
+#    ./features/neofetch.nix
+#    ./features/spotify.nix
+#    ./features/slack.nix
+#    ./features/rider.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
