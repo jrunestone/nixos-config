@@ -9,12 +9,6 @@
           type = "gpt";
 
           partitions = {
-            boot = {
-              name = "boot";
-              size = "1M";
-              type = "EF02";
-            };
-
             ESP = {
               name = "ESP";
               size = "512M";
@@ -25,6 +19,7 @@
                 type = "filesystem";
                 format = "vfat";
                 mountpoint = "/boot";
+                mountOptions = ["umask=0077"]
               };
             };
 
@@ -47,11 +42,5 @@
         mountOptions = ["mode=755" "noatime" "nodev" "size=8G"]; # will not reserve 8gb
       };
     };
-  };
-
-  fileSystems = {
-    "/".neededForBoot = true;
-    "/nix".neededForBoot = true;
-    "/boot".neededForBoot = true;
   };
 }

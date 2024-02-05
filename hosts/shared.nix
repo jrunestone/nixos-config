@@ -1,11 +1,11 @@
 { inputs, lib, outputs, pkgs, config, ... }: let 
-  cfg = config.system.nixos;
   ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
     ./features/basic.nix
+    ./features/persistence.nix
     ./features/gfx.nix
     ./features/wired.nix
     ./features/pipewire.nix
@@ -35,6 +35,4 @@ in
 
   home-manager.users.jr = import ../home-manager/${config.networking.hostName}.nix;
   home-manager.extraSpecialArgs = { inherit inputs outputs; };
-
-  system.nixos.label = lib.concatStringsSep "-" ((lib.sort (x: y: x < y) cfg.tags) ++ [ "${cfg.version}.${inputs.self.sourceInfo.shortRev or "dirty"}" ]);
 }

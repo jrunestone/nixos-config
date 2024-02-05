@@ -1,7 +1,9 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   imports = [
+    # ./features/persistence.nix
     ./features/xdg.nix
     ./features/git.nix
+#    ./features/desktop.nix
 #    ./features/nerdfonts.nix
 #    ./features/bash.nix
 #    ./features/fzf.nix
