@@ -36,5 +36,5 @@ User is hard-coded to "jr" in flake for all hosts.
 6. `mv nixos-config /mnt/nix/persist/system/etc/nixos`
 8. `mkpasswd -m sha-512 "<password>" > /mnt/nix/persist/system/passwords/jr`
 5. `nixos-generate-config --no-filesystems --root /mnt` and copy hardware-info.nix to repo/host if new host
-9. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config/#<host>`
+9. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
 10. `reboot`

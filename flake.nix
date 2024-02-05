@@ -48,6 +48,7 @@
           modules = [ 
             impermanence.nixosModules.impermanence
             disko.nixosModules.disko
+            home-manager.nixosModules.home-manager
             ./hosts/jr-home
           ];
         };
@@ -57,6 +58,7 @@
           modules = [ 
             impermanence.nixosModules.impermanence
             disko.nixosModules.disko
+            home-manager.nixosModules.home-manager
             ./hosts/jr-work
           ];
         };
@@ -66,6 +68,7 @@
           modules = [ 
             impermanence.nixosModules.impermanence
             disko.nixosModules.disko
+            home-manager.nixosModules.home-manager
             (import ./disko-config.nix { disk = "/dev/sda"; })
             ./hosts/jr-vm
           ];

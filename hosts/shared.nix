@@ -3,7 +3,6 @@
 in
 {
   imports = [
-    inputs.home-manager.nixosModules.home-manager
     ./features/basic.nix
     ./features/persistence.nix
     ./features/gfx.nix
@@ -35,4 +34,5 @@ in
 
   home-manager.users.jr = import ../home-manager/${config.networking.hostName}.nix;
   home-manager.extraSpecialArgs = { inherit inputs outputs; };
+  programs.home-manager.enable = true;
 }

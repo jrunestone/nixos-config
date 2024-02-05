@@ -5,15 +5,15 @@
     ./features/xdg.nix
     ./features/gnome.nix
     ./features/persistence.nix
-   ./features/nerdfonts.nix
-   ./features/bash.nix
-   ./features/fzf.nix
-   ./features/blesh.nix
-   ./features/dircolors.nix
-   ./features/blackbox.nix
-   ./features/starship.nix
+    ./features/nerdfonts.nix
+    ./features/bash.nix
+    ./features/fzf.nix
+    ./features/blesh.nix
+    ./features/dircolors.nix
+    ./features/blackbox.nix
+    ./features/starship.nix
   #  ./features/hyprland.nix
-   ./features/neofetch.nix
+    ./features/neofetch.nix
   #  ./features/spotify.nix
   #  ./features/slack.nix
   #  ./features/rider.nix
