@@ -43,9 +43,5 @@
     };
   };
 
-  fileSystems = {
-    "/".neededForBoot = true;
-    "/boot".neededForBoot = true;
-    "/nix".neededForBoot = true;
-  };
+  fileSystems."/nix".neededForBoot = true;
 }
