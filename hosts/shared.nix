@@ -12,11 +12,13 @@ in
 #    ./features/hyprland.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
-  home-manager.extraSpecialArgs = { inherit inputs outputs; };
+  security.sudo.extraConfig = ''
+    Defaults lecture = never
+  '';
 
+  users.mutableUsers = false;
   users.users.jr = {
     isNormalUser = true;
-    #shell = pkgs.bash;
     extraGroups = [
       "wheel"
       "video"
@@ -25,12 +27,11 @@ in
       "networkmanager"
       "docker"
     ];
-
-    packages = [ pkgs.home-manager ];
+    passwordFile = "/persist/system/passwords/jr";
   };
 
-  # user
   home-manager.users.jr = import ../home-manager/${config.networking.hostName}.nix;
+  home-manager.extraSpecialArgs = { inherit inputs outputs; };
 
   system.nixos.label = lib.concatStringsSep "-" ((lib.sort (x: y: x < y) cfg.tags) ++ [ "${cfg.version}.${inputs.self.sourceInfo.shortRev or "dirty"}" ]);
 }

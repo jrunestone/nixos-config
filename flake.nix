@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hardware.url = "github:nixos/nixos-hardware";
+    impermanence.url = "github:nix-community/impermanence";
 
     inputs.disko.url = "github:nix-community/disko";
     inputs.disko.inputs.nixpkgs.follows = "nixpkgs";
@@ -19,7 +20,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, disko, impermanence, home-manager, ... }@inputs:
     let
       inherit (self) outputs;
       lib = nixpkgs.lib // home-manager.lib;
@@ -43,28 +44,28 @@
         jr-home = lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [ 
-            ./hosts/jr-home 
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.jr = import ./home-manager/jr-home.nix;
-              home-manager.extraSpecialArgs = { inherit inputs outputs; };
-            }
+            impermanence.nixosModules.impermanence
+            disko.nixosModules.disko
+            ./hosts/jr-home
           ];
         };
 
         jr-work = lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [ 
-            ./hosts/jr-work 
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.jr = import ./home-manager/jr-work.nix;
-              home-manager.extraSpecialArgs = { inherit inputs outputs; };
-            }
+            impermanence.nixosModules.impermanence
+            disko.nixosModules.disko
+            ./hosts/jr-work
+          ];
+        };
+
+        jr-vm = lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [ 
+            impermanence.nixosModules.impermanence
+            disko.nixosModules.disko
+            (import ./disko-config.nix { disk = "/dev/sda"; pp = ""; })
+            ./hosts/jr-vm
           ];
         };
       };
