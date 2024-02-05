@@ -27,7 +27,7 @@ in
       "networkmanager"
       "docker"
     ];
-    passwordFile = "/persist/system/passwords/jr";
+    passwordFile = "/nix/persist/system/passwords/jr";
   };
 
   home-manager.users.jr = import ../home-manager/${config.networking.hostName}.nix;

@@ -1,8 +1,10 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   # bootloader
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.device = "nodev"; # uefi
+  boot.loader.grub.efiSupport = true;
   boot.loader.grub.useOSProber = true;
+  boot.loader.grub.configurationLimit = 10;
 
   time.timeZone = "Europe/Stockholm";
 
@@ -44,4 +46,9 @@
 
   # enable font dir
   fonts.fontDir.enable = true;
+
+  nix.gc = {
+		automatic = true;
+		options = "--delete-older-than 1w";
+	};
 }

@@ -6,8 +6,10 @@
     hardware.url = "github:nixos/nixos-hardware";
     impermanence.url = "github:nix-community/impermanence";
 
-    inputs.disko.url = "github:nix-community/disko";
-    inputs.disko.inputs.nixpkgs.follows = "nixpkgs";
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -64,7 +66,7 @@
           modules = [ 
             impermanence.nixosModules.impermanence
             disko.nixosModules.disko
-            (import ./disko-config.nix { disk = "/dev/sda"; pp = ""; })
+            (import ./disko-config.nix { disk = "/dev/sda"; })
             ./hosts/jr-vm
           ];
         };
