@@ -32,7 +32,6 @@ in
     hashedPasswordFile = "/nix/persist/system/passwords/jr";
   };
 
-  home-manager.users.jr = import ../home-manager/${config.networking.hostName}.nix;
-  home-manager.extraSpecialArgs = { inherit inputs outputs; };
-  programs.home-manager.enable = true;
+  # home-manager.users.jr = import ../home-manager/${config.networking.hostName}.nix;
+  # home-manager.extraSpecialArgs = { inherit inputs outputs; };
 }
