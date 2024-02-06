@@ -9,6 +9,10 @@
 
     extraConfig = {
       init.defaultBranch = "main";
+
+      pull = {
+        rebase = true;
+      };
     };
 
     userName = "Johan Runsten";

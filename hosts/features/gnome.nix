@@ -5,7 +5,8 @@
     simple-scan # document scanner
     yelp        # help viewer
     geary       # email client
-    
+    seahorse    # password manager
+
     gnome-characters 
     gnome-contacts
     gnome-maps 
