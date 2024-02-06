@@ -24,13 +24,12 @@
     ];
   };
 
-  userHomeBase = "/nix/persist/home/";
   system.activationScripts.persistent-dirs.text =
     let
       mkHomePersist = user: lib.optionalString user.createHome ''
-        mkdir -p ${userHomeBase}${user.home}
-        chown ${user.name}:${user.group} ${userHomeBase}${user.home}
-        chmod ${user.homeMode} ${userHomeBase}${user.home}
+        mkdir -p /nix/persist/${user.home}
+        chown ${user.name}:${user.group} /nix/persist/${user.home}
+        chmod ${user.homeMode} /nix/persist/${user.home}
       '';
       users = lib.attrValues config.users.users;
     in
