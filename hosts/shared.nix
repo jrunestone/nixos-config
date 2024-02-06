@@ -6,6 +6,7 @@ in
     inputs.home-manager.nixosModules.home-manager
     inputs.disko.nixosModules.disko
     ./features/basic.nix
+    ./features/gnome.nix
     ./features/persistence.nix
     ./features/gfx.nix
     ./features/wired.nix
