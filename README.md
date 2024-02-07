@@ -1,17 +1,11 @@
 * keyboard shortcuts
-    * screenshot
-    * terminal
-    * files
-    * workspaces
     * favorite apps theme.nix
 * gnome settings?
 * Theme
     * Wallpaper
 * gnome extensions
-* ssh
-    * key
-    * known_hosts
-        * github
+* sops
+    * ssh key
 
 * Steam
 * Hyprland

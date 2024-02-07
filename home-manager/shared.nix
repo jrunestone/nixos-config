@@ -6,6 +6,7 @@
     ./features/persistence.nix
     ./features/nerdfonts.nix
     ./features/bash.nix
+    ./features/keybindings.nix
     ./features/fzf.nix
     ./features/blesh.nix
     ./features/dircolors.nix
