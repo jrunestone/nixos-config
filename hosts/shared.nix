@@ -9,6 +9,7 @@ in
     
     ./features/bootloader.nix
     ./features/basic.nix
+    ./features/ssh.nix
     ./features/gnome.nix
     ./features/persistence.nix
     ./features/gfx.nix
