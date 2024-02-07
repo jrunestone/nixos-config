@@ -4,6 +4,8 @@
     * files
     * workspaces
     * favorite apps theme.nix
+    * alias
+        * nixos-rebuild
 * gnome settings?
 * Theme
     * Wallpaper

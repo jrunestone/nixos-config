@@ -5,14 +5,18 @@
 
   home.persistence."/nix/persist/home/${config.home.username}" = {
     directories = [
-      "Documents"
-      "dev"
       ".gnupg"
       ".ssh"
       ".local/share/keyrings"
-      ".config/presets"
-      ".config/gtk3.0"
-      ".config/gtk4.0"
+
+      "Documents"
+      "dev"
+
+      # gradience
+      ".config/presets/official"
+      ".config/presets/curated"
+      ".config/presets/user"
+      ".config/gtk-4.0"
     ];
 
     files = [
