@@ -4,6 +4,7 @@
 
     shellAliases = {
       ls = "ls -lah --color=auto";
+      rebuild = "sudo nixos-rebuild --flake /etc/nixos/nixos-config/#$HOST";
     };
 
     initExtra = ''
