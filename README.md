@@ -1,6 +1,9 @@
 * keyboard shortcuts
     * screenshot
     * terminal
+    * files
+    * workspaces
+    * favorite apps theme.nix
 * gnome settings?
 * Theme
     * Wallpaper
@@ -45,3 +48,8 @@ User is hard-coded to "jr" in flake for all hosts.
 5. `nixos-generate-config --no-filesystems --root /mnt` and copy hardware-info.nix to repo/host if new host
 9. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
 10. `reboot`
+
+## Commands
+`nix-rebuild [switch|boot] /nixos-config.#[hostname]`
+`journalctl -u home-manager-jr.service`
+`journalctl --identifier "hm-activate-$user" --since "$date"`
