@@ -9,11 +9,7 @@
 * gnome settings?
 * Theme
     * Wallpaper
-    * gradience..
 * gnome extensions
-* git
-    * url insteadOf
-    * aliases
 * ssh
     * key
     * known_hosts
