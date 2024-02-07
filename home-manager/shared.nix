@@ -7,6 +7,7 @@
     ./features/nerdfonts.nix
     ./features/bash.nix
     ./features/keybindings.nix
+    ./features/gnome-settings.nix
     ./features/fzf.nix
     ./features/blesh.nix
     ./features/dircolors.nix
