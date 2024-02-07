@@ -1,25 +1,6 @@
 { pkgs, lib, config, ... }: {
-  gtk = {
-    enable = true;
-
-    theme = {
-      name = "SolArc-Dark";
-      package = pkgs.solarc-gtk-theme;
-    };
-
-    gtk3.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
-
-    gtk4.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
-  };
-
+  home.packages = [ pkgs.grub2-themes ];
+  
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
@@ -38,6 +19,4 @@
       favorite-apps = []; # TODO: rider, slack, spotify, steam, ...
     };
   };
-
-  home.sessionVariables.GTK_THEME = "SolArc-Dark";
 }
