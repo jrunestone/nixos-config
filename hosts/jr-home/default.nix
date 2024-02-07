@@ -8,6 +8,8 @@
     ../shared.nix
   ];
 
+  boot.loader.grub2-theme.screen = "4k";
+
   networking = {
     hostName = "jr-home";
   };
