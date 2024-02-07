@@ -7,7 +7,9 @@
 * gnome settings?
 * Theme
     * Wallpaper
-    * gradience activation script
+    * gtk theme
+    * grub theme custom pkg https://github.com/vinceliuice/grub2-themes
+* gnome extensions
 * git
     * url insteadOf
     * aliases
