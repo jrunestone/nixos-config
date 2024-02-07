@@ -10,6 +10,9 @@
       ".gnupg"
       ".ssh"
       ".local/share/keyrings"
+      ".config/presets"
+      ".config/gtk3.0"
+      ".config/gtk4.0"
     ];
 
     files = [
