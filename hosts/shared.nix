@@ -5,6 +5,7 @@ in
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.disko.nixosModules.disko
+    grub2-themes.nixosModules.default
     ./features/basic.nix
     ./features/gnome.nix
     ./features/persistence.nix

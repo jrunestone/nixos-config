@@ -1,6 +1,4 @@
 { pkgs, lib, config, ... }: {
-  home.packages = [ pkgs.grub2-themes ];
-  
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";

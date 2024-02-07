@@ -4,7 +4,9 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hardware.url = "github:nixos/nixos-hardware";
+    
     impermanence.url = "github:nix-community/impermanence";
+    grub2-themes.url = "github:vinceliuice/grub2-themes";
 
     disko = {
       url = "github:nix-community/disko";
@@ -22,7 +24,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, disko, impermanence, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, disko, impermanence, home-manager, grub2-themes, ... }@inputs:
     let
       inherit (self) outputs;
       lib = nixpkgs.lib // home-manager.lib;

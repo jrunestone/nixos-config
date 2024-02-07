@@ -1,12 +1,4 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
-  # bootloader
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "nodev";
-  boot.loader.grub.useOSProber = true;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.configurationLimit = 10;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   time.timeZone = "Europe/Stockholm";
 
   # Select internationalisation properties.
