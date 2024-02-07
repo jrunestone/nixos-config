@@ -1,14 +1,22 @@
+* keyboard shortcuts
+    * screenshot
+    * terminal
+* gnome settings?
+* Theme
+    * Wallpaper
+    * gradience activation script
+* git
+    * url insteadOf
+    * aliases
+* ssh
+    * key
+    * known_hosts
+        * github
+
 * Steam
 * Hyprland
     * waybar
     * login screen
-* gtk4?
-* Theme
-    Nordic
-    Adwaita color scheme instead?
-* Wallpaper
-* alias
-    * git
 * docker/podman
 * Vscode/neovim
 * Obsidian
@@ -18,7 +26,6 @@
 * PWA (dev-envs?)
     * Outlook
     * Teams
-* SSH key 
 
 ### devshells
 nix-direnv + flakes

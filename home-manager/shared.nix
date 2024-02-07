@@ -2,7 +2,7 @@
   imports = [
     ./features/git.nix
     ./features/xdg.nix
-    ./features/gnome.nix
+    ./features/theme.nix
     ./features/persistence.nix
     ./features/nerdfonts.nix
     ./features/bash.nix
