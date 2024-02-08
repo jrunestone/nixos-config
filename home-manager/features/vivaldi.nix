@@ -1,3 +1,8 @@
 { pkgs, lib, config, ... }: {
-  home.packages = [ pkgs.vivaldi ];
+  home.packages = with pkgs; [
+    (vivaldi.override {
+      proprietaryCodecs = true;
+      enableWidevine = true;
+    })
+  ];
 }
