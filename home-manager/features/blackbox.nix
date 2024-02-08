@@ -11,6 +11,8 @@
       terminal-bell = false;
       opacity = lib.hm.gvariant.mkUint32 80;
       theme-dark = "base16: Twilight (dark)";
+      notify-process-completion = false;
+      scrollback-lines = lib.hm.gvariant.mkUint32 10000;
     };
   };
 }
