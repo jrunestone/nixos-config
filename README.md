@@ -1,21 +1,21 @@
-* keyboard shortcuts
-    * favorite apps theme.nix
+* favorite apps theme.nix
 * gnome settings?
 * Theme
     * Wallpaper
 * gnome extensions
 * sops
+    * install nixos with minimal bootstrap flake, generate or copy over ssh keys, reboot and nix-rebuild the original config
     * ssh key
 
 * Steam
 * Hyprland
     * waybar
     * login screen
-* docker/podman
+* docker/podman (dev-env)
 * Vscode/neovim
 * Obsidian
 * Vivaldi
-* Protonpass
+* Protonpass pwa
 * 1Pass (dev-env?)
 * PWA (dev-envs?)
     * Outlook

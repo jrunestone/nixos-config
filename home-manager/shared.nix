@@ -13,8 +13,10 @@
     ./features/dircolors.nix
     ./features/blackbox.nix
     ./features/starship.nix
-  #  ./features/hyprland.nix
     ./features/neofetch.nix
+    ./features/vivaldi.nix
+    ./features/obsidian.nix
+  #  ./features/hyprland.nix
   #  ./features/spotify.nix
   #  ./features/slack.nix
   #  ./features/rider.nix
