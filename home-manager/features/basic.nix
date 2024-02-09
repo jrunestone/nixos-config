@@ -1,3 +1,3 @@
 { pkgs, lib, config, ... }: {
-  home.packages = [ tree ];
+  home.packages = [ pkgs.tree ];
 }
