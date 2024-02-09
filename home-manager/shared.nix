@@ -1,11 +1,12 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   imports = [
+    ./features/bash.nix
+    ./features/basic.nix
     ./features/git.nix
     ./features/xdg.nix
     ./features/theme.nix
     ./features/persistence.nix
     ./features/nerdfonts.nix
-    ./features/bash.nix
     ./features/keybindings.nix
     ./features/gnome-settings.nix
     ./features/fzf.nix

@@ -39,6 +39,7 @@ User is hard-coded to "jr" in flake for all hosts.
 9. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
 10. `reboot`
 11. Copy over ssh keys (if using sops, this needs to be done before step 3)
+12. Configure Obsidian and clone vault repo
 
 ## Commands
 `nix-rebuild [switch|boot] /nixos-config.#[hostname]`

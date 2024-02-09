@@ -17,6 +17,12 @@
       ".config/presets/curated"
       ".config/presets/user"
       ".config/gtk-4.0"
+
+      # obsidian
+      ".config/obsidian"
+
+      # vivaldi
+      ".config/vivaldi"
     ];
 
     files = [
