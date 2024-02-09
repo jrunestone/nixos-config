@@ -1,5 +1,4 @@
 * favorite apps theme.nix
-* gnome settings?
 * Theme
     * Wallpaper
 * gnome extensions
@@ -39,6 +38,7 @@ User is hard-coded to "jr" in flake for all hosts.
 5. `nixos-generate-config --no-filesystems --root /mnt` and copy hardware-info.nix to repo/host if new host
 9. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
 10. `reboot`
+11. Copy over ssh keys (if using sops, this needs to be done before step 3)
 
 ## Commands
 `nix-rebuild [switch|boot] /nixos-config.#[hostname]`

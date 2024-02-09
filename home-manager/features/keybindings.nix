@@ -1,11 +1,21 @@
 { pkgs, lib, config, ... }: {
   dconf.settings = {
-    "org/gnome/shell/keybindings" = {
-      show-screenshot-ui = [ "<Super><Alt>s" ];
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      binding = "<Super>t";
+      command = "blackbox";
+      name = "Open terminal";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
       home = [ "<Super>f" ];
+      
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+      ];
+    };
+
+    "org/gnome/shell/keybindings" = {
+      show-screenshot-ui = [ "<Super><Alt>s" ];
     };
 
     "org/gnome/desktop/wm/keybindings" = {
@@ -17,14 +27,5 @@
       move-to-monitor-right = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
     };
 
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = "<Super>t";
-      command = "blackbox";
-      name = "Open terminal";
-    };
-
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings" = [
-      "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-    ];
   };
 }
