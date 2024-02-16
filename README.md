@@ -6,7 +6,6 @@
     * install nixos with minimal bootstrap flake, generate or copy over ssh keys, reboot and nix-rebuild the original config
     * ssh key
 * Obsidian vault+settings
-* Vivaldi settings (or just sign in to sync?)
 
 * Steam
 * Hyprland
