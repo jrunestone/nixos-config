@@ -8,5 +8,16 @@
         "org.gnome.Settings.desktop" 
       ];
     };
+
+    "org/gnome/shell" = {
+      favorite-apps = [
+        "org.gnome.Nautilus.desktop"
+        "com.raggesilver.BlackBox.desktop"
+        "vivaldi-stable.desktop"
+        "rider.desktop"
+        "spotify.desktop"
+        "slack.desktop"
+      ];
+    };
   };
 }
