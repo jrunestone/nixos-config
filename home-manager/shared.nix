@@ -18,9 +18,9 @@
     ./features/vivaldi.nix
     ./features/obsidian.nix
   #  ./features/hyprland.nix
-  #  ./features/spotify.nix
-  #  ./features/slack.nix
-  #  ./features/rider.nix
+   ./features/spotify.nix
+   ./features/slack.nix
+   ./features/rider.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules );
 
   nix = {

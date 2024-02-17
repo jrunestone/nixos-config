@@ -1,7 +1,4 @@
 * favorite apps theme.nix
-* Theme
-    * Wallpaper
-* gnome extensions
 * sops
     * install nixos with minimal bootstrap flake, generate or copy over ssh keys, reboot and nix-rebuild the original config
     * ssh key
@@ -37,7 +34,7 @@ User is hard-coded to "jr" in flake for all hosts.
 5. `nixos-generate-config --no-filesystems --root /mnt` and copy hardware-info.nix to repo/host if new host
 9. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
 10. `reboot`
-11. Copy over ssh keys (if using sops, this needs to be done before step 3)
+11. Copy over ssh keys (if using sops this needs to be done before step 3)
 12. Configure Obsidian and clone vault repo
 
 ## Commands
