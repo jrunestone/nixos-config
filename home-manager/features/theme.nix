@@ -12,17 +12,21 @@
       color-scheme = "prefer-dark";
     };
 
-    "org/gnome/desktop/background" = {
-      picture-uri = "file:///etc/nix/nix-config/home-manager/features/wallpapers/1.jpg";
-      picture-uri-dark = "file:///etc/nix/nix-config/home-manager/features/wallpapers/1.jpg";
-    };
-
     "org/gnome/desktop/wm/preferences" = {
       workspace-names = [ "Main" ];
     };
 
     "org/gnome/shell" = {
       favorite-apps = []; # TODO: rider, slack, spotify, steam, ...
+    };
+
+    home.file."${xdg.userDirs.documents}/wallpapers" = {
+      source = ../wallpapers;
+    };
+
+    "org/gnome/desktop/background" = {
+      picture-uri = "file://${xdg.userDirs.documents}/wallpapers/1.jpg";
+      picture-uri-dark = "file://${xdg.userDirs.documents}/wallpapers/1.jpg";
     };
   };
 }
