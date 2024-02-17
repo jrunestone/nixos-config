@@ -1,5 +1,8 @@
 { pkgs, lib, config, ... }: {
-  home.packages = [ pkgs.blackbox-terminal ];
+  home.packages = [ 
+    pkgs.blackbox-terminal 
+    pkgs.nautilus-open-any-terminal
+  ];
   
   dconf.settings = {
     "com/raggesilver/BlackBox" = {
