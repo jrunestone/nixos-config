@@ -21,7 +21,14 @@
     };
 
     "org/gnome/shell" = {
-      favorite-apps = []; # TODO: rider, slack, spotify, steam, ...
+      favorite-apps = [
+        "org.gnome.Nautilus.desktop"
+        "com.raggesilver.BlackBox.desktop"
+        "vivaldi-stable.desktop"
+        "rider.desktop"
+        "spotify.desktop"
+        "slack.desktop"
+      ];
     };
 
     "org/gnome/desktop/background" = {

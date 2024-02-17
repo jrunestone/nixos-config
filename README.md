@@ -1,8 +1,6 @@
-* favorite apps theme.nix
 * sops
     * install nixos with minimal bootstrap flake, generate or copy over ssh keys, reboot and nix-rebuild the original config
     * ssh key
-* Obsidian vault+settings
 
 * Steam
 * Hyprland

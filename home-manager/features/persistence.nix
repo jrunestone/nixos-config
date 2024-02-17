@@ -18,11 +18,11 @@
       ".config/presets/user"
       ".config/gtk-4.0"
 
-      # obsidian
       ".config/obsidian"
-
-      # vivaldi
       ".config/vivaldi"
+      ".config/spotify"
+      ".config/Slack"
+      ".config/JetBrains"
     ];
 
     files = [

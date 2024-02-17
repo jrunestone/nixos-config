@@ -10,7 +10,7 @@
       home = [ "<Super>f" ];
       www = [ "<Super>w" ];
       control-center = [ "<Super>comma" ];
-      pause = [ "<Super>space" ];
+      play = [ "<Super>space" ];
       volume-mute = [ "<Super>m" ];
       
       custom-keybindings = [
@@ -30,6 +30,7 @@
       move-to-workspace-right = [ "<Super><Shift>Right" ];
       move-to-monitor-left = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
       move-to-monitor-right = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
+      switch-input-source = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
       switch-input-source-backward = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
     };
   };
