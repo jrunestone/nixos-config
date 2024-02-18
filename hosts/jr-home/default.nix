@@ -1,5 +1,7 @@
 { pkgs, inputs, ... }: {
   imports = [
+    (import ../../disko-config.nix { disk = "/dev/nvme0n1"; })
+
     inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-gpu-amd
     inputs.hardware.nixosModules.common-pc-ssd

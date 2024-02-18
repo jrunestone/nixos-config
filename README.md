@@ -23,17 +23,17 @@ User is hard-coded to "jr" in flake for all hosts.
 
 1. Run installer iso
 2. Exit installer into cmd
-6. `git clone https://github.com/jrunestone/nixos-config.git`
-5. `sudo su`
-4. `nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko /home/nixos/nixos-config/disko-config.nix --arg disk '"/dev/<disk>"'`
-5. `mkdir -p {/mnt/nix/persist/system/etc/nixos,/mnt/nix/persist/system/passwords}`
-6. `mv nixos-config /mnt/nix/persist/system/etc/nixos`
+3. `git clone https://github.com/jrunestone/nixos-config.git`
+4. `sudo su`
+5. `nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko /home/nixos/nixos-config/disko-config.nix --arg disk '"/dev/<disk>"'`
+6. `mkdir -p {/mnt/nix/persist/system/etc/nixos,/mnt/nix/persist/system/passwords}`
+7. `mv nixos-config /mnt/nix/persist/system/etc/nixos`
 8. `mkpasswd -m sha-512 "<password>" > /mnt/nix/persist/system/passwords/jr`
-5. `nixos-generate-config --no-filesystems --root /mnt` and copy hardware-info.nix to repo/host if new host
-9. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
-10. `reboot`
-11. Copy over ssh keys (if using sops this needs to be done before step 3)
-12. Configure Obsidian and clone vault repo
+9. `nixos-generate-config --no-filesystems --root /mnt` and copy hardware-info.nix to repo/host if new host
+10. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
+11. `reboot`
+12. Copy over ssh keys (if using sops this needs to be done before step 3)
+13. Configure Gradience
 
 ## Commands
 `nix-rebuild [switch|boot] /nixos-config.#[hostname]`
