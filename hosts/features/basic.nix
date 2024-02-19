@@ -16,13 +16,6 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
   # Configure keymap in X11
   services.xserver = {
     xkb = {
@@ -43,7 +36,7 @@
   fonts.fontDir.enable = true;
 
   nix.gc = {
-		automatic = true;
-		options = "--delete-older-than 1w";
-	};
+    automatic = true;
+    options = "--delete-older-than 1w";
+  };
 }

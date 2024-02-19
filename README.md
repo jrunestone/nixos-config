@@ -1,11 +1,17 @@
-* sops
-    * install nixos with minimal bootstrap flake, generate or copy over ssh keys, reboot and nix-rebuild the original config
-    * ssh key
+* monitor 100hz
+* material shell extensions
+* login screen theme
+* quiet boot?
+* terminal bg (prompt..)
+* persist gnome settings (mouse, audio interface, level)
+* never turn off screen
+* gradience
+* tray?
+
+* dev-certs
+
 
 * Steam
-* Hyprland
-    * waybar
-    * login screen
 * docker/podman (dev-env)
 * Vscode/neovim
 * Protonpass pwa

@@ -17,7 +17,6 @@
     ./features/neofetch.nix
     ./features/vivaldi.nix
     ./features/obsidian.nix
-  #  ./features/hyprland.nix
    ./features/spotify.nix
    ./features/slack.nix
    ./features/rider.nix

@@ -9,13 +9,13 @@ in
     
     ./features/bootloader.nix
     ./features/basic.nix
+    ./features/environment.nix
     ./features/ssh.nix
     ./features/gnome.nix
     ./features/persistence.nix
     ./features/gfx.nix
     ./features/wired.nix
     ./features/pipewire.nix
-#    ./features/hyprland.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   nixpkgs = {
