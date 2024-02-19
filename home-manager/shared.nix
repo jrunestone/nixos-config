@@ -20,6 +20,7 @@
    ./features/spotify.nix
    ./features/slack.nix
    ./features/rider.nix
+   ./features/neovim.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules );
 
   nix = {
