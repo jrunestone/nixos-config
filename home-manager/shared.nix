@@ -1,5 +1,7 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   imports = [
+    inputs.nixvim.homeManagerModules.nixvim
+    
     ./features/bash.nix
     ./features/basic.nix
     ./features/git.nix
@@ -20,7 +22,7 @@
    ./features/spotify.nix
    ./features/slack.nix
    ./features/rider.nix
-   ./features/neovim.nix
+   ./features/nixvim.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules );
 
   nix = {
