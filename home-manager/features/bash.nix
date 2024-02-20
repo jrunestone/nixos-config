@@ -2,9 +2,13 @@
   programs.bash = {
     enable = true;
 
+    sessionVariables = {
+      NIXCONFIG = "/etc/nixos/nixos-config/";
+    };
+
     shellAliases = {
       ls = "ls -lah --color=auto";
-      buildnix = "sudo nixos-rebuild --flake /etc/nixos/nixos-config/#$HOST";
+      buildnix = "sudo nixos-rebuild --flake $NIXCONFIG#$HOST";
     };
 
     initExtra = ''

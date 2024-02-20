@@ -19,10 +19,10 @@
     ./features/neofetch.nix
     ./features/vivaldi.nix
     ./features/obsidian.nix
-   ./features/spotify.nix
-   ./features/slack.nix
-   ./features/rider.nix
-   ./features/nixvim.nix
+    ./features/spotify.nix
+    ./features/slack.nix
+    ./features/rider.nix
+    ./features/nixvim.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules );
 
   nix = {
