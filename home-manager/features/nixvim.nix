@@ -25,25 +25,42 @@
       shiftwidth = 2;
       tabstop = 2;
       expandtab = true;
-    }; 
-
-    plugins.telescope = {
-      enable = true;
-
-      keymaps = {
-        "<leader>ff" = "find_files";
-        "<leader>fg" = "live_grep";
-      };
     };
+    
+    keymaps = [
+      {
+        key = "<leader>n";
+        action = ":Neotree<CR>";
+      }
+    ];
 
-    plugins.treesitter = {
-      enable = true;
-
-      grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-        bash
-        nix
-        c_sharp
-      ];
+    plugins = {
+      telescope = {
+        enable = true;
+  
+        keymaps = {
+          "<leader>ff" = "find_files";
+          "<leader>fg" = "live_grep";
+        };
+      };
+  
+      treesitter = {
+        enable = true;
+  
+        grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+          bash
+          nix
+          c_sharp
+        ];
+      };
+      
+      neo-tree = {
+        enable = true;
+      };
+      
+      lualine = {
+        enable = true;
+      };
     };
   };
 }
