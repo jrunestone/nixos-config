@@ -8,6 +8,7 @@
 
     ./hardware-configuration.nix
     ../shared.nix
+    ./monitors.nix
   ];
 
   boot.loader.grub2-theme.screen = "4k";

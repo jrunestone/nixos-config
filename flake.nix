@@ -34,8 +34,7 @@
         inherit system;
         config.allowUnfree = true;
       });
-    in
-    {
+    in {
       inherit lib;
       nixosModules = import ./modules/nixos;
       homeManagerModules = import ./modules/home-manager;
