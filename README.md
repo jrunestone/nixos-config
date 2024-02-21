@@ -35,9 +35,7 @@ User is hard-coded to "jr" in flake for all hosts.
 11. `reboot`
 12. Copy over ssh keys
 13. Configure initial settings (these are then persisted):
-    1. Resolution/rate
-    2. Sound output device
-    3. Gradience/theme
+    1. Gradience/theme
 
 ## Commands
 `nix-rebuild [switch|boot] $NIXCONFIG.#$HOSTNAME` or `buildnix [switch|boot]`
