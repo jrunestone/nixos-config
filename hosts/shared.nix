@@ -29,10 +29,6 @@ in
     };
   };
 
-  security.sudo.extraConfig = ''
-    Defaults lecture = never
-  '';
-
   users.mutableUsers = false;
 
   users.users.jr = {
@@ -53,5 +49,5 @@ in
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.extraSpecialArgs = { inherit inputs outputs; };
-  home-manager.users.jr = import ../home-manager/${config.networking.hostName}.nix;
+  home-manager.users.jr = import ../home-manager/${config.networking.hostName};
 }

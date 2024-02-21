@@ -8,7 +8,7 @@
 
     shellAliases = {
       ls = "ls -lah --color=auto";
-      buildnix = "sudo nixos-rebuild --flake $NIXCONFIG#$HOST";
+      buildnix = "git -C $NIXCONFIG add . && sudo nixos-rebuild --flake $NIXCONFIG#$HOST";
     };
 
     initExtra = ''

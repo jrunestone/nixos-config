@@ -1,19 +1,14 @@
-* monitor 100hz
 * material shell extensions
 * login screen theme
 * quiet boot?
 * terminal bg (prompt..)
-* persist gnome settings (mouse, audio interface, level)
 * never turn off screen
 * gradience
 * tray?
 
 * dev-certs
-
-
 * Steam
 * docker/podman (dev-env)
-* Vscode/neovim
 * Protonpass pwa
 * 1Pass (dev-env?)
 * PWA (dev-envs?)
@@ -38,10 +33,13 @@ User is hard-coded to "jr" in flake for all hosts.
 9. `nixos-generate-config --no-filesystems --root /mnt` and copy hardware-info.nix to repo/host if new host
 10. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
 11. `reboot`
-12. Copy over ssh keys (if using sops this needs to be done before step 3)
-13. Configure Gradience
+12. Copy over ssh keys
+13. Configure initial settings (these are then persisted):
+    1. Resolution/rate
+    2. Sound output device
+    3. Gradience/theme
 
 ## Commands
-`nix-rebuild [switch|boot] /nixos-config.#[hostname]`
+`nix-rebuild [switch|boot] $NIXCONFIG.#$HOSTNAME` or `buildnix [switch|boot]`
 `journalctl -u home-manager-jr.service`
-`journalctl --identifier "hm-activate-$user" --since "$date"`
+`journalctl --identifier "hm-activate-$user"`

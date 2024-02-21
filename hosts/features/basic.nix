@@ -1,7 +1,5 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   time.timeZone = "Europe/Stockholm";
-
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -16,7 +14,6 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
-  # Configure keymap in X11
   services.xserver = {
     xkb = {
       layout = "se";
@@ -24,16 +21,14 @@
     };
   };
 
-  # Configure console keymap
   console.keyMap = "sv-latin1";
-
-  # Enable CUPS to print documents.
   services.printing.enable = true;
-
   hardware.enableRedistributableFirmware = true;
-
-  # enable font dir
   fonts.fontDir.enable = true;
+
+  security.sudo.extraConfig = ''
+    Defaults lecture = never
+  '';
 
   nix.gc = {
     automatic = true;

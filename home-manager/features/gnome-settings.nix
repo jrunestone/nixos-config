@@ -1,5 +1,13 @@
 { pkgs, lib, config, ... }: {
   dconf.settings = {
+    "org/gnome/desktop/session" = {
+      idle-delay = lib.hm.gvariant.mkUint32 0;
+    };
+
+    "org/gnome/settings-daemon/plugins/power" = {
+      sleep-inactive-ac-type = "nothing";
+    };
+
     "org/gnome/desktop/search-providers" = {
       disabled = [ 
         "org.gnome.clocks.desktop" 

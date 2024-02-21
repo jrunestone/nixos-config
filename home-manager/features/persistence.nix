@@ -5,17 +5,19 @@
 
   home.persistence."/nix/persist/home/${config.home.username}" = {
     directories = [
-      ".gnupg"
-      ".ssh"
-      ".local/share/keyrings"
-
       "Documents"
       "dev"
+
+      ".gnupg"
+      ".ssh"
+
+      ".local/share/keyrings"
 
       # gradience
       ".config/presets/official"
       ".config/presets/curated"
       ".config/presets/user"
+      ".config/gtk-3.0"
       ".config/gtk-4.0"
 
       ".config/obsidian"

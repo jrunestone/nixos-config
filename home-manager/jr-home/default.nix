@@ -1,6 +1,8 @@
 { inputs, lib, pkgs, ... }: {
   imports = [
-    ./shared.nix
+    ../shared.nix
+    ./monitors.nix
+    ./sound.nix
   ];
 
   programs.git = {
