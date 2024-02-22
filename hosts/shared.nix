@@ -17,6 +17,7 @@ in
     ./features/wired.nix
     ./features/pipewire.nix
     ./features/podman.nix
+    ./features/1password.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   nixpkgs = {
