@@ -22,8 +22,10 @@
 
     options = {
       number = true;
+      relativenumber = true;
       shiftwidth = 2;
       tabstop = 2;
+      softtabstop = 2;
       expandtab = true;
     };
     
@@ -32,9 +34,33 @@
         key = "<leader>n";
         action = ":Neotree<CR>";
       }
+      
+      {
+        key = "<leader>m";
+        action =":MCstart<CR>";
+      }
+
+      {
+        key = "<leader>mp";
+        action =":MCpattern<CR>";
+      }
+
+      {
+        key = "<leader>t2";
+        action =":set shiftwidth=2 tabstop=2 softtabstop=2<CR>";
+      }
+
+      {
+        key = "<leader>t4";
+        action =":set shiftwidth=4 tabstop=4 softtabstop=4<CR>";
+      }
     ];
 
     plugins = {
+      multicursors = {
+        enable = true;
+      };
+
       telescope = {
         enable = true;
   
