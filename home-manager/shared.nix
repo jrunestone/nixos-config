@@ -25,6 +25,7 @@
     ./features/nixvim.nix
     ./features/az.nix
     ./features/insomnia.nix
+    ./features/1password.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules );
 
   nix = {
