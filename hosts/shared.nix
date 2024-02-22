@@ -16,6 +16,7 @@ in
     ./features/gfx.nix
     ./features/wired.nix
     ./features/pipewire.nix
+    ./features/podman.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   nixpkgs = {
@@ -40,7 +41,6 @@ in
       "audio"
     ] ++ ifTheyExist [
       "networkmanager"
-      "docker"
     ];
   
     hashedPasswordFile = "/nix/persist/system/passwords/jr";

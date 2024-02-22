@@ -3,21 +3,30 @@
 * quiet boot?
 * terminal bg (prompt..)
 * never turn off screen
-* gradience
-* tray?
+* gradience?
 
-* dev-certs
 * Steam
-* docker/podman (dev-env)
 * Protonpass pwa
-* 1Pass (dev-env?)
-* PWA (dev-envs?)
-    * Outlook
+* 1Pass
+* PWA
+    * Outlook/other?
     * Teams
 
 ### devshells
 nix-direnv + flakes
-* dotnet
+* docker-compose for (redis, sql)
+* flake for pkgs (dotnet, node, az)
+* dev-certs
+* structure for multiple envs
+  * local urls, localhost:ports or nginx proxy?
+  * multiple db servers, single db?
+  * single db server, multiple dbs?
+
+## Notes
+* Obisidan marks unsafe electron as allowed until updated
+* Should modularize monitors.xml
+* Should look into replacing podman with oci-containers or apptainer
+* Should define a std for nix develop flakes and where to store them etc
 
 ## Install
 User is hard-coded to "jr" in flake for all hosts.

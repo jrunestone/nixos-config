@@ -70,9 +70,9 @@
     };
 
     nix_shell = {
-      symbol = "nix-shell/";
+      symbol = "shell";
       style = "bg:#DA627D fg:#FFFFFF";
-      format = "[\\[$symbol$state\\] ]($style)";
+      format = "[\\[$symbol\\] ]($style)";
     };
 
     c = {
