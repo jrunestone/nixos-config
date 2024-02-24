@@ -16,15 +16,13 @@
     ./features/dircolors.nix
     ./features/blackbox.nix
     ./features/starship.nix
-    ./features/neofetch.nix
     ./features/vivaldi.nix
     ./features/obsidian.nix
     ./features/spotify.nix
     ./features/slack.nix
-    ./features/rider.nix
     ./features/nixvim.nix
-    ./features/az.nix
-    ./features/insomnia.nix
+    ./features/just.nix
+    ./features/podman.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules );
 
   nix = {

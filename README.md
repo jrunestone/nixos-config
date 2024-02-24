@@ -1,26 +1,32 @@
-* material shell extensions
+* tiling ext
 * login screen theme
 * quiet boot?
 * terminal bg (prompt..)
-* never turn off screen
+* never turn off screen at lock
 * gradience?
+* just commands
+* rider, spotify, 1password, vivaldi "cache" dir for config?
+* persist nugets
+* have to double-return after bash completion
+* slow bash/prompt in dir with many files
 
 * Steam
-* Protonpass pwa
-* 1Pass
 * PWA
     * Outlook/other?
     * Teams
+    * Protonpass
 
 ### devshells
 nix-direnv + flakes
 * docker-compose for (redis, sql)
 * flake for pkgs (dotnet, node, az)
-* dev-certs
+* template flakes in nix-config repo
+* dev-certs (just cmd?)
 * structure for multiple envs
   * local urls, localhost:ports or nginx proxy?
   * multiple db servers, single db?
   * single db server, multiple dbs?
+* just for podman commands such as log etc
 
 ## Notes
 * Obisidan marks unsafe electron as allowed until updated

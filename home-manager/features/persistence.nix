@@ -12,6 +12,8 @@
       ".ssh"
 
       ".local/share/keyrings"
+      ".local/share/containers"
+      ".local/share/JetBrains"
 
       # gradience
       ".config/presets/official"
@@ -25,6 +27,12 @@
       ".config/spotify"
       ".config/Slack"
       ".config/JetBrains"
+      ".config/1Password"
+      ".config/Insomnia"
+
+      ".cache/Spotify"
+      ".cache/JetBrains"
+      ".cache/vivaldi"
     ];
 
     files = [
