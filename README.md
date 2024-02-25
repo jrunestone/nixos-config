@@ -1,14 +1,14 @@
-* tiling ext
-* login screen theme
 * quiet boot?
 * terminal bg (prompt..)
-* never turn off screen at lock
 * gradience?
 * just commands
-* rider, spotify, 1password, vivaldi "cache" dir for config?
 * persist nugets
-* have to double-return after bash completion
 * slow bash/prompt in dir with many files
+* ext: dash to dock(?)
+* ext: background applications
+* ext: no turn off lock screen
+* ext: login screen bg
+
 
 * Steam
 * PWA

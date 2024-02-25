@@ -11,7 +11,11 @@
     ./monitors.nix
   ];
 
+  # host specific overrides
+  hardware.bluetooth.enable = false;
+
   boot.loader.grub2-theme.screen = "4k";
+  boot.loader.grub2-theme.splashImage = ../../assets/grub-4k.jpg;
 
   networking = {
     hostName = "jr-home";

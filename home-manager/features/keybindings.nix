@@ -1,21 +1,11 @@
 { pkgs, lib, config, ... }: {
   dconf.settings = {
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = "<Super>t";
-      command = "blackbox";
-      name = "Open terminal";
-    };
-
     "org/gnome/settings-daemon/plugins/media-keys" = {
       home = [ "<Super>f" ];
       www = [ "<Super>w" ];
       control-center = [ "<Super>comma" ];
       play = [ "<Super>space" ];
       volume-mute = [ "<Super>m" ];
-      
-      custom-keybindings = [
-        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-      ];
     };
 
     "org/gnome/shell/keybindings" = {

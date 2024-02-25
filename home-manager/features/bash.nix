@@ -22,10 +22,6 @@
 
       # ctrl-backspace delete word
       bind '"\C-h": backward-kill-word'
-
-      # to scan in history
-      bind '"\e[A": history-search-backward'
-      bind '"\e[B": history-search-forward'
     '';
   };
 }

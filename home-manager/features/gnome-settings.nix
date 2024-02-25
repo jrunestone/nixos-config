@@ -1,5 +1,13 @@
 { pkgs, lib, config, ... }: {
   dconf.settings = {
+    "org/gnome/mutter" = {
+      dynamic-workspaces = true;
+    };
+
+    "org/gnome/shell/app-switcher" = {
+      current-workspace-only = true;
+    };
+      
     "org/gnome/desktop/wm/preferences" = {
       button-layout = ":minimize,maximize,close";
     };
@@ -10,6 +18,10 @@
 
     "org/gnome/settings-daemon/plugins/power" = {
       sleep-inactive-ac-type = "nothing";
+    };
+
+    "org/gnome/desktop/sound" = {
+      event-sounds = false;
     };
 
     "org/gnome/desktop/search-providers" = {
@@ -23,12 +35,11 @@
 
     "org/gnome/shell" = {
       favorite-apps = [
-        "org.gnome.Nautilus.desktop"
         "com.raggesilver.BlackBox.desktop"
         "vivaldi-stable.desktop"
         "spotify.desktop"
-        "obsidian.desktop"
         "slack.desktop"
+        "obsidian.desktop"
       ];
     };
   };

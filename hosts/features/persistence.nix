@@ -16,6 +16,7 @@
       "/var/lib/bluetooth"
       "/var/lib/nixos"
       "/var/lib/systemd"
+      "/var/lib/AccountsService/icons"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
     ];
 
@@ -24,6 +25,7 @@
     ];
   };
 
+  # create persisted dirs in home directory
   system.activationScripts.persistent-dirs.text =
     let
       mkHomePersist = user: lib.optionalString user.createHome ''

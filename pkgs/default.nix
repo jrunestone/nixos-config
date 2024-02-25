@@ -2,5 +2,5 @@
 # You can build them using 'nix build .#example'
 { pkgs ? import <nixpkgs> { } }: rec {
   # example = pkgs.callPackage ./example { };
-  grub2-themes = pkgs.callPackage ./grub2-themes { };
+  user-icons = pkgs.callPackage ./user-icons { };
 }

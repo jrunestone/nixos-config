@@ -10,6 +10,7 @@
     };
 
     extraConfig = {
+      core.autocrlf = "input";
       init.defaultBranch = "main";
 
       pull = {

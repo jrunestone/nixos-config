@@ -43,7 +43,8 @@ in
     ] ++ ifTheyExist [
       "networkmanager"
     ];
-  
+
+    icon = ../assets/jr.png;
     hashedPasswordFile = "/nix/persist/system/passwords/jr";
   };
 

@@ -18,4 +18,18 @@
       scrollback-lines = lib.hm.gvariant.mkUint32 10000;
     };
   };
+
+  dconf.settings = {
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      binding = "<Super>t";
+      command = "blackbox";
+      name = "Open terminal";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys" = {
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+      ];
+    };
+  };
 }
