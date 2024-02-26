@@ -12,7 +12,7 @@
       headerbar-drag-area = true;
       font = "FiraCode Nerd Font 14";
       terminal-bell = false;
-      opacity = lib.hm.gvariant.mkUint32 95;
+      opacity = lib.hm.gvariant.mkUint32 90;
       theme-dark = "base16: Twilight (dark)";
       notify-process-completion = false;
       scrollback-lines = lib.hm.gvariant.mkUint32 10000;

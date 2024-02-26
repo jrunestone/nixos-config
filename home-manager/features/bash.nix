@@ -8,7 +8,7 @@
 
     shellAliases = {
       ls = "ls -lah --color=auto";
-      editnix = "nvim $NIXCONFIG";
+      editnix = "nv $NIXCONFIG";
       buildnix = "git -C $NIXCONFIG add . && sudo nixos-rebuild --flake $NIXCONFIG#$HOST";
     };
 
