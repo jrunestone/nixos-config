@@ -57,6 +57,19 @@
     ];
 
     plugins = {
+      which-key = {
+        enable = true;
+      };
+
+      barbar = {
+        enable = true;
+
+        keymaps = {
+          previous = "<leader>a";
+          next = "<leader>d";
+        };
+      };
+
       multicursors = {
         enable = true;
       };
@@ -82,6 +95,10 @@
       
       neo-tree = {
         enable = true;
+
+        extraOptions = {
+          followCurrentFile.enabled = true;
+        };
       };
       
       lualine = {

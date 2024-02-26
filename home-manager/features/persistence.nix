@@ -23,7 +23,8 @@
       ".config/1Password"
       ".config/Insomnia"
 
-      ".cache/Spotify"
+      ".cache/blesh"
+      ".cache/spotify"
       ".cache/JetBrains"
       ".cache/vivaldi"
     ];

@@ -1,13 +1,7 @@
-* quiet boot?
 * terminal bg (prompt..)
-* gradience?
 * just commands
 * persist nugets
 * slow bash/prompt in dir with many files
-* ext: dash to dock(?)
-* ext: background applications
-* ext: no turn off lock screen
-* ext: login screen bg
 
 
 * Steam

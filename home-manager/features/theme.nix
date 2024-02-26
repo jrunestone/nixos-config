@@ -5,7 +5,8 @@
     pkgs.gnomeExtensions.blur-my-shell
     pkgs.gnomeExtensions.appindicator
     pkgs.gnomeExtensions.dash-to-dock
-    pkgs.gnomeExtensions.hide-activities-button
+    pkgs.gnomeExtensions.space-bar
+    pkgs.gnomeExtensions.disable-workspace-switcher
   ];
 
   home.file.".nix-config-assets" = {
@@ -21,6 +22,8 @@
         "appindicatorsupport@rgcjonas.gmail.com"
         "dash-to-dock@micxgx.gmail.com"
         "Hide_Activities@shay.shayel.org"
+        "space-bar@luchrioh"
+        "disable-workspace-switcher@jbradaric.me"
       ];
     };
 
@@ -35,6 +38,12 @@
       background-color = "rgb(36,36,36)";
       intellihide = false;
       show-icons-notifications-counter = false;
+    };
+
+    "org/gnome/shell/extensions/space-bar/behavior" = {
+      indicator-style = "current-workspace-name";
+      toggle-overview = false;
+      scroll-wheel = "disabled";
     };
 
     "org/gnome/shell/extensions/appindicator" = {
@@ -54,6 +63,7 @@
       tile-bottomleft-quarter = [ "<Super>adiaeresis" ];
       tile-bottomright-quarter = [ "<Super>apostrophe" ];
       window-gap = 4;
+      enable-tiling-popup = false;
     };
 
     "org/gnome/shell/extensions/unblank" = {
@@ -62,10 +72,11 @@
 
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
+      enable-hot-corners = false;
     };
 
     "org/gnome/desktop/wm/preferences" = {
-      workspace-names = [ "Main" ];
+      workspace-names = [ "main" ];
     };
 
     "org/gnome/desktop/background" = {
