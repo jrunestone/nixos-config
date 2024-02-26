@@ -1,8 +1,14 @@
 { pkgs, lib, config, ... }: {
   home.packages = [ pkgs.ripgrep ];
 
-  programs.bash.sessionVariables = {
-    EDITOR = "nvim";
+  programs.bash = {
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
+
+    initExtra = ''
+      function nv() { nvim -c "lcd $1" $1; }
+    '';
   };
 
   programs.nixvim = {
@@ -37,22 +43,37 @@
       
       {
         key = "<leader>m";
-        action =":MCstart<CR>";
+        action = ":MCstart<CR>";
       }
 
       {
         key = "<leader>mp";
-        action =":MCpattern<CR>";
+        action = ":MCpattern<CR>";
       }
 
       {
         key = "<leader>t2";
-        action =":set shiftwidth=2 tabstop=2 softtabstop=2<CR>";
+        action = ":set shiftwidth=2 tabstop=2 softtabstop=2<CR>";
       }
 
       {
         key = "<leader>t4";
-        action =":set shiftwidth=4 tabstop=4 softtabstop=4<CR>";
+        action = ":set shiftwidth=4 tabstop=4 softtabstop=4<CR>";
+      }
+
+      {
+        key = "<leader>w";
+        action = ":BufferClose<CR>";
+      }
+
+      {
+        key = "<leader>q";
+        action = ":BufferCloseBuffersLeft<CR>";
+      }
+
+      {
+        key = "<leader>e";
+        action = ":BufferCloseBuffersRight<CR>";
       }
     ];
 
@@ -67,6 +88,7 @@
         keymaps = {
           previous = "<leader>a";
           next = "<leader>d";
+          close = "<leader>w";
         };
       };
 
@@ -78,7 +100,8 @@
         enable = true;
   
         keymaps = {
-          "<leader>ff" = "find_files";
+          "<leader><leader>" = "find_files";
+          "<leader>fb" = "buffers";
           "<leader>fg" = "live_grep";
         };
       };
@@ -96,8 +119,18 @@
       neo-tree = {
         enable = true;
 
-        extraOptions = {
-          followCurrentFile.enabled = true;
+        filesystem = {
+          followCurrentFile = {
+            enabled = true;
+            leaveDirsOpen = true;
+          };
+        };
+
+        buffers = {
+          followCurrentFile = {
+            enabled = true;
+            leaveDirsOpen = true;
+          };
         };
       };
       
