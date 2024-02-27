@@ -10,15 +10,15 @@
   '';
 
   programs.starship.settings = {
-    format = "[ 󰆚 $nix_shell](fg:#FFFFFF bg:#DA627D)[](fg:#DA627D bg:#d62d53)$directory[](fg:#d62d53 bg:#FCA17D)$git_branch$git_status$git_state[](fg:#FCA17D bg:#33658A)$time[](fg:#33658A bg:#DA627D)$cmd_duration$status[](fg:#DA627D)$line_break$character";
+    format = "$nix_shell$directory$git_branch$git_status$git_state$time$cmd_duration$status$line_break$character";
 
     character = {
-      success_symbol = "[\\$](fg:#FFFFFF)";
-      error_symbol = "[\\$](fg:#FFFFFF)";
+      success_symbol = "[\\$]($style)";
+      error_symbol = "[\\$]($style)";
     };
 
     directory = {
-      style = "bg:#d62d53 fg:#FFFFFF";
+      style = "fg:#9b859d";
       format = "[ $path ]($style)";
       truncate_to_repo = false;
       truncation_length = 10;
@@ -26,25 +26,25 @@
     };
 
     time = {
+      style = "fg:#cda869";
       disabled = false;
       time_format = "%R";
-      style = "bg:#33658A fg:#FFFFFF";
       format = "[ 󱑔 $time ]($style)";
     };
 
     cmd_duration = {
-      style = "bg:#DA627D fg:#FFFFFF";
+      style = "fg:#8f9d6a";
       format = "[ ⏱ $duration ]($style)";
     };
 
     status = {
+      style = "fg:#8f9d6a";
       disabled = false;
-      style = "bg:#DA627D fg:#FFFFFF";
       format = "[  $status ]($style)";
     };
 
     git_status = {
-      style = "bg:#FCA17D fg:#FFFFFF";
+      style = "fg:#f9ee98";
       format = "[$all_status$ahead_behind]($style)";
       conflicted = "~$count ";
       ahead = "⇡$count ";
@@ -59,55 +59,49 @@
     };
 
     git_branch = {
+      style = "fg:#f9ee98";
       symbol = "";
-      style = "bg:#FCA17D fg:#FFFFFF";
       format = "[ $symbol $branch ]($style)";
     };
 
     git_state = {
-      style = "bg:#FCA17D fg:#FFFFFF";
+      style = "fg:#f9ee98";
       format = "[ \($state( $progress_current/$progress_total)\)]($style) ";
     };
 
     nix_shell = {
+      style = "fg:#cf6a4c";
       symbol = "shell";
-      style = "bg:#DA627D fg:#FFFFFF";
       format = "[\\[$symbol\\] ]($style)";
     };
 
     c = {
       symbol = "c/";
-      style = "bg:#86BBD8 fg:#FFFFFF";
       format = "[ $symbol ($version)]($style)";
     };
 
     php = {
       symbol = "php/";
-      style = "bg:#86BBD8 fg:#FFFFFF";
       format = "[ $symbol ($version)]($style)";
     };
 
     java = {
       symbol = "java/";
-      style = "bg:#86BBD8 fg:#FFFFFF";
       format = "[ $symbol ($version)]($style)";
     };
 
     dotnet = {
       symbol = ".net/";
-      style = "bg:#86BBD8 fg:#FFFFFF";
       format = "[ ($tfm)]($style)";
     };
 
     nodejs = {
       symbol = "nodejs/";
-      style = "bg:#86BBD8 fg:#FFFFFF";
       format = "[ $symbol($version)]($style)";
     };
 
     rust = {
       symbol = "rust/";
-      style = "bg:#86BBD8 fg:#FFFFFF";
       format = "[ $symbol ($version)]($style)";
     };
   };

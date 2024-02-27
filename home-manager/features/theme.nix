@@ -6,7 +6,7 @@
     pkgs.gnomeExtensions.appindicator
     pkgs.gnomeExtensions.dash-to-dock
     pkgs.gnomeExtensions.space-bar
-    pkgs.gnomeExtensions.disable-workspace-switcher
+    pkgs.gnomeExtensions.just-perfection
   ];
 
   home.file.".nix-config-assets" = {
@@ -23,8 +23,14 @@
         "dash-to-dock@micxgx.gmail.com"
         "Hide_Activities@shay.shayel.org"
         "space-bar@luchrioh"
-        "disable-workspace-switcher@jbradaric.me"
+        "just-perfection-desktop@just-perfection"
       ];
+    };
+
+    "org/gnome/shell/extensions/just-perfection" = {
+      top-panel-position = 1;
+      clock-menu-position = 1;
+      workspace-popup = false;
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
@@ -44,6 +50,12 @@
       indicator-style = "current-workspace-name";
       toggle-overview = false;
       scroll-wheel = "disabled";
+      enable-activate-workspace-shortcuts = false;
+      activate-empty-key = lib.gvariant.mkEmptyArray lib.gvariant.type.string; 
+      activate-previous-key = lib.gvariant.mkEmptyArray lib.gvariant.type.string; 
+      move-workspace-right = lib.gvariant.mkEmptyArray lib.gvariant.type.string; 
+      move-workspace-left = lib.gvariant.mkEmptyArray lib.gvariant.type.string; 
+      open-menu = lib.gvariant.mkEmptyArray lib.gvariant.type.string; 
     };
 
     "org/gnome/shell/extensions/appindicator" = {
@@ -72,7 +84,6 @@
 
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
-      enable-hot-corners = false;
     };
 
     "org/gnome/desktop/wm/preferences" = {
