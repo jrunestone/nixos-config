@@ -10,6 +10,7 @@
 
       ".gnupg"
       ".ssh"
+      ".java"
 
       ".local/share/keyrings"
       ".local/share/containers"

@@ -50,6 +50,9 @@
       indicator-style = "current-workspace-name";
       toggle-overview = false;
       scroll-wheel = "disabled";
+    };
+
+    "org/gnome/shell/extensions/space-bar/shortcuts" = {
       enable-activate-workspace-shortcuts = false;
       activate-empty-key = lib.gvariant.mkEmptyArray lib.gvariant.type.string; 
       activate-previous-key = lib.gvariant.mkEmptyArray lib.gvariant.type.string; 

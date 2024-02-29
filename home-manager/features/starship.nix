@@ -19,7 +19,7 @@
 
     directory = {
       style = "fg:#9b859d";
-      format = "[ $path ]($style)";
+      format = "[$path]($style) ";
       truncate_to_repo = false;
       truncation_length = 10;
       truncation_symbol = "…/";
@@ -29,23 +29,23 @@
       style = "fg:#cda869";
       disabled = false;
       time_format = "%R";
-      format = "[ 󱑔 $time ]($style)";
+      format = "[󱑔 $time]($style) ";
     };
 
     cmd_duration = {
       style = "fg:#8f9d6a";
-      format = "[ ⏱ $duration ]($style)";
+      format = "[⏱ $duration]($style) ";
     };
 
     status = {
       style = "fg:#8f9d6a";
       disabled = false;
-      format = "[  $status ]($style)";
+      format = "[ $status]($style) ";
     };
 
     git_status = {
       style = "fg:#f9ee98";
-      format = "[$all_status$ahead_behind]($style)";
+      format = "[$all_status$ahead_behind]($style) ";
       conflicted = "~$count ";
       ahead = "⇡$count ";
       behind = "⇣$count ";
@@ -61,18 +61,18 @@
     git_branch = {
       style = "fg:#f9ee98";
       symbol = "";
-      format = "[ $symbol $branch ]($style)";
+      format = "[$symbol $branch]($style) ";
     };
 
     git_state = {
       style = "fg:#f9ee98";
-      format = "[ \($state( $progress_current/$progress_total)\)]($style) ";
+      format = "[\($state($progress_current/$progress_total)\)]($style) ";
     };
 
     nix_shell = {
       style = "fg:#cf6a4c";
       symbol = "shell";
-      format = "[\\[$symbol\\] ]($style)";
+      format = "[\\[$symbol\\]]($style) ";
     };
 
     c = {

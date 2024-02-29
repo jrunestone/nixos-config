@@ -12,6 +12,7 @@
     gnome-maps 
     gnome-music 
     gnome-weather 
+    
     pkgs.gnome-tour
     pkgs.gnome-photos
     pkgs.gnome-connections
