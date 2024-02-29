@@ -10,11 +10,13 @@
 
       ".gnupg"
       ".ssh"
-      ".java"
+      ".java" # jetbrains credentials
 
       ".local/share/keyrings"
       ".local/share/containers"
       ".local/share/JetBrains"
+      ".local/share/applications" # vivaldi pwa
+      ".local/share/icons"
 
       ".config/obsidian"
       ".config/vivaldi"

@@ -44,9 +44,11 @@ User is hard-coded to "jr" in flake for all hosts.
 11. `reboot`
 12. Copy over ssh keys
 13. Configure initial settings (these are then persisted):
-    1. Gradience/theme
+    1. PWA:s
 
 ## Commands
-`nix-rebuild [switch|boot] $NIXCONFIG.#$HOSTNAME` or `buildnix [switch|boot]`
-`journalctl -u home-manager-jr.service`
-`journalctl --identifier "hm-activate-$user"`
+* `$NIXCONFIG`
+* `editnix`
+* `nix-rebuild [switch|boot] $NIXCONFIG.#$HOSTNAME` or `buildnix [switch|boot]`
+* `journalctl -b -u home-manager-jr.service`
+* `journalctl -b --identifier "hm-activate-$user"`

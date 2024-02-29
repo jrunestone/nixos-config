@@ -13,13 +13,4 @@
     theme = "vimix";
     footer = false;
   };
-
-  boot.plymouth.themePackages = [ 
-    (pkgs.adi1090x-plymouth-themes.override {
-      selected_themes = ["spinner_alt"];
-    })
-  ];
-
-  boot.plymouth.enable = true;
-  boot.plymouth.theme = "spinner_alt";
 }
