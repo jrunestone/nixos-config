@@ -15,12 +15,19 @@ nix-direnv + flakes
 * docker-compose for (redis, sql)
 * flake for pkgs (dotnet, node, az)
 * template flakes in nix-config repo
+* keep stuff in a user-specific gitignored folder in the project
+  * .jr or .jr-dev
+  * contains flake.*, .env, .az, docker-compose, just cmds, dev-certs etc
 * dev-certs (just cmd?)
 * structure for multiple envs
   * local urls, localhost:ports or nginx proxy?
   * multiple db servers, single db?
   * single db server, multiple dbs?
 * just for podman commands such as log etc
+* set az config dir to project dir
+  * atm with DEVDIR=$(pwd) nix develop, just cmd? just cmd can check if in the same dir as flake
+  * use nixdirenv to load .env with AZURE_CONFIG_DIR= and also az subscription=xx probably?
+* set insomnia to project dir?
 
 ## Notes
 * Obisidan marks unsafe electron as allowed until updated
