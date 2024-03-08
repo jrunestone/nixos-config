@@ -8,8 +8,10 @@
 
     shellAliases = {
       ls = "ls -lah --color=auto";
-      editnix = "nv $NIXCONFIG";
-      buildnix = "git -C $NIXCONFIG add . && sudo nixos-rebuild --flake $NIXCONFIG#$HOST";
+      nixdir = "cd $NIXCONFIG";
+      nixedit = "nv $NIXCONFIG";
+      nixbuild = "git -C $NIXCONFIG add . && sudo nixos-rebuild --flake $NIXCONFIG#$HOST";
+      nixversions = "find /etc/profiles/per-user/jr/bin -type l | xargs readlink -f | cut -d- -f2- | cut -d/ -f1 | sort -u";
     };
 
     initExtra = ''
