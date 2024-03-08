@@ -10,7 +10,7 @@
   '';
 
   programs.starship.settings = {
-    format = "$env_var$directory $git_branch$git_status$git_state$time$cmd_duration$status$line_break$character";
+    format = "$nix_shell$env_var$directory $git_branch$git_status$git_state$time$cmd_duration$status$line_break$character";
 
     character = {
       success_symbol = "[\\$]($style)";
@@ -29,18 +29,18 @@
       style = "fg:#cda869";
       disabled = false;
       time_format = "%R";
-      format = "[󱑔 $time]($style)  ";
+      format = "[󱑔 $time]($style)";
     };
 
     cmd_duration = {
       style = "fg:#8f9d6a";
-      format = "[⏱ $duration]($style)  ";
+      format = "  [⏱ $duration]($style)";
     };
 
     status = {
       style = "fg:#cf6a4c";
       disabled = false;
-      format = "[ $status]($style)  ";
+      format = "  [ $status]($style)";
     };
 
     git_status = {
@@ -72,13 +72,14 @@
     nix_shell = {
       style = "fg:#cf6a4c";
       symbol = "shell";
-      format = "[\\[$symbol\\]]($style)";
+      format = "[$symbol]($style) ";
     };
 
     env_var = {
       style = "fg:#cf6a4c";
+      symbol = "";
       variable = "DEVENV_NAME";
-      format = "[\\[$env_value\\]]($style) ";
+      format = "[$symbol$env_value]($style) ";
     };
 
     c = {

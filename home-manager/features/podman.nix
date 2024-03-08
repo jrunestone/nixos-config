@@ -3,6 +3,6 @@
   xdg.configFile."containers/storage.conf".text = ''
     [storage]
     driver = "overlay"
-    graphroot = "/nix/persist/home/${config.home.username}/${config.xdg.dataHome}/containers"
+    graphroot = "/nix/persist/${config.xdg.dataHome}/containers"
   '';
 }

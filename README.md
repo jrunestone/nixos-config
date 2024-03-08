@@ -1,7 +1,5 @@
 * terminal bg (prompt..)
-* just commands
-* persist nugets
-* slow bash/prompt in dir with many files
+* persist nugets and dotnet tools
 
 
 * Steam
@@ -16,14 +14,16 @@ nix-direnv + flakes
 * flake for pkgs (dotnet, node, az)
 * template flakes in nix-config repo
 * keep stuff in a user-specific gitignored folder in the project
-  * .jr or .jr-dev
+  * env/jr
   * contains flake.*, .env, .az, docker-compose, just cmds, dev-certs etc
+  * run just dev to load .env file and run nix develop
+  * run (global) just init-dev to symlink the env/jr dir from another repo
+  * have a global just cmd or alias to point to ./env/jr/justfile or a root justfile that imports it
 * dev-certs (just cmd?)
 * structure for multiple envs
   * local urls, localhost:ports or nginx proxy?
   * multiple db servers, single db?
   * single db server, multiple dbs?
-* just for podman commands such as log etc
 * set az config dir to project dir
   * atm with DEVDIR=$(pwd) nix develop, just cmd? just cmd can check if in the same dir as flake
   * use nixdirenv to load .env with AZURE_CONFIG_DIR= and also az subscription=xx probably?
