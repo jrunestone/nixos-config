@@ -20,14 +20,18 @@ in
     ./features/1password.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
+  nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" "repl-flake" ];
+      warn-dirty = false;
+    };
+  };
+
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
     config = {
       allowUnfree = true;
       allowUnfreePredicate = (_: true);
-
-      # TODO: until obsidian is updated
-      permittedInsecurePackages = pkgs.lib.optional (pkgs.obsidian.version == "1.5.3") "electron-25.9.0";
     };
   };
 

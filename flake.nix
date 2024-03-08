@@ -41,13 +41,6 @@
       overlays = import ./overlays { inherit inputs outputs; };
       packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
 
-      nix = {
-        settings = {
-          experimental-features = [ "nix-command" "flakes" "repl-flake" ];
-          warn-dirty = false;
-        };
-      };
-
       # NixOS configuration entrypoint
       # Available through 'nixos-rebuild --flake .#your-hostname'
       nixosConfigurations = {
