@@ -12,6 +12,8 @@
         config.allowUnfree = true;
       };
     in pkgs.mkShell {
+      DEVENV_NAME = "myenv";
+
       packages = with pkgs; [
       ];
 

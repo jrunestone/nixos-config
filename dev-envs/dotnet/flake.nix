@@ -12,6 +12,8 @@
         config.allowUnfree = true;
       };
     in pkgs.mkShell {
+      DEVENV_NAME = "my-env";
+
       packages = with pkgs; [
         (with dotnetCorePackages; combinePackages [
           sdk_8_0
