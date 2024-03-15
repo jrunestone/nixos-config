@@ -8,13 +8,16 @@
     enable = true;
 
     settings = {
-      import = [ "${pkgs.alacritty-theme}/gruvbox_material_hard_dark.toml" ];
+      import = [ "${pkgs.alacritty-theme}/meliora.toml" ];
 
       window = {
-        opacity = 0.85;
+        opacity = 0.87;
+        blur = true;
+        decorations_theme_variant = "Dark";
+
         dimensions = {
-          columns = 120;
-          lines = 30;
+          columns = 130;
+          lines = 35;
         };
       };
 
