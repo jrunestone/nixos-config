@@ -3,10 +3,11 @@
     inputs.nixvim.homeManagerModules.nixvim
     
     ./features/bash.nix
-    ./features/basic.nix
+    ./features/basic.nix 
+    ./features/tmux.nix 
     ./features/git.nix
     ./features/xdg.nix
-    ./features/theme.nix
+    ./features/theme.nix 
     ./features/persistence.nix
     ./features/nerdfonts.nix
     ./features/keybindings.nix
@@ -14,7 +15,7 @@
     ./features/fzf.nix
     ./features/blesh.nix
     ./features/dircolors.nix
-    ./features/blackbox.nix
+    ./features/alacritty.nix
     ./features/starship.nix
     ./features/vivaldi.nix
     ./features/obsidian.nix

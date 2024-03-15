@@ -1,8 +1,6 @@
 * terminal bg (prompt..)
-* persist nugets and dotnet tools
 
 
-* Steam
 * PWA
     * Outlook/other?
     * Teams
@@ -30,9 +28,7 @@ nix-direnv + flakes
 * set insomnia to project dir?
 
 ## Notes
-* Obisidan marks unsafe electron as allowed until updated
 * Should modularize monitors.xml
-* Should look into replacing podman with oci-containers or apptainer
 * Should define a std for nix develop flakes and where to store them etc
 
 ## Install
@@ -54,8 +50,8 @@ User is hard-coded to "jr" in flake for all hosts.
     1. PWA:s
 
 ## Commands
-* `$NIXCONFIG`
-* `editnix`
-* `nix-rebuild [switch|boot] $NIXCONFIG.#$HOSTNAME` or `buildnix [switch|boot]`
+* `$NIXCONFIG` or `nixdir`
+* `nixedit`
+* `nix-rebuild [switch|boot] $NIXCONFIG.#$HOSTNAME` or `nixbuild [switch|boot]`
 * `journalctl -b -u home-manager-jr.service`
 * `journalctl -b --identifier "hm-activate-$user"`

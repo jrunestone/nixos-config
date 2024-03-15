@@ -75,9 +75,106 @@
         key = "<leader>e";
         action = ":BufferCloseBuffersRight<CR>";
       }
+
+      {
+        key = "<leader>do";
+        action = ":lua require('dapui').open()<CR>";
+      }
+
+      {
+        key = "<leader>dc";
+        action = ":lua require('dapui').close()<CR>";
+      }
+
+      {
+        key = "<leader>db";
+        action = ":lua require('dap').toggle_breakpoint()<CR>";
+      }
+
+      {
+        key = "<leader>dh";
+        action = ":lua require('dap.ui.widgets').hover()<CR>";
+      }
+
+      {
+        key = "<F5>";
+        action = ":lua require('dap').continue()<CR>";
+      }
+
+      {
+        key = "<S>-<F5>";
+        action = ":lua require('dap').terminate()<CR>";
+      }
+
+      {
+        key = "<F10>";
+        action = ":lua require('dap').step_over()<CR>";
+      }
+
+      {
+        key = "<F11>";
+        action = ":lua require('dap').step_into()<CR>";
+      }
+
+      {
+        key = "<S><F11>";
+        action = ":lua require('dap').step_out()<CR>";
+      }
     ];
 
     plugins = {
+      lsp = {
+        enable = true;
+
+        servers = {
+          ccls.enable = true;
+          cmake.enable = true;
+        };
+
+        keymaps = {
+          lspBuf = {
+            "<leader>gd" = "definition";
+            "<leader>gr" = "references";
+            "<leader>gg" = "hover";
+          };
+        };
+      };
+
+      dap = {
+        enable = true;
+        extensions.dap-ui.enable = true;
+          
+        adapters = {
+          executables.gdb = {
+            command = "gdb";
+            args = [ "-i" "dap" ];
+          };
+        };
+
+        configurations = {
+          c = [{
+            name = "Debug";
+            type = "gdb";
+            request = "launch";
+            program = ''
+              function()
+                return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+              end
+            '';
+          }];
+        };
+      };
+
+      coq-nvim = {
+        enable = true;
+        
+        settings = {
+          auto_start = "shut-up";
+          completion.always = true;
+          keymap.recommended = true;
+        };
+      };
+
       which-key = {
         enable = true;
       };
@@ -100,9 +197,10 @@
         enable = true;
   
         keymaps = {
-          "<leader><leader>" = "find_files";
+          "<leader>ff" = "find_files";
           "<leader>fb" = "buffers";
           "<leader>fg" = "live_grep";
+          "<leader>fc" = "commands";
         };
       };
   
@@ -113,6 +211,10 @@
           bash
           nix
           c_sharp
+          c
+          cpp
+          javascript
+          typescript
         ];
       };
       

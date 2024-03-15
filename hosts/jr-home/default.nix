@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }: {
   imports = [
     (import ../../disko-config.nix { disk = "/dev/nvme0n1"; })
+    (import ./disko-config.nix { disk = "/dev/nvme1n1"; })
 
     inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-gpu-amd
@@ -9,6 +10,7 @@
     ./hardware-configuration.nix
     ../shared.nix
     ./monitors.nix
+    ../features/steam.nix
   ];
 
   # host specific overrides

@@ -6,6 +6,8 @@
       NIXCONFIG = "/etc/nixos/nixos-config/";
     };
 
+    historyControl = [ "ignoredups" ];
+
     shellAliases = {
       ls = "ls -lah --color=auto";
       nixdir = "cd $NIXCONFIG";
