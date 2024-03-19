@@ -26,6 +26,10 @@
 
       # ctrl-backspace delete word
       bind '"\C-h": backward-kill-word'
+
+      function run() {
+        $1 > /dev/null 2>&1 & disown
+      }
     '';
   };
 }
