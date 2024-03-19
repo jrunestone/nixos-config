@@ -35,10 +35,9 @@
 
     "org/gnome/shell" = {
       favorite-apps = [
-        "com.raggesilver.BlackBox.desktop"
+        "Alacritty.desktop"
         "vivaldi-stable.desktop"
         "spotify.desktop"
-        "slack.desktop"
         "obsidian.desktop"
       ];
     };

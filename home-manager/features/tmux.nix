@@ -3,7 +3,8 @@
     enable = true;
     sensibleOnTop = false;
     mouse = true;
-    prefix = "C-e";
+    prefix = "C-x";
+    escapeTime = 0;
     disableConfirmationPrompt = true;
 
     extraConfig = ''
