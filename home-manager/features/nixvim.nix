@@ -34,7 +34,7 @@
       softtabstop = 2;
       expandtab = true;
     };
-    
+
     keymaps = [
       {
         key = "<leader>n";

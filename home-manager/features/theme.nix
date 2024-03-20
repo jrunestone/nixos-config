@@ -31,6 +31,8 @@
       top-panel-position = 1;
       clock-menu-position = 1;
       workspace-popup = false;
+      notification-banner-position = 2;
+      panel = false;
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
@@ -40,10 +42,14 @@
       hot-keys = false;
       click-action = "minimize";
       disable-overview-on-startup = true;
-      background-opacity = 0.85;
+      custom-theme-shrink = true;
+      transparency-mode = "FIXED";
+      custom-background-color = true;
+      background-opacity = 0.75;
       background-color = "rgb(36,36,36)";
       intellihide = false;
       show-icons-notifications-counter = false;
+      dash-max-icon-size = 40;
     };
 
     "org/gnome/shell/extensions/space-bar/behavior" = {
