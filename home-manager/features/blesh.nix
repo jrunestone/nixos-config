@@ -18,7 +18,7 @@
     #bleopt edit_marker=
     #bleopt edit_marker_error=
 
-    ble-face auto_complete='fg=#5f5a60'
+    ble-face auto_complete='fg=#6c7086'
     ble-face syntax_command='fg=default,bold'
     ble-face syntax_quoted='fg=#a6e3a1'
     ble-face syntax_quotation='fg=#a6e3a1'
