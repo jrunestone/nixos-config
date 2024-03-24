@@ -30,6 +30,7 @@
         "org.gnome.Calendar.desktop" 
         "org.gnome.Nautilus.desktop" 
         "org.gnome.Settings.desktop" 
+        "org.gnome.Software.desktop" 
       ];
     };
 

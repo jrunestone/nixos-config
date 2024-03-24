@@ -8,11 +8,16 @@
     enable = true;
 
     settings = {
-      import = [ "${pkgs.alacritty-theme}/meliora.toml" ];
+      import = [ "${pkgs.alacritty-theme}/catppuccin_mocha.toml" ];
+
+      env = {
+        TERM = "xterm-256color";
+      };
 
       window = {
         opacity = 0.87;
         blur = true;
+        decorations = "None";
         decorations_theme_variant = "Dark";
 
         dimensions = {

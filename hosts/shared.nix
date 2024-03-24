@@ -11,6 +11,7 @@ in
     ./features/basic.nix
     ./features/environment.nix
     ./features/ssh.nix
+    ./features/flatpak.nix
     ./features/gnome.nix
     ./features/persistence.nix
     ./features/gfx.nix

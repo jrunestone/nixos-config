@@ -10,7 +10,6 @@
     ./hardware-configuration.nix
     ../shared.nix
     ./monitors.nix
-    ../features/steam.nix
   ];
 
   # host specific overrides

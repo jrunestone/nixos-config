@@ -7,6 +7,7 @@
     
     impermanence.url = "github:nix-community/impermanence";
     grub2-themes.url = "github:vinceliuice/grub2-themes";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
 
     disko = {
       url = "github:nix-community/disko";
@@ -24,7 +25,16 @@
     };
   };
 
-  outputs = { self, nixpkgs, disko, impermanence, home-manager, grub2-themes, ... }@inputs:
+  outputs = { 
+    self, 
+    nixpkgs, 
+    disko, 
+    impermanence, 
+    home-manager, 
+    grub2-themes, 
+    nixvim, 
+    nix-flatpak, 
+    ... }@inputs:
     let
       inherit (self) outputs;
       lib = nixpkgs.lib // home-manager.lib;

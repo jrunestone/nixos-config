@@ -17,9 +17,15 @@
     viAlias = true;
     vimAlias = true;
     
-    colorschemes.base16 = {
+    #colorschemes.base16 = {
+    #  enable = true;
+    #  colorscheme = "twilight";
+    #};
+    colorschemes.catppuccin = {
       enable = true;
-      colorscheme = "twilight";
+      flavour = "mocha";
+      background.dark = "mocha";
+      transparentBackground = true;
     };
 
     globals = {
@@ -135,7 +141,7 @@
           lspBuf = {
             "<leader>gd" = "definition";
             "<leader>gr" = "references";
-            "<leader>gg" = "hover";
+            "<leader>gh" = "hover";
           };
         };
       };
@@ -156,11 +162,7 @@
             name = "Debug";
             type = "gdb";
             request = "launch";
-            program = ''
-              function()
-                return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-              end
-            '';
+            program = "/home/jr/dev/src/home/asteroids-c/build/asteroids-c";
           }];
         };
       };
@@ -184,7 +186,7 @@
 
         keymaps = {
           previous = "<leader>a";
-          next = "<leader>d";
+          next = "<leader>s";
           close = "<leader>w";
         };
       };
@@ -238,7 +240,7 @@
       
       lualine = {
         enable = true;
-        theme = lib.mkForce "gruvbox_dark";
+        #theme = lib.mkForce "gruvbox_dark";
       };
     };
   };

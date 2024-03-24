@@ -12,6 +12,7 @@
       ".ssh"
       ".java" # jetbrains credentials
       ".nuget"
+      ".pki"
 
       ".local/share/keyrings"
       ".local/share/containers"
@@ -19,6 +20,9 @@
       ".local/share/applications" # vivaldi pwa
       ".local/share/icons"
       ".local/share/NuGet"
+      ".local/share/flatpak"
+
+      ".var/app/com.valvesoftware.Steam"
 
       ".config/obsidian"
       ".config/vivaldi"

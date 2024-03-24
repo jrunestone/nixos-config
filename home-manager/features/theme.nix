@@ -32,7 +32,6 @@
       clock-menu-position = 1;
       workspace-popup = false;
       notification-banner-position = 2;
-      panel = false;
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {

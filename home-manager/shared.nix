@@ -1,7 +1,8 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-    
+    inputs.nix-flatpak.homeManagerModules.nix-flatpak
+
     ./features/bash.nix
     ./features/basic.nix 
     ./features/tmux.nix 
@@ -24,6 +25,8 @@
     ./features/nixvim.nix
     ./features/just.nix
     ./features/podman.nix
+    ./features/pinta.nix
+    ./features/steam.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules );
 
   programs = {
