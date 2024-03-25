@@ -17,10 +17,6 @@
     viAlias = true;
     vimAlias = true;
     
-    #colorschemes.base16 = {
-    #  enable = true;
-    #  colorscheme = "twilight";
-    #};
     colorschemes.catppuccin = {
       enable = true;
       flavour = "mocha";

@@ -15,7 +15,7 @@
       };
 
       window = {
-        opacity = 0.87;
+        opacity = 0.93;
         blur = true;
         decorations = "None";
         decorations_theme_variant = "Dark";
