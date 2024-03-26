@@ -151,24 +151,6 @@
         "type": "github"
       }
     },
-    "grub2-themes": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1708174123,
-        "narHash": "sha256-h1m4PaeKXVXTJcAg0urnHHnXZKpIA159ZZ/XBOQXyZo=",
-        "owner": "vinceliuice",
-        "repo": "grub2-themes",
-        "rev": "eda1b86dd8e991ea0c03090ff60b4c0b63799489",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vinceliuice",
-        "repo": "grub2-themes",
-        "type": "github"
-      }
-    },
     "hardware": {
       "locked": {
         "lastModified": 1710123225,
@@ -261,38 +243,7 @@
         "type": "github"
       }
     },
-    "nix-flatpak": {
-      "locked": {
-        "lastModified": 1708781964,
-        "narHash": "sha256-qbEZgB1mNuMADLmM64EtcRjDHXR3UFL4xVmoanv9wZU=",
-        "owner": "gmodena",
-        "repo": "nix-flatpak",
-        "rev": "09d07c73b4d9771f527a168e0b1b6d8a1f39de28",
-        "type": "github"
-      },
-      "original": {
-        "owner": "gmodena",
-        "repo": "nix-flatpak",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
-      "locked": {
-        "lastModified": 1710508998,
-        "narHash": "sha256-OocbR8gk0boNU/JzegCsFC2RempumnGEzzm3qvqE5ZQ=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "6fd3c2ebcffeff005f7d39993f4f5f518b63a24a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "master",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
       "locked": {
         "lastModified": 1710451336,
         "narHash": "sha256-pP86Pcfu3BrAvRO7R64x7hs+GaQrjFes+mEPowCfkxY=",
@@ -365,12 +316,10 @@
     "root": {
       "inputs": {
         "disko": "disko",
-        "grub2-themes": "grub2-themes",
         "hardware": "hardware",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
-        "nix-flatpak": "nix-flatpak",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "nixvim": "nixvim"
       }
     },
