@@ -5,7 +5,7 @@ in
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.disko.nixosModules.disko
-    
+
     ./features/system
     ./features/system/boot.nix
     ./features/system/persistence.nix
@@ -13,6 +13,8 @@ in
     ./features/system/wired.nix
     ./features/system/pipewire.nix
     ./features/system/ssh.nix
+    ./features/system/font.nix
+    ./features/system/hyprland.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   nix = {

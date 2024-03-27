@@ -1,4 +1,11 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
+  environment.systemPackages = [ 
+    pkgs.tree
+    pkgs.just
+    pkgs.ripgrep
+  ];
+
+  # system config
   time.timeZone = "Europe/Stockholm";
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -15,6 +22,7 @@
   };
 
   services.xserver = {
+    enable = true;
     xkb = {
       layout = "se";
       variant = "";
@@ -30,8 +38,12 @@
     Defaults lecture = never
   '';
 
+  # nix config
   nix.gc = {
     automatic = true;
     options = "--delete-older-than 1w";
   };
+
+  # flatpak
+  services.flatpak.enable = true;
 }

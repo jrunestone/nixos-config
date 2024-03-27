@@ -2,5 +2,5 @@
 # You can build them using 'nix build .#example'
 { pkgs ? import <nixpkgs> { } }: rec {
   # example = pkgs.callPackage ./example { };
-  user-icons = pkgs.callPackage ./user-icons { };
+  rofi-catppuccin = pkgs.callPackage ./rofi-catppuccin { };
 }

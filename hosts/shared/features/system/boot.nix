@@ -6,4 +6,5 @@
   boot.loader.grub.configurationLimit = 20;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = ["quiet"];
+  boot.initrd.systemd.enable = true;
 }

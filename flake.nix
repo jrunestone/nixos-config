@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hardware.url = "github:nixos/nixos-hardware";
     impermanence.url = "github:nix-community/impermanence";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
 
     disko = {
       url = "github:nix-community/disko";
@@ -28,6 +29,8 @@
     disko, 
     impermanence, 
     home-manager, 
+    nix-flatpak,
+    nixvim,
     ... }@inputs:
     let
       inherit (self) outputs;
