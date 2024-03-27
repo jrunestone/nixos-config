@@ -19,7 +19,10 @@ stdenvNoCC.mkDerivation rec {
 
   installPhase = ''
     runHook preInstall
-    install -Dm644 -t $out/share/ basic/.local/share/rofi/themes
+
+    mkdir -p $out/share
+    cp -r basic/.local/share/rofi/themes $out/share/ 
+    
     runHook postInstall
   '';
 

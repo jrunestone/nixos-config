@@ -3,6 +3,7 @@
     pkgs.tree
     pkgs.just
     pkgs.ripgrep
+    pkgs.killall
   ];
 
   # system config

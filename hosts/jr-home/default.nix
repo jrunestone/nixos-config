@@ -8,7 +8,10 @@
     inputs.hardware.nixosModules.common-pc-ssd
 
     ./hardware-configuration.nix
+
     ../shared
+    ../shared/features/system/podman.nix
+    
     ./features/system
   ];
 

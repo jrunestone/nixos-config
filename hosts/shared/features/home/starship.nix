@@ -1,10 +1,11 @@
 { pkgs, lib, config, ... }: {
-  programs.bash.initExtra = ''
-    eval "$(starship init bash)"
-  '';
+  #programs.bash.initExtra = ''
+  #  eval "$(starship init bash)"
+  #'';
 
   programs.starship = {
     enable = true;
+    enableBashIntegration = true;
 
     settings = {
       palette = "catppuccin_mocha";

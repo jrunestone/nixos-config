@@ -12,7 +12,7 @@
     ./features/home/tmux.nix
     ./features/home/nixvim.nix
     ./features/home/hyprland.nix
-    o/features/home/rofi.nix
+    ./features/home/rofi.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules );
 
   programs = {

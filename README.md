@@ -1,10 +1,7 @@
-* terminal bg (prompt..)
-
-
-* PWA
-    * Outlook/other?
-    * Teams
-    * Protonpass
+## TODO
+* bar (clock, workspace, tray?)
+* notifications
+* todo/notes for special workspace
 
 ### devshells
 nix-direnv + flakes
@@ -26,10 +23,6 @@ nix-direnv + flakes
   * atm with DEVDIR=$(pwd) nix develop, just cmd? just cmd can check if in the same dir as flake
   * use nixdirenv to load .env with AZURE_CONFIG_DIR= and also az subscription=xx probably?
 * set insomnia to project dir?
-
-## Notes
-* Should modularize monitors.xml
-* Should define a std for nix develop flakes and where to store them etc
 
 ## Install
 User is hard-coded to "jr" in flake for all hosts.
