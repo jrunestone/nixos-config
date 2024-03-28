@@ -15,7 +15,6 @@
 
       ".local/share/keyrings"
       ".local/share/containers"
-      ".local/share/applications"
       ".local/share/icons"
       ".local/share/NuGet"
       ".local/share/flatpak"
@@ -34,8 +33,13 @@
       ".cache/spotify"
 
       # vivaldi
-      ".config/vivaldi"
-      ".cache/vivaldi"
+      #".config/vivaldi"
+      #".cache/vivaldi"
+      #".local/share/applications"
+
+      # firefox
+      ".cache/mozilla/firefox"
+      "./mozilla/firefox"
 
       # misc
       ".var/app/com.valvesoftware.Steam"

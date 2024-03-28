@@ -12,6 +12,7 @@
     ./features/home/tmux.nix
     ./features/home/nixvim.nix
     ./features/home/hyprland.nix
+    ./features/home/waybar.nix
     ./features/home/rofi.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules );
 

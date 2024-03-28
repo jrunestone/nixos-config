@@ -10,6 +10,9 @@
       font_family = "Fira Code Nerd Font";
       font_size = 14;
       confirm_os_window_close = 0;
+      scrollback_lines = 10000;
     };
+
+    shellIntegration.enableBashIntegration = false;
   };
 }

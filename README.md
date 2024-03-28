@@ -1,28 +1,45 @@
 ## TODO
+* update flake
+* disable sounds
+* notifications on other workspaces
+* windowrule firefox popups floating
+* windowrule notifications floating
 * bar (clock, workspace, tray?)
+* 1pass
+* remove/change askpass
+* open workspace x at lauynch? or allow negative workspaces
+* workspace overview
 * notifications
 * todo/notes for special workspace
+    * keyboard repeat
+    * keyring
+* rider weird
+* print scrn
+    * borders
+* starship borked
+* wallpaper
+* sddm
+* lock screen
+
+## Aliases
+* `$NIXCONFIG` or `nixdir`
+* `nixedit`
+* `nix-rebuild [switch|boot] $NIXCONFIG.#$HOSTNAME` or `nixbuild [switch|boot]`
 
 ### devshells
-nix-direnv + flakes
-* docker-compose for (redis, sql)
-* flake for pkgs (dotnet, node, az)
-* template flakes in nix-config repo
-* keep stuff in a user-specific gitignored folder in the project
-  * env/jr
-  * contains flake.*, .env, .az, docker-compose, just cmds, dev-certs etc
-  * run just dev to load .env file and run nix develop
-  * run (global) just init-dev to symlink the env/jr dir from another repo
-  * have a global just cmd or alias to point to ./env/jr/justfile or a root justfile that imports it
-* dev-certs (just cmd?)
-* structure for multiple envs
-  * local urls, localhost:ports or nginx proxy?
-  * multiple db servers, single db?
-  * single db server, multiple dbs?
-* set az config dir to project dir
-  * atm with DEVDIR=$(pwd) nix develop, just cmd? just cmd can check if in the same dir as flake
-  * use nixdirenv to load .env with AZURE_CONFIG_DIR= and also az subscription=xx probably?
-* set insomnia to project dir?
+* Uses devenvs with flakes and nix develop.
+* Separate repo for project-specific devenv setups
+* A devenv is a parent folder with meta files and then the project in a project dir gitignored
+* Run `just develop` to init the devenv with the correct dirs, setup certs etc
+
+Todo:
+* Global justfile for shared cmds like develop, export/import db, make certs
+* Change to a shared azure sql server for umbraco dbs?
+* Local url mapping with traefik or other?
+* Set AZ subscription automatically
+
+Global command ideas:
+* Dockerify an umbraco project
 
 ## Install
 User is hard-coded to "jr" in flake for all hosts.
@@ -31,7 +48,7 @@ User is hard-coded to "jr" in flake for all hosts.
 2. Exit installer into cmd
 3. `git clone https://github.com/jrunestone/nixos-config.git`
 4. `sudo su`
-5. `nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko /home/nixos/nixos-config/disko-config.nix --arg disk '"/dev/<disk>"'`
+5. `nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko /home/nixos/nixos-config/hosts/shared/disko-config.nix --arg disk '"/dev/<disk>"'`
 6. `mkdir -p {/mnt/nix/persist/system/etc/nixos,/mnt/nix/persist/system/passwords}`
 7. `mv nixos-config /mnt/nix/persist/system/etc/nixos`
 8. `mkpasswd -m sha-512 "<password>" > /mnt/nix/persist/system/passwords/jr`
@@ -39,12 +56,3 @@ User is hard-coded to "jr" in flake for all hosts.
 10. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
 11. `reboot`
 12. Copy over ssh keys
-13. Configure initial settings (these are then persisted):
-    1. PWA:s
-
-## Commands
-* `$NIXCONFIG` or `nixdir`
-* `nixedit`
-* `nix-rebuild [switch|boot] $NIXCONFIG.#$HOSTNAME` or `nixbuild [switch|boot]`
-* `journalctl -b -u home-manager-jr.service`
-* `journalctl -b --identifier "hm-activate-$user"`

@@ -47,4 +47,7 @@
 
   # flatpak
   services.flatpak.enable = true;
+
+  # keyring
+  services.gnome.gnome-keyring.enable = true;
 }
