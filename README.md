@@ -22,6 +22,7 @@
 * lock screen
 * screenshot editor
 * rofi
+* nix cmds in global justfile
 
 ## Aliases
 * `$NIXCONFIG` or `nixdir`

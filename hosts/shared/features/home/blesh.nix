@@ -22,6 +22,7 @@
     ble-face syntax_command='fg=default,bold'
     ble-face syntax_quoted='fg=#a6e3a1'
     ble-face syntax_quotation='fg=#a6e3a1'
+    ble-face syntax_error='bg=#f38ba8'
     ble-face command_builtin='fg=default,bold'
     ble-face command_file='fg=default,bold'
     ble-face command_alias='fg=default,bold'
@@ -31,7 +32,7 @@
     ble-face argument_option='fg=#afc4db'
     ble-face region_insert='fg=#b4befe'
     ble-face region_match='bg=153,fg=black,bold'
-    ble-face varname_export='fg=#a6e3a1,bold'
-    ble-face syntax_error='bg=#f38ba8'
+    ble-face varname_unset='fg=196'
+    ble-face varname_export='fg=#a6e3a1'
   '';
 }
