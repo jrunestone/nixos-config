@@ -21,6 +21,11 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland-contrib = {
+      url = "github:hyprwm/contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { 
@@ -31,6 +36,7 @@
     home-manager, 
     nix-flatpak,
     nixvim,
+    hyprland-contrib,
     ... }@inputs:
     let
       inherit (self) outputs;

@@ -1,12 +1,12 @@
 ## TODO
 * update flake
-* disable sounds
+    * disable sounds
 * notifications on other workspaces
 * windowrule firefox popups floating
 * windowrule notifications floating
 * bar (clock, workspace, tray?)
 * 1pass
-* remove/change askpass
+    * remove/change askpass
 * open workspace x at lauynch? or allow negative workspaces
 * workspace overview
 * notifications
@@ -14,12 +14,14 @@
     * keyboard repeat
     * keyring
 * rider weird
-* print scrn
+    * print scrn
     * borders
 * starship borked
 * wallpaper
 * sddm
 * lock screen
+* screenshot editor
+* rofi
 
 ## Aliases
 * `$NIXCONFIG` or `nixdir`

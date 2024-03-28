@@ -4,6 +4,7 @@
     pkgs.just
     pkgs.ripgrep
     pkgs.killall
+    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];
 
   # system config
@@ -50,4 +51,7 @@
 
   # keyring
   services.gnome.gnome-keyring.enable = true;
+
+  # polkit
+  security.polkit.enable = true;
 }

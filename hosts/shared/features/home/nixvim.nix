@@ -193,7 +193,7 @@
         enable = true;
   
         keymaps = {
-          "<leader>ff" = "find_files";
+          "<leader><leader>" = "find_files";
           "<leader>fb" = "buffers";
           "<leader>fg" = "live_grep";
           "<leader>fc" = "commands";
