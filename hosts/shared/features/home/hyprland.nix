@@ -1,4 +1,6 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
+  home.packages = [ pkgs.swww ];
+
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -23,6 +25,7 @@
 
       # startup commands
       exec-once = [
+        "swww init && swww img ${../../../../assets/wallpapers}/1.png"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
       ];
 
@@ -30,6 +33,9 @@
       windowrulev2 = [
         "workspace special,title:^(Spotify)(.*)$"
         "float,title:^(Spotify)(.*)$"
+
+        "workspace special,class:^(1Password)(.*)$"
+        "float,class:^(1Password)(.*)$"
       ];
 
       # keybinds
@@ -39,7 +45,8 @@
         "$mod, T, exec, kitty"
         "$mod, W, exec, firefox"
         "$mod, S, exec, spotify"
-        "$mod, Space, exec, rofi -show drun"
+        "$mod, Space, exec, fuzzel"
+        "$mod, L, exec, hyprlock"
 
         "$mod SHIFT, S, exec, grimblast copy area"
 

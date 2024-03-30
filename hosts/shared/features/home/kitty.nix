@@ -7,7 +7,7 @@
 
     settings = {
       background_opacity = "0.93";
-      font_family = "Fira Code Nerd Font";
+      font_family = "FiraCode Nerd Font";
       font_size = 14;
       confirm_os_window_close = 0;
       scrollback_lines = 10000;

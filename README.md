@@ -1,28 +1,15 @@
 ## TODO
-* update flake
-    * disable sounds
-* notifications on other workspaces
+* change theme (nixvim, dunst, fluzzel, kitty, auth asker, sddm, starship, rider)
+    * qt..? gtk..?
+    * https://www.reddit.com/r/unixporn/comments/9y9w0r/sway_first_rice_on_my_super_old_macbook_air/
 * windowrule firefox popups floating
-* windowrule notifications floating
-* bar (clock, workspace, tray?)
-* 1pass
-    * remove/change askpass
-* open workspace x at lauynch? or allow negative workspaces
-* workspace overview
-* notifications
-* todo/notes for special workspace
-    * keyboard repeat
-    * keyring
+* pwa: outlook, teams, proton
 * rider weird
-    * print scrn
-    * borders
 * starship borked
-* wallpaper
-* sddm
-* lock screen
+* firefox extednsions windows weird
+
 * screenshot editor
-* rofi
-* nix cmds in global justfile
+* todo/notes for special workspace
 
 ## Aliases
 * `$NIXCONFIG` or `nixdir`

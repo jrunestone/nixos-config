@@ -42,16 +42,6 @@
       }
       
       {
-        key = "<leader>m";
-        action = ":MCstart<CR>";
-      }
-
-      {
-        key = "<leader>mp";
-        action = ":MCpattern<CR>";
-      }
-
-      {
         key = "<leader>t2";
         action = ":set shiftwidth=2 tabstop=2 softtabstop=2<CR>";
       }
@@ -185,10 +175,6 @@
         };
       };
 
-      multicursors = {
-        enable = true;
-      };
-
       telescope = {
         enable = true;
   
@@ -230,11 +216,6 @@
             leaveDirsOpen = true;
           };
         };
-      };
-      
-      lualine = {
-        enable = true;
-        #theme = lib.mkForce "gruvbox_dark";
       };
     };
   };

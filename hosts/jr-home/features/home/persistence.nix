@@ -39,7 +39,7 @@
 
       # firefox
       ".cache/mozilla/firefox"
-      "./mozilla/firefox"
+      "./.mozilla/firefox"
 
       # misc
       ".var/app/com.valvesoftware.Steam"

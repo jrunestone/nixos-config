@@ -14,6 +14,7 @@
     
     text = ''
       [default-routes]
+      alsa_card.pci-0000_0a_00.1:output:hdmi-output-1={"channelVolumes":[1.000000, 1.000000], "iec958Codecs":[], "latencyOffsetNsec":0, "mute":false, "channelMap":["FL", "FR"]}
       alsa_card.pci-0000_0a_00.1:output:hdmi-output-1:channelMap=FL;FR;
       alsa_card.pci-0000_0a_00.1:output:hdmi-output-1:channelVolumes=1.0;1.0;
       alsa_card.pci-0000_0a_00.1:output:hdmi-output-1:iec958Codecs=

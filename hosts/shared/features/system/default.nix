@@ -1,12 +1,4 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
-  environment.systemPackages = [ 
-    pkgs.tree
-    pkgs.just
-    pkgs.ripgrep
-    pkgs.killall
-    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
-  ];
-
   # system config
   time.timeZone = "Europe/Stockholm";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -51,6 +43,7 @@
 
   # keyring
   services.gnome.gnome-keyring.enable = true;
+  environment.variables.XDG_RUNTIME_DIR = "/run/user/$UID";
 
   # polkit
   security.polkit.enable = true;

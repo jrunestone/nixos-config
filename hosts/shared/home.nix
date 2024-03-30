@@ -12,8 +12,10 @@
     ./features/home/tmux.nix
     ./features/home/nixvim.nix
     ./features/home/hyprland.nix
+    ./features/home/hyprlock.nix
     ./features/home/waybar.nix
-    ./features/home/rofi.nix
+    ./features/home/fuzzel.nix
+    ./features/home/dunst.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules );
 
   programs = {
