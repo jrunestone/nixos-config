@@ -15,11 +15,9 @@
     viAlias = true;
     vimAlias = true;
     
-    colorschemes.catppuccin = {
+    colorschemes.base16 = {
       enable = true;
-      flavour = "mocha";
-      background.dark = "mocha";
-      transparentBackground = true;
+      colorscheme = "tomorrow-night";
     };
 
     globals = {

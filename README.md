@@ -1,13 +1,11 @@
 ## TODO
-* change theme (nixvim, dunst, fluzzel, kitty, auth asker, sddm, starship, rider)
-    * qt..? gtk..?
-    * https://www.reddit.com/r/unixporn/comments/9y9w0r/sway_first_rice_on_my_super_old_macbook_air/
+* change theme (dunst, fluzzel, auth asker, sddm, starship, rider)
+    * https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2F2bwm-minimalistic-setup-based-on-base16-tomorrow-night-v0-y4n93q69dtm81.png%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3D12507332cb814d7c106d2fe343eabc594f4ef537
 * windowrule firefox popups floating
 * pwa: outlook, teams, proton
 * rider weird
 * starship borked
 * firefox extednsions windows weird
-
 * screenshot editor
 * todo/notes for special workspace
 

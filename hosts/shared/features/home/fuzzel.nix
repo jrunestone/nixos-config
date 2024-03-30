@@ -6,8 +6,9 @@
       main = {
         layer = "overlay";
         terminal = "kitty";
-        font = "FiraCode Nerd Font:size=18";
+        font = "Noto Sans:size=18";
         dpi-aware = "no";
+        icons-enabled = "no";
       };
     };
   };

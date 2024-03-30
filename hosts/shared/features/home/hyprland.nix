@@ -7,16 +7,6 @@
     settings = {
       monitor = lib.mkDefault ",preferred,auto,auto";
       
-      general = {
-        gaps_in = 5;
-        gaps_out = 10;
-        border_size = 3;
-      };
-
-      decoration = {
-        rounding = 10;
-      };
-
       input = {
         kb_layout = "se";
         repeat_delay = 350;
@@ -93,6 +83,22 @@
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
       ];
+
+      general = {
+        gaps_in = 20;
+        gaps_out = 20;
+        border_size = 5;
+        "col.inactive_border" = "rgb(${config.colorScheme.palette.base02})";
+        "col.active_border" = "rgb(${config.colorScheme.palette.base05})";
+      };
+
+      decoration = {
+        rounding = 0;
+        drop_shadow = true;
+        shadow_offset = "5 5";
+        shadow_render_power = 2;
+        dim_special = 0.4;
+      };
     };
   };
 }

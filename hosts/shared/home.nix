@@ -1,6 +1,7 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   imports = [
     inputs.nix-flatpak.homeManagerModules.nix-flatpak
+    inputs.nix-colors.homeManagerModules.default
 
     ./features/home
     ./features/home/bash.nix
@@ -17,6 +18,8 @@
     ./features/home/fuzzel.nix
     ./features/home/dunst.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules );
+
+  colorScheme = inputs.nix-colors.colorSchemes.tomorrow-night;
 
   programs = {
     home-manager.enable = true;

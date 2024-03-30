@@ -6,6 +6,7 @@
     hardware.url = "github:nixos/nixos-hardware";
     impermanence.url = "github:nix-community/impermanence";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    nix-colors.url = "github:misterio77/nix-colors";
 
     disko = {
       url = "github:nix-community/disko";
@@ -37,6 +38,7 @@
     nix-flatpak,
     nixvim,
     hyprland-contrib,
+    nix-colors,
     ... }@inputs:
     let
       inherit (self) outputs;

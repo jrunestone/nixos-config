@@ -1,6 +1,7 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   fonts.packages = [
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "IBMPlexMono" ]; })
+    (pkgs.noto-fonts.override { variants = [ "NotoSans" ]; })
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 
   fonts.fontconfig.enable = true;
