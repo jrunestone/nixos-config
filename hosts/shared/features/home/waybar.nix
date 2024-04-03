@@ -9,11 +9,14 @@
         layer = "top";
         position = "bottom";
         modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "clock" ];
-        modules-right = [ "tray" ];
+        modules-right = [ "tray" "clock" ];
 
         clock = {
-          format = "{:%b %d %H:%M}";
+          format = "{:%H:%M}";
+        };
+
+        tray = {
+          spacing = 10;
         };
       };
     };
@@ -28,10 +31,12 @@
 
       window#waybar {
         background: #${config.colorScheme.palette.base00};
+        box-shadow: 0px -5px 10px 0px #ee1a1a;
       }
 
       #workspaces button {
         color: #${config.colorScheme.palette.base02};
+        padding: 3px;
       }
 
       #workspaces button.focused,
@@ -41,6 +46,7 @@
 
       #clock, #tray {
         color: #${config.colorScheme.palette.base05};
+        margin-right: 15px;
       }
     '';
   };

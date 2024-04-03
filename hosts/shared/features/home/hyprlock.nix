@@ -47,17 +47,5 @@
       halign = center
       valign = top
     }
-
-    label {
-        monitor =
-        text = $USER
-        color = $foreground
-        #color = rgba(255, 255, 255, 0.6)
-        font_size = 25
-        font_family = FiraCode Nerd Font
-        position = 0, -40
-        halign = center
-        valign = center
-    }
   '';
 }

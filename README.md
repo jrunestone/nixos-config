@@ -1,5 +1,5 @@
 ## TODO
-* change theme (dunst, fluzzel, auth asker, sddm, starship, rider)
+* change theme (dunst, auth asker, sddm, rider)
     * https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2F2bwm-minimalistic-setup-based-on-base16-tomorrow-night-v0-y4n93q69dtm81.png%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3D12507332cb814d7c106d2fe343eabc594f4ef537
 * windowrule firefox popups floating
 * pwa: outlook, teams, proton
@@ -8,6 +8,11 @@
 * firefox extednsions windows weird
 * screenshot editor
 * todo/notes for special workspace
+* unlock keyring at login + askpass ugly
+* nixvim coq borked
+* bind open terminal floating
+* waybar padding+styling
+* lock screen styling
 
 ## Aliases
 * `$NIXCONFIG` or `nixdir`

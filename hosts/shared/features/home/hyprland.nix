@@ -97,6 +97,8 @@
         drop_shadow = true;
         shadow_offset = "5 5";
         shadow_render_power = 2;
+        shadow_range = 8;
+        "col.shadow" = "rgba(00000045)";
         dim_special = 0.4;
       };
     };
