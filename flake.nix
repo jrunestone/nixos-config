@@ -7,6 +7,7 @@
     impermanence.url = "github:nix-community/impermanence";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nix-colors.url = "github:misterio77/nix-colors";
+    hyprland.url = "github:hyprwm/Hyprland";
 
     disko = {
       url = "github:nix-community/disko";
@@ -27,6 +28,11 @@
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = { 
@@ -37,6 +43,7 @@
     home-manager, 
     nix-flatpak,
     nixvim,
+    hyprland,
     hyprland-contrib,
     nix-colors,
     ... }@inputs:

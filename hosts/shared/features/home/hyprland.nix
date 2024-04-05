@@ -3,6 +3,12 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    systemd.enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+
+    plugins = [
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+    ];
 
     settings = {
       monitor = lib.mkDefault ",preferred,auto,auto";
@@ -28,6 +34,16 @@
         "float,class:^(1Password)(.*)$"
       ];
 
+      # plugins
+      plugins = {
+        hyprexpo = {
+          columns = 3;
+          gap_size = 20;
+          bg_col = "rgb(${config.colorScheme.palette.base00})";
+          workspace_method = "first 1";
+        };
+      };
+
       # keybinds
       "$mod" = "SUPER";
 
@@ -37,13 +53,14 @@
         "$mod, S, exec, spotify"
         "$mod, Space, exec, fuzzel"
         "$mod, L, exec, hyprlock"
+        "$mod, dead_diaeresis, hyprexpo:expo, toggle"
 
         "$mod SHIFT, S, exec, grimblast copy area"
 
         "$mod, X, killactive"
         "$mod, C, togglefloating"
         "$mod, V, fullscreen, 1"
-        #"$mod, P, setfloating"
+        "$mod, P, setfloating"
         "$mod, P, pin"
 
         "$mod, 1, workspace, 1"
@@ -64,9 +81,9 @@
         "$mod CTRL, Down, togglespecialworkspace"
         
         "$mod SHIFT, Up, movetoworkspace, special"
-        #"$mod SHIFT, Up, setfloating"
+        "$mod SHIFT, Up, setfloating"
         "$mod SHIFT, Down, movetoworkspace, e+0"
-        #"$mod SHIFT, Down, settiled"
+        "$mod SHIFT, Down, settiled"
         
         "$mod ALT, Left, movewindow, l"
         "$mod ALT, Right, movewindow, r"
@@ -85,7 +102,7 @@
       ];
 
       general = {
-        gaps_in = 20;
+        gaps_in = 15;
         gaps_out = 20;
         border_size = 5;
         "col.inactive_border" = "rgb(${config.colorScheme.palette.base02})";
@@ -100,6 +117,10 @@
         shadow_range = 8;
         "col.shadow" = "rgba(00000045)";
         dim_special = 0.4;
+      };
+
+      debug = {
+        disable_logs = false;
       };
     };
   };

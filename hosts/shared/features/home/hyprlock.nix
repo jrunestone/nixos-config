@@ -18,10 +18,32 @@
       disable_loading_bar = true
     }
 
+    label {
+      monitor =
+      text = cmd[update:1000] echo "$(date +"%H:%M%p")"
+      color = $foreground
+      font_size = 120
+      font_family = FiraCode Nerd Font
+      position = 0, 200
+      halign = center
+      valign = center
+    }
+
+    image {
+      monitor =
+      path = ${../../../../assets}/jr.png
+      #size = 512
+      rounding = -1
+      position = 0, 100
+      halign = center
+      valign = center
+    }
+
     input-field {
       monitor =
       size = 250, 60
       outline_thickness = 2
+      rounding = 10
       dots_size = 0.2
       dots_spacing = 0.2
       dots_center = true
@@ -31,21 +53,9 @@
       fade_on_empty = false
       font_family = FiraCode Nerd Font
       hide_input = false
-      position = 0, -120
+      #position = 0, -120
       halign = center
       valign = center
-    }
-
-    label {
-      monitor =
-      text = cmd[update:1000] echo "$(date +"%H:%M%p")"
-      color = $foreground
-      #color = rgba(255, 255, 255, 0.6)
-      font_size = 120
-      font_family = FiraCode Nerd Font
-      position = 0, -300
-      halign = center
-      valign = top
     }
   '';
 }

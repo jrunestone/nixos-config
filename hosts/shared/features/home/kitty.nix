@@ -13,6 +13,7 @@
       scrollback_lines = 10000;
       enable_audio_bell = "no";
       window_padding_width = 10;
+      disable_ligatures = "always";
     };
 
     shellIntegration.enableBashIntegration = false;

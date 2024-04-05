@@ -8,6 +8,8 @@
         mode = "dock";
         layer = "top";
         position = "bottom";
+        #margin = "10 20 20 20";
+        height = 40;
         modules-left = [ "hyprland/workspaces" ];
         modules-right = [ "tray" "clock" ];
 
@@ -16,7 +18,7 @@
         };
 
         tray = {
-          spacing = 10;
+          spacing = 8;
         };
       };
     };
@@ -30,8 +32,11 @@
       }
 
       window#waybar {
-        background: #${config.colorScheme.palette.base00};
-        box-shadow: 0px -5px 10px 0px #ee1a1a;
+        background-color: rgba(24,24,26,1) /*#${config.colorScheme.palette.base00}*/;
+      }
+
+      #workspaces {
+        margin-left: 10px;
       }
 
       #workspaces button {
@@ -47,6 +52,10 @@
       #clock, #tray {
         color: #${config.colorScheme.palette.base05};
         margin-right: 15px;
+      }
+
+      #tray {
+        margin-right: 17px;
       }
     '';
   };
