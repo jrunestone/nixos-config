@@ -22,7 +22,7 @@
     ble-face syntax_command='fg=default,bold'
     ble-face syntax_quoted='fg=#a6e3a1'
     ble-face syntax_quotation='fg=#a6e3a1'
-    ble-face syntax_error='bg=#f38ba8'
+    ble-face syntax_error='none'
     ble-face command_builtin='fg=default,bold'
     ble-face command_file='fg=default,bold'
     ble-face command_alias='fg=default,bold'

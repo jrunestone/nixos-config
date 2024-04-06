@@ -5,38 +5,48 @@
 
     settings = {
       primary = {
-        mode = "dock";
+        #mode = "dock;
         layer = "top";
         position = "bottom";
-        #margin = "10 20 20 20";
+        margin = "5 20 15 20";
         height = 40;
         modules-left = [ "hyprland/workspaces" ];
         modules-right = [ "tray" "clock" ];
 
         clock = {
-          format = "{:%H:%M}";
+          format = "{:%H:%M %a %d}";
         };
 
         tray = {
           spacing = 8;
+        };
+
+        "hyprland/workspaces" = {
+          persistent-workspaces = {
+            "*" = 5;
+          };
         };
       };
     };
 
     style = ''
       * {
-        border: none;
         font-family: Noto Sans;
         font-size: 14px;
         font-weight: bold;
       }
 
       window#waybar {
-        background-color: rgba(24,24,26,1) /*#${config.colorScheme.palette.base00}*/;
+        background-color: transparent;
+      }
+
+      #workspaces, #clock, #tray {
+        background-color: #${config.colorScheme.palette.base00};
+        border-radius: 5px;
       }
 
       #workspaces {
-        margin-left: 10px;
+        padding: 5px 10px;
       }
 
       #workspaces button {
@@ -51,7 +61,7 @@
 
       #clock, #tray {
         color: #${config.colorScheme.palette.base05};
-        margin-right: 15px;
+        padding: 5px 15px;
       }
 
       #tray {

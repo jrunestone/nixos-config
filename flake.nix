@@ -8,6 +8,8 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nix-colors.url = "github:misterio77/nix-colors";
     hyprland.url = "github:hyprwm/Hyprland";
+    hyprpaper.url = "github:hyprwm/hyprpaper";
+    hyprlock.url = "github:hyprwm/hyprlock";
 
     disko = {
       url = "github:nix-community/disko";
@@ -44,6 +46,8 @@
     nix-flatpak,
     nixvim,
     hyprland,
+    hyprpaper,
+    hyprlock,
     hyprland-contrib,
     nix-colors,
     ... }@inputs:

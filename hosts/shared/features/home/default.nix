@@ -6,10 +6,18 @@
     pkgs.killall
     pkgs.wl-clipboard
     pkgs.hyprpicker
+    pkgs.playerctl
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];
 
-  xdg.enable = true;
+  xdg = {
+    enable = true;
+
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
+  };
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -24,4 +32,7 @@
     name = "Simp1e Adw Dark";
     size = 16;
   };
+
+  # media key control
+  services.playerctld.enable = true;
 }

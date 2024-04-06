@@ -15,6 +15,7 @@ in
     ./features/system/ssh.nix
     ./features/system/font.nix
     ./features/system/hyprland.nix
+    ./features/system/greetd.nix
     ./features/system/1password.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 

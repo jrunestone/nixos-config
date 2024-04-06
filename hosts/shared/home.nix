@@ -13,6 +13,7 @@
     ./features/home/tmux.nix
     ./features/home/nixvim.nix
     ./features/home/hyprland.nix
+    ./features/home/hyprpaper.nix
     ./features/home/hyprlock.nix
     ./features/home/waybar.nix
     ./features/home/fuzzel.nix

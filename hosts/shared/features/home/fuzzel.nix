@@ -7,12 +7,12 @@
         layer = "overlay";
         terminal = "kitty";
         font = "Noto Sans:size=18";
+        prompt = "\"   \"";
         dpi-aware = "no";
-        #icons-enabled = "no";
         horizontal-pad = 35;
         vertical-pad = 20;
         inner-pad = 15;
-        width = 50;
+        width = 20;
       };
 
       colors = {
@@ -22,12 +22,12 @@
         selection = "#${config.colorScheme.palette.base01}FF";
         selection-text = "#${config.colorScheme.palette.base04}FF";
         selection-match = "#${config.colorScheme.palette.base0A}FF";
-        border = "#${config.colorScheme.palette.base09}FF";
+        border = "#${config.colorScheme.palette.base06}FF";
       };
 
       border = {
-        width = 5;
-        radius = 0;
+        width = 3;
+        radius = 7;
       };
     };
   };

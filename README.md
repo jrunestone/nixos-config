@@ -1,22 +1,19 @@
 ## TODO
-* change theme (dunst, auth asker, sddm, rider)
-    * https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2F2bwm-minimalistic-setup-based-on-base16-tomorrow-night-v0-y4n93q69dtm81.png%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3D12507332cb814d7c106d2fe343eabc594f4ef537
-* windowrule firefox popups floating
 * pwa: outlook, teams, proton
 * rider crashing
-* starship borked
-* firefox extednsions windows weird
 * screenshot editor
 * todo/notes for special workspace
-* unlock keyring at login + askpass ugly
-* nixvim coq borked + wrap false
-* bind open terminal floating
-* lock screen styling
 * slack doesnt open links in ff
-* notifications in other workspaces
-* static workspace numbers
-* waybar not full bar
-* tray menus under windows
+* theme tmux
+* waybar fix empty tray
+* config nix for wallpaper, avatar etc
+* User photo in sddm
+* File manager term
+
+## Known issues
+* Slack (electron apps?) doesn't show notifications in other workspaces
+* Firefox extensions windows lagging
+* Lock screen doesnt support image element yet
 
 ## Aliases
 * `$NIXCONFIG` or `nixdir`

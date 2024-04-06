@@ -9,11 +9,10 @@
 
     extraConfig = {
       core.autocrlf = "input";
+      core.askPass = "";
       init.defaultBranch = "main";
-
-      pull = {
-        rebase = true;
-      };
+      credential.helper = "cache --timeout=28800";
+      pull.rebase = true;
 
       url = {
         "git@github.com:" = {

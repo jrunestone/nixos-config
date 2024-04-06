@@ -15,14 +15,6 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
-  services.xserver = {
-    enable = true;
-    xkb = {
-      layout = "se";
-      variant = "";
-    };
-  };
-
   console.keyMap = "sv-latin1";
   services.printing.enable = true;
   hardware.enableRedistributableFirmware = true;
@@ -41,10 +33,9 @@
   # flatpak
   services.flatpak.enable = true;
 
-  # keyring
+  # security
   services.gnome.gnome-keyring.enable = true;
   environment.variables.XDG_RUNTIME_DIR = "/run/user/$UID";
-
-  # polkit
   security.polkit.enable = true;
+  security.pam.services.hyprlock = {};
 }

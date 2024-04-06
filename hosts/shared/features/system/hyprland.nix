@@ -1,6 +1,5 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.enable = true;
+  #services.xserver.enable = true;
 
   programs.hyprland = {
     enable = true;

@@ -1,6 +1,4 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
-  home.packages = [ pkgs.swww ];
-
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
@@ -15,13 +13,12 @@
       
       input = {
         kb_layout = "se";
-        repeat_delay = 350;
+        repeat_delay = 300;
         repeat_rate = 45;
       };
 
       # startup commands
       exec-once = [
-        "swww init && swww img ${../../../../assets/wallpapers}/1.png"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
       ];
 
@@ -49,13 +46,19 @@
 
       bind = [
         "$mod, T, exec, kitty"
+        "$mod CTRL, T, exec, [float] kitty"
         "$mod, W, exec, firefox"
         "$mod, S, exec, spotify"
         "$mod, Space, exec, fuzzel"
         "$mod, L, exec, hyprlock"
         "$mod, dead_diaeresis, hyprexpo:expo, toggle"
+        "$mod CTRL, Pause, exec, shutdown -r now"
+        "$mod CTRL, Delete, exec, shutdown now"
+        "$mod SHIFT, S, exec, grimblast --freeze copysave area"
 
-        "$mod SHIFT, S, exec, grimblast copy area"
+        "$mod, Pause, exec, playerctl play-pause"
+        "$mod, Delete, exec, playerctl next"
+        "$mod, Print, exec, playerctl previous"
 
         "$mod, X, killactive"
         "$mod, C, togglefloating"

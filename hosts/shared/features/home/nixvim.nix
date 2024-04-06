@@ -145,7 +145,7 @@
             name = "Debug";
             type = "gdb";
             request = "launch";
-            program = "/home/jr/dev/src/home/asteroids-c/build/asteroids-c";
+            #program = ""; # TODO: must specify a hard coded path atm
           }];
         };
       };
@@ -196,6 +196,7 @@
           cpp
           javascript
           typescript
+          html
         ];
       };
       
