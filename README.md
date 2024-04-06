@@ -3,13 +3,12 @@
 * rider crashing
 * screenshot editor
 * todo/notes for special workspace
-* config nix for wallpaper, avatar etc
 * File manager term
+* Default wallpaper flashing at boot
 
 ## Known issues
 * Slack (electron apps?) doesn't show notifications in other workspaces
 * Firefox extensions windows lagging
-* Lock screen doesnt support image element yet
 
 ## Aliases
 * `$NIXCONFIG` or `nixdir`

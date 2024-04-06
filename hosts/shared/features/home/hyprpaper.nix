@@ -11,7 +11,7 @@
     ];
 
     wallpapers = [
-      "${config.host-options.home.wallpaper}"
+      ",${config.host-options.home.wallpaper}"
     ];
   };
 }

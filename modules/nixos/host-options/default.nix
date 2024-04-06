@@ -6,6 +6,11 @@
           type = lib.types.path;
           default = ../../../assets/wallpapers/1.png;
         };
+
+        user-icon = lib.mkOption {
+          type = lib.types.path;
+          default = ../../../assets/jr.png;
+        };
       };
 
       system = {

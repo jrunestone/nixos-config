@@ -1,4 +1,4 @@
-{ pkgs, inputs, ...}: let
+{ lib, config, pkgs, inputs, ...}: let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
   hyprland-pkg = "${inputs.hyprland.packages.${pkgs.system}.hyprland}";
 in {
@@ -6,7 +6,7 @@ in {
     enable = true;
 
     settings = {
-      initial_session = {
+      initial_session = lib.mkIf (config.host-options.system.autoLogin) {
         command = "${hyprland-pkg}/bin/Hyprland";
         user = "jr";
       };

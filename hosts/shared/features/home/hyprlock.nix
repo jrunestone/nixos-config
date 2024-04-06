@@ -15,7 +15,7 @@
 
     backgrounds = [{
       monitor = "";
-      path = "${../../../../assets/wallpapers/1.png}";
+      path = "${config.host-options.home.wallpaper}";
       blur_passes = 3;
       contrast = 0.8916;
       brightness = 0.8172;
@@ -36,7 +36,7 @@
 
     images = [{
       monitor = "";
-      path = "${../../../../assets/jr.png}";
+      path = "${config.host-options.home.user-icon}";
       #size = 512
       rounding = -1;
       position = { x = 0; y = 100; };

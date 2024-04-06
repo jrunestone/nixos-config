@@ -17,7 +17,7 @@
   ];
 
   host-options.home = {
-    wallpaper = ../../assets/wallpapers/2.png;
+
   };
 
   programs.git = {
