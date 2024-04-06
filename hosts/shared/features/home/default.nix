@@ -1,5 +1,6 @@
 { inputs, lib, pkgs, config, outputs, ... }: {  
   home.packages = [
+    pkgs.file
     pkgs.tree
     pkgs.just
     pkgs.ripgrep

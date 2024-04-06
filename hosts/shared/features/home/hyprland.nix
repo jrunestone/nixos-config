@@ -123,6 +123,11 @@
         dim_special = 0.4;
       };
 
+      misc = {
+        disable_hyprland_logo = true;
+        force_default_wallpaper = 0;
+      };
+
       debug = {
         disable_logs = false;
       };

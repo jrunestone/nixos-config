@@ -3,8 +3,8 @@
 * rider crashing
 * screenshot editor
 * todo/notes for special workspace
-* File manager term
-* Default wallpaper flashing at boot
+* Empty tray waybar
+* dircolors
 
 ## Known issues
 * Slack (electron apps?) doesn't show notifications in other workspaces

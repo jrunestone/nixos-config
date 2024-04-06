@@ -129,9 +129,10 @@
         };
       };
 
+      # disabled for now because of limitations
       dap = {
-        enable = true;
-        extensions.dap-ui.enable = true;
+        #enable = true;
+        #extensions.dap-ui.enable = true;
           
         adapters = {
           executables.gdb = {

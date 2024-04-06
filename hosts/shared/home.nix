@@ -10,6 +10,7 @@
     ./features/home/blesh.nix
     ./features/home/fzf.nix
     ./features/home/git.nix
+    ./features/home/lf.nix
     ./features/home/tmux.nix
     ./features/home/nixvim.nix
     ./features/home/hyprland.nix
