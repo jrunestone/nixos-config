@@ -1,4 +1,4 @@
-{ inputs, lib, pkgs, ... }: {
+{ inputs, config, lib, pkgs, ... }: {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
 
@@ -15,6 +15,10 @@
     ./features/home/persistence.nix
     ./features/home/hyprland.nix
   ];
+
+  host-options.home = {
+    wallpaper = ../../assets/wallpapers/2.png;
+  };
 
   programs.git = {
     userEmail = "johanrunsten86@gmail.com";

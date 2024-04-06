@@ -1,13 +1,18 @@
 { pkgs, inputs, ...}: let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
-  hyprland-session = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/share/wayland-sessions";
+  hyprland-pkg = "${inputs.hyprland.packages.${pkgs.system}.hyprland}";
 in {
   services.greetd = {
     enable = true;
 
     settings = {
+      initial_session = {
+        command = "${hyprland-pkg}/bin/Hyprland";
+        user = "jr";
+      };
+
       default_session = {
-        command = "${tuigreet} --time --remember --remember-session --sessions ${hyprland-session}";
+        command = "${tuigreet} --time --remember --remember-session --sessions ${hyprland-pkg}/share/wayland-sessions";
         user = "greeter";
       };
     };

@@ -15,5 +15,9 @@
     ./features/system
   ];
 
+  host-options.system = {
+    autoLogin = true;
+  };
+
   system.stateVersion = "24.05";
 }

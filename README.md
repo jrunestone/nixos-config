@@ -3,11 +3,7 @@
 * rider crashing
 * screenshot editor
 * todo/notes for special workspace
-* slack doesnt open links in ff
-* theme tmux
-* waybar fix empty tray
 * config nix for wallpaper, avatar etc
-* User photo in sddm
 * File manager term
 
 ## Known issues
