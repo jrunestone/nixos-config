@@ -10,6 +10,8 @@
           kitty +kitten icat --silent --stdin no --transfer-mode file --place "''${w}x''${h}@''${x}x''${y}" "$file" < /dev/null > /dev/tty
           exit 1
       fi
+
+      cat "$file"
     '';
 
     cleanerScript = pkgs.writeShellScript "kitty-clean" ''
