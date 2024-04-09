@@ -1,14 +1,11 @@
 ## TODO
 * pwa: outlook, teams, proton
 * rider crashing
-* screenshot editor
 * todo/notes for special workspace
 * Empty tray waybar
-* dircolors
 
 ## Known issues
 * Slack (electron apps?) doesn't show notifications in other workspaces
-* Firefox extensions windows lagging
 
 ## Aliases
 * `$NIXCONFIG` or `nixdir`

@@ -4,12 +4,16 @@
 
     sessionVariables = {
       NIXCONFIG = "/etc/nixos/nixos-config";
+      EZA_COLORS = "xx=36:or=31";
+      LS_COLORS = builtins.readFile ../../../../assets/LS_COLORS;
     };
 
     historyControl = [ "ignoredups" ];
 
     shellAliases = {
-      ls = "ls -lah --color=auto";
+      #ls = "ls -lah --color=auto";
+      ls = "eza -lgaa --group-directories-first";
+
       nixdir = "cd $NIXCONFIG";
       nixedit = "nv $NIXCONFIG";
       nixbuild = "git -C $NIXCONFIG add . && sudo nixos-rebuild --flake $NIXCONFIG/#$HOST";

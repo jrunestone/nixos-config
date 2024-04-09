@@ -56,6 +56,7 @@
         "$mod CTRL, Pause, exec, shutdown -r now"
         "$mod CTRL, Delete, exec, shutdown now"
         "$mod SHIFT, S, exec, grimblast --freeze copysave area"
+        "$mod CTRL, S, exec, grimblast --freeze edit area"
 
         "$mod, Pause, exec, playerctl play-pause"
         "$mod, Delete, exec, playerctl next"

@@ -8,6 +8,7 @@
     pkgs.wl-clipboard
     pkgs.hyprpicker
     pkgs.playerctl
+    pkgs.satty
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];
 
@@ -34,6 +35,12 @@
     size = 16;
   };
 
-  # media key control
+  # more programs/services
   services.playerctld.enable = true;
+  programs.eza.enable = true;
+
+  # envs
+  home.sessionVariables = {
+    GRIMBLAST_EDITOR = "satty --filename";
+  };
 }
