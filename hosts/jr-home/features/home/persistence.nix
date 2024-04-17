@@ -32,14 +32,12 @@
       ".config/spotify"
       ".cache/spotify"
 
-      # vivaldi
-      #".config/vivaldi"
-      #".cache/vivaldi"
-      #".local/share/applications"
-
       # firefox
       ".cache/mozilla/firefox"
       "./.mozilla/firefox"
+
+      # notesnook
+      ".config/Notesnook"
 
       # misc
       ".var/app/com.valvesoftware.Steam"

@@ -5,7 +5,7 @@
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
 
     plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+      inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
     ];
 
     settings = {
@@ -30,16 +30,13 @@
 
         "workspace special,class:^(1Password)(.*)$"
         "float,class:^(1Password)(.*)$"
+
+        "workspace special,class:^(Notesnook)(.*)$"
+        "float,class:^(Notesnook)(.*)$"
       ];
 
       # plugins
       plugins = {
-        hyprexpo = {
-          columns = 3;
-          gap_size = 20;
-          bg_col = "rgb(${config.colorScheme.palette.base00})";
-          workspace_method = "first 1";
-        };
       };
 
       # keybinds
@@ -50,9 +47,10 @@
         "$mod CTRL, T, exec, [float] kitty"
         "$mod, W, exec, firefox"
         "$mod, S, exec, spotify"
+        "$mod, N, exec, notesnook"
         "$mod, Space, exec, fuzzel"
         "$mod, L, exec, hyprlock"
-        "$mod, dead_diaeresis, hyprexpo:expo, toggle"
+        "$mod, dead_diaeresis, overview:toggle"
         "$mod CTRL, Pause, exec, shutdown -r now"
         "$mod CTRL, Delete, exec, shutdown now"
         "$mod SHIFT, S, exec, grimblast --freeze copysave area"

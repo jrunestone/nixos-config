@@ -10,6 +10,7 @@
     ../shared/features/home/spotify.nix
     ../shared/features/home/podman.nix
     ../shared/features/home/steam.nix
+    ../shared/features/home/notesnook.nix
 
     ./features/home/sound.nix
     ./features/home/persistence.nix

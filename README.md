@@ -1,8 +1,10 @@
 ## TODO
 * pwa: outlook, teams, proton
 * rider crashing
-* todo/notes for special workspace
 * Empty tray waybar
+* Starship git plugin slow on large repos
+    * Change shell.. :(
+* Too many files os error 24
 
 ## Known issues
 * Slack (electron apps?) doesn't show notifications in other workspaces

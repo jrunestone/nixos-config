@@ -33,9 +33,20 @@
   # flatpak
   services.flatpak.enable = true;
 
-  # security
+  # security/policies
   services.gnome.gnome-keyring.enable = true;
   environment.variables.XDG_RUNTIME_DIR = "/run/user/$UID";
   security.polkit.enable = true;
   security.pam.services.hyprlock = {};
+
+  boot.kernel.sysctl = {
+    "fs.inotify.max_queued_events" = 1048576;
+    "fs.inotify.max_user_instances" = 1048576;
+    "fs.inotify.max_user_watches" = 1048576;
+  };
+
+  systemd.extraConfig = ''
+    DefaultLimitNOFILE=1048576
+    DefaultLimitMEMLOCK=infinity
+  '';
 }

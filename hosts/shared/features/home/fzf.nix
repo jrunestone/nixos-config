@@ -2,7 +2,7 @@
   home.packages = [ pkgs.fzf ];
 
   programs.bash.sessionVariables = {
-    FZF_DEFAULT_COMMAND = "find \\! \\( -path '*/.git' -o -path '*/node_modules' -prune \\) -printf '%P\\n'";
+    FZF_DEFAULT_COMMAND = "find \\! \\( -path '*/.git' -o -path '*/node_modules' -o -path '*/containers' -prune \\) -printf '%P\\n'";
   };
 
   programs.bash.initExtra = ''
