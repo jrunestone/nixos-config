@@ -1,4 +1,6 @@
 { pkgs, lib, config, ... }: {
+  home.packages = [ pkgs.gitstatus ];
+
   programs.git = {
     enable = true;
     

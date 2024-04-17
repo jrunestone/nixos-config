@@ -11,6 +11,7 @@
 
     ../shared
     ../shared/features/system/podman.nix
+    ../shared/features/system/1password.nix
     
     ./features/system
   ];

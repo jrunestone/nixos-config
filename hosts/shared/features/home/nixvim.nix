@@ -1,11 +1,11 @@
 { pkgs, lib, config, ... }: {
-  programs.bash = {
+  programs.zsh = {
     sessionVariables = {
       EDITOR = "nvim";
     };
 
     initExtra = ''
-      function nv() { nvim -c "lcd $1" $1; }
+      nv() { nvim -c "lcd $1" $1; }
     '';
   };
 

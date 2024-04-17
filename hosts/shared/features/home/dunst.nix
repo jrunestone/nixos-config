@@ -19,19 +19,19 @@
       };
 
       urgency_normal = {
-        background = "#${config.colorScheme.palette.base00}E5";
+        background = "#${config.colorScheme.palette.base00}";
         foreground = "#${config.colorScheme.palette.base06}";
         highlight = "#${config.colorScheme.palette.base08}";
       };
 
       urgency_low = {
-        background = "#${config.colorScheme.palette.base00}E5";
+        background = "#${config.colorScheme.palette.base00}";
         foreground = "#${config.colorScheme.palette.base06}";
         highlight = "#${config.colorScheme.palette.base08}";
       };
 
       urgency_critical = {
-        background = "#${config.colorScheme.palette.base00}E5";
+        background = "#${config.colorScheme.palette.base00}";
         foreground = "#${config.colorScheme.palette.base09}";
         highlight = "#${config.colorScheme.palette.base08}";
       };

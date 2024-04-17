@@ -2,12 +2,12 @@
 * pwa: outlook, teams, proton
 * rider crashing
 * Empty tray waybar
-* Starship git plugin slow on large repos
-    * Change shell.. :(
+* Change shell to starship or pure (need print env)
 * Too many files os error 24
+* Keyring doesn't unlock on boot
+* fzf default command doesnt ignore git folder
 
 ## Known issues
-* Slack (electron apps?) doesn't show notifications in other workspaces
 
 ## Aliases
 * `$NIXCONFIG` or `nixdir`

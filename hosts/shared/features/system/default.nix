@@ -25,10 +25,31 @@
   '';
 
   # nix config
-  nix.gc = {
-    automatic = true;
-    options = "--delete-older-than 1w";
+  nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" "repl-flake" ];
+      substituters = ["https://hyprland.cachix.org"];
+      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+      trusted-users = [ "root" "@wheel" ];
+      warn-dirty = false;
+    };
+
+    gc = {
+      automatic = true;
+      options = "--delete-older-than 1w";
+    };
   };
+
+  nixpkgs = {
+    overlays = builtins.attrValues outputs.overlays;
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
+  };
+
+  # zsh completion
+  environment.pathsToLink = [ "/share/zsh" ];
 
   # flatpak
   services.flatpak.enable = true;

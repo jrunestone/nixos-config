@@ -1,12 +1,6 @@
 { pkgs, lib, config, ... }: {
-  # init starship as early as possible
-  programs.bash.bashrcExtra = ''
-    eval "$(starship init bash)";
-  '';
-
   programs.starship = {
     enable = true;
-    enableBashIntegration = true;
 
     settings = {
       format = lib.concatStrings [

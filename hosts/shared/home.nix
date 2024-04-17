@@ -4,10 +4,9 @@
     inputs.nix-colors.homeManagerModules.default
 
     ./features/home
-    ./features/home/bash.nix
-    ./features/home/kitty.nix
+    ./features/home/zsh.nix
     ./features/home/starship.nix
-    ./features/home/blesh.nix
+    ./features/home/kitty.nix
     ./features/home/fzf.nix
     ./features/home/git.nix
     ./features/home/lf.nix
