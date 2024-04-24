@@ -15,12 +15,12 @@
       DEVENV_NAME = "projectname";
 
       packages = with pkgs; [
-        conan
         cmake
         gdb
       ];
 
       shellHook = ''
+        exec zsh
       '';
     };
   };

@@ -1,4 +1,8 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
+  environment.systemPackages = [
+    pkgs.libnotify
+  ];
+
   # system config
   time.timeZone = "Europe/Stockholm";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -48,7 +52,9 @@
     };
   };
 
-  # zsh completion
+  # zsh
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
   environment.pathsToLink = [ "/share/zsh" ];
 
   # flatpak

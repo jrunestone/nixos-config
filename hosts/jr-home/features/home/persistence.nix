@@ -19,9 +19,6 @@
       ".local/share/NuGet"
       ".local/share/flatpak"
 
-      # ble.sh
-      ".cache/blesh"
-
       # jetbrains
       ".java"
       ".local/share/JetBrains"
@@ -36,19 +33,17 @@
       ".cache/mozilla/firefox"
       "./.mozilla/firefox"
 
-      # notesnook
-      ".config/Notesnook"
-
       # misc
+      ".local/share/bottles"
+      ".config/Notesnook"
       ".var/app/com.valvesoftware.Steam"
-      ".config/obsidian"
       ".config/Slack"
       ".config/1Password"
       ".config/Insomnia"
     ];
 
     files = [
-      ".bash_history"
+      ".zsh_history"
     ];
 
     allowOther = true;

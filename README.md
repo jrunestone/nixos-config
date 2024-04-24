@@ -2,12 +2,13 @@
 * pwa: outlook, teams, proton
 * rider crashing
 * Empty tray waybar
-* Change shell to starship or pure (need print env)
 * Too many files os error 24
 * Keyring doesn't unlock on boot
 * fzf default command doesnt ignore git folder
 
 ## Known issues
+* History scan up/down (history substring search) doesn't work with p10k
+* No audio in games running in bottles if Spotify is running
 
 ## Aliases
 * `$NIXCONFIG` or `nixdir`

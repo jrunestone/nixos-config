@@ -5,7 +5,6 @@
 
     ./features/home
     ./features/home/zsh.nix
-    ./features/home/starship.nix
     ./features/home/kitty.nix
     ./features/home/fzf.nix
     ./features/home/git.nix

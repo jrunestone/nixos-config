@@ -16,6 +16,7 @@
         follow = "mouse";
         corner_radius = 7;
         icon_corner_radius = 3;
+        show_indicators = false;
       };
 
       urgency_normal = {

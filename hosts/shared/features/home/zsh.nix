@@ -4,6 +4,31 @@
     autocd = true;
     history.ignoreDups = true;
     historySubstringSearch.enable = true;
+ 
+    plugins = [
+      {
+        name = "powerlevel10k";
+        src = pkgs.zsh-powerlevel10k;
+        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+      }
+
+      {
+        name = "powerlevel10k-config";
+        src = ../../../../assets/config;
+        file = ".p10k.zsh";
+      }
+
+      {
+        name = "zsh-nix-shell";
+        file = "nix-shell.plugin.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "chisui";
+          repo = "zsh-nix-shell";
+          rev = "v0.8.0";
+          sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
+        };
+      }
+    ];
 
     autosuggestion = {
       enable = true;
@@ -43,9 +68,17 @@
     };
 
     initExtra = ''
+      function redraw-prompt() {
+        local f
+        for f in chpwd "''${chpwd_functions[@]}" precmd "''${precmd_functions[@]}"; do
+          [[ "''${+functions[$f]}" == 0 ]] || "$f" &>/dev/null || true
+        done
+        p10k display -r
+      }
+
       # cd up and back (alt-up, alt-left)
-      cd-up() { builtin cd .. && zle reset-prompt }
-      cd-prev() { builtin cd - && zle reset-prompt }
+      cd-up() { builtin cd .. && redraw-prompt }
+      cd-prev() { builtin cd - && redraw-prompt }
 
       zle -N cd-up
       zle -N cd-prev

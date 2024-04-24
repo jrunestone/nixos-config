@@ -17,11 +17,11 @@
 
       colors = {
         background = "#${config.colorScheme.palette.base00}E5";
-        text = "#${config.colorScheme.palette.base06}FF";
-        match = "#${config.colorScheme.palette.base0A}FF";
+        text = "#${config.colorScheme.palette.base04}FF";
+        match = "#${config.colorScheme.palette.base06}FF";
         selection = "#${config.colorScheme.palette.base01}FF";
         selection-text = "#${config.colorScheme.palette.base04}FF";
-        selection-match = "#${config.colorScheme.palette.base0A}FF";
+        selection-match = "#${config.colorScheme.palette.base06}FF";
         border = "#${config.colorScheme.palette.base06}FF";
       };
 

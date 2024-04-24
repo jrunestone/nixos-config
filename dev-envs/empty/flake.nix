@@ -18,8 +18,8 @@
       ];
 
       shellHook = ''
-        echo "Ready"
-        trap 'echo "Bye"' EXIT
+        exec zsh
+        #trap 'echo "Bye"' EXIT
       '';
     };
   };

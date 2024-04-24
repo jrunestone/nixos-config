@@ -11,6 +11,7 @@
     ../shared/features/home/podman.nix
     ../shared/features/home/steam.nix
     ../shared/features/home/notesnook.nix
+    ../shared/features/home/bottles.nix
 
     ./features/home/sound.nix
     ./features/home/persistence.nix

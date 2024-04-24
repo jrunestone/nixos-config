@@ -56,6 +56,7 @@
       hide_input = false;
       halign = "center";
       valign = "center";
+      placeholder_text= "";
     }];
   };
 }
