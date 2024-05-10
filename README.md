@@ -1,3 +1,11 @@
+## TODO WORK
+* keybind media keys
+* battery indicator, wifi?
+* unlock keyring?
+* monitor
+    * workspaces multiple monitors
+        * have each monitor have its own workspace queue
+
 ## TODO
 * pwa: outlook, teams, proton
 * rider crashing

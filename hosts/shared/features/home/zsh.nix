@@ -2,9 +2,14 @@
   programs.zsh = {
     enable = true;
     autocd = true;
-    history.ignoreDups = true;
     historySubstringSearch.enable = true;
- 
+
+    history = {
+      extended = true;
+      ignoreDups = true;
+      ignoreSpace = true;
+    };
+
     plugins = [
       {
         name = "powerlevel10k";

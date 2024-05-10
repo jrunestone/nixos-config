@@ -81,6 +81,13 @@
             ./hosts/jr-home
           ];
         };
+
+        jr-work = lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [ 
+            ./hosts/jr-work
+          ];
+        };
       };
     };
 }
