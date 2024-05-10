@@ -52,6 +52,9 @@
     };
   };
 
+  # fwupd
+  services.fwupd.enable = true;
+
   # zsh
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;

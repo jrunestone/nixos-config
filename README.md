@@ -1,5 +1,6 @@
 ## TODO WORK
 * keybind media keys
+* suspend on close lid
 * battery indicator, wifi?
 * unlock keyring?
 * monitor
@@ -13,6 +14,7 @@
 * Too many files os error 24
 * Keyring doesn't unlock on boot
 * fzf default command doesnt ignore git folder
+* updat firmware
 
 ## Known issues
 * History scan up/down (history substring search) doesn't work with p10k
