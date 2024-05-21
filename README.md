@@ -8,6 +8,7 @@
         * have each monitor have its own workspace queue
 
 ## TODO
+* stylix
 * pwa: outlook, teams, proton
 * rider crashing
 * Empty tray waybar

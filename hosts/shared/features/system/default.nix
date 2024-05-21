@@ -1,6 +1,7 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   environment.systemPackages = [
     pkgs.libnotify
+    pkgs.unzip
   ];
 
   # system config
