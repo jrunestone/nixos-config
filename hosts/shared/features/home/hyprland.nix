@@ -5,7 +5,7 @@
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
 
     plugins = [
-      inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
     ];
 
     settings = {
@@ -50,7 +50,7 @@
         "$mod, N, exec, notesnook"
         "$mod, Space, exec, fuzzel"
         "$mod, L, exec, hyprlock"
-        "$mod, dead_diaeresis, overview:toggle"
+        "$mod, dead_diaeresis, hyprexpo:expo, toggle"
         "$mod CTRL, Pause, exec, shutdown -r now"
         "$mod CTRL, Delete, exec, shutdown now"
         "$mod SHIFT, S, exec, grimblast copysave area"
