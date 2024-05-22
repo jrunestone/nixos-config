@@ -1,21 +1,15 @@
 ## TODO WORK
 * keybind media keys
-* suspend on close lid
-* battery indicator, wifi?
-* unlock keyring?
-* monitor
-    * workspaces multiple monitors
-        * have each monitor have its own workspace queue
+* have each monitor have its own workspace queue
 
 ## TODO
+* new hyprland borked
+    * rider crashes
+    * window rules not working (workspace, float)
 * stylix
+* unlock keyring with autologin
 * pwa: outlook, teams, proton
-* rider crashing
-* Empty tray waybar
-* Too many files os error 24
-* Keyring doesn't unlock on boot
 * fzf default command doesnt ignore git folder
-* updat firmware
 
 ## Known issues
 * History scan up/down (history substring search) doesn't work with p10k
@@ -25,6 +19,8 @@
 * `$NIXCONFIG` or `nixdir`
 * `nixedit`
 * `nix-rebuild [switch|boot] $NIXCONFIG.#$HOSTNAME` or `nixbuild [switch|boot]`
+* `nixversions`
+* `nixupdates` after running `nix flake update`
 
 ### devshells
 * Uses devenvs with flakes and nix develop.
