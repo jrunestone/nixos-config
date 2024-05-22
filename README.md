@@ -6,6 +6,7 @@
 * new hyprland borked
     * rider crashes
     * window rules not working (workspace, float)
+* grimblast not opening editor (cmdline works)
 * stylix
 * unlock keyring with autologin
 * pwa: outlook, teams, proton
