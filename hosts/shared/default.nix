@@ -39,4 +39,5 @@ in
   home-manager.useUserPackages = true;
   home-manager.extraSpecialArgs = { inherit inputs outputs; };
   home-manager.users.jr = import ../${config.networking.hostName}/home.nix;
+  home-manager.backupFileExtension = "bak";
 }

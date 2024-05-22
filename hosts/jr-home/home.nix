@@ -18,11 +18,12 @@
     ./features/home/hyprland.nix
   ];
 
-  host-options.home = {
-
-  };
-
   programs.git = {
     userEmail = "johanrunsten86@gmail.com";
+  };
+
+  # host-specific overrides eg wallpaper
+  host-options.home = {
+
   };
 }

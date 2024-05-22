@@ -3,6 +3,8 @@
     enable = true;
 
     settings = {
+      splash = false;
+
       preload = [
         "${config.host-options.home.wallpaper}"
       ];
