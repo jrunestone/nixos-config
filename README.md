@@ -5,6 +5,7 @@
 ## TODO
 * new hyprland borked
     * rider crashes
+    * clipboard not working
     * window rules not working (workspace, float)
 * grimblast not opening editor (cmdline works)
 * stylix
