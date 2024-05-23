@@ -1,21 +1,13 @@
 ## TODO WORK
 * keybind media keys
-* suspend on close lid
-* battery indicator, wifi?
-* unlock keyring?
-* monitor
-    * workspaces multiple monitors
-        * have each monitor have its own workspace queue
+* have each monitor have its own workspace queue
 
 ## TODO
 * stylix
+* sublime package ctl
 * pwa: outlook, teams, proton
-* rider crashing
-* Empty tray waybar
-* Too many files os error 24
 * Keyring doesn't unlock on boot
 * fzf default command doesnt ignore git folder
-* updat firmware
 
 ## Known issues
 * History scan up/down (history substring search) doesn't work with p10k

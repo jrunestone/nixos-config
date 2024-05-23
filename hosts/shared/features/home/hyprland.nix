@@ -45,6 +45,7 @@
       bind = [
         "$mod, T, exec, kitty"
         "$mod CTRL, T, exec, [float] kitty"
+        "$mod CTRL, N, exec, [float] sublime"
         "$mod, W, exec, firefox"
         "$mod, S, exec, spotify"
         "$mod, N, exec, notesnook"

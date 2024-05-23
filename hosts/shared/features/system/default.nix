@@ -47,9 +47,15 @@
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
-    config = {
+ 
+  config = {
       allowUnfree = true;
       allowUnfreePredicate = (_: true);
+
+      permittedInsecurePackages = [
+        # required for sublime4 atm
+        "openssl-1.1.1w"
+      ];
     };
   };
 

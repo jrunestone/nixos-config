@@ -7,8 +7,8 @@
     pkgs.killall
     pkgs.wl-clipboard
     pkgs.hyprpicker
-    pkgs.playerctl
-    pkgs.satty
+    pkgs.playerctl # for media key ctl
+    pkgs.satty # screenshot editor
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];
 
