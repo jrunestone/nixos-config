@@ -1,8 +1,11 @@
 ## TODO WORK
 * keybind media keys
+* brightness ctl
 * have each monitor have its own workspace queue
 
 ## TODO
+* sublime json formatter OR nixvim json plugin
+* software volume control
 * stylix
 * sublime package ctl
 * pwa: outlook, teams, proton

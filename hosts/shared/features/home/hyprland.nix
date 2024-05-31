@@ -43,13 +43,15 @@
       "$mod" = "SUPER";
 
       bind = [
-        "$mod, T, exec, kitty"
         "$mod CTRL, T, exec, [float] kitty"
-        "$mod CTRL, N, exec, [float] sublime"
+        "$mod CTRL SHIFT, N, exec, [float] sublime"
+        "$mod CTRL, N, exec, [float] kitty --hold nvim"
+        "$mod, T, exec, kitty"
         "$mod, W, exec, firefox"
         "$mod, S, exec, spotify"
         "$mod, N, exec, notesnook"
         "$mod, Space, exec, fuzzel"
+
         "$mod, L, exec, hyprlock"
         "$mod, dead_diaeresis, overview:toggle"
         "$mod CTRL, Pause, exec, shutdown -r now"

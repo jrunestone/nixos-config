@@ -1,8 +1,11 @@
 { inputs, lib, pkgs, config, outputs, ... }: {  
   home.packages = [
+    pkgs.libnotify
+    pkgs.unzip
     pkgs.file
     pkgs.tree
     pkgs.just
+    pkgs.jq
     pkgs.ripgrep
     pkgs.killall
     pkgs.wl-clipboard

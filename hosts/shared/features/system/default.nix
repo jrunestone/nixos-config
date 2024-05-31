@@ -1,7 +1,5 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   environment.systemPackages = [
-    pkgs.libnotify
-    pkgs.unzip
   ];
 
   # system config
@@ -85,5 +83,6 @@
   systemd.extraConfig = ''
     DefaultLimitNOFILE=1048576
     DefaultLimitMEMLOCK=infinity
+    DefaultTimeoutStopSec=10s
   '';
 }

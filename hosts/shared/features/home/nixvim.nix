@@ -65,55 +65,63 @@
         action = ":BufferCloseBuffersRight<CR>";
       }
 
+      # set filetype to json and format with jq
       {
-        key = "<leader>do";
-        action = ":lua require('dapui').open()<CR>";
+        key = "<leader>fj";
+        action =":set filetype=json | %!jq '.'<CR>";
       }
 
-      {
-        key = "<leader>dc";
-        action = ":lua require('dapui').close()<CR>";
-      }
+      # the following are keybinds for dap/dapui
+      #{
+      #  key = "<leader>do";
+      #  action = ":lua require('dapui').open()<CR>";
+      #}
 
-      {
-        key = "<leader>db";
-        action = ":lua require('dap').toggle_breakpoint()<CR>";
-      }
+      #{
+      #  key = "<leader>dc";
+      #  action = ":lua require('dapui').close()<CR>";
+      #}
 
-      {
-        key = "<leader>dh";
-        action = ":lua require('dap.ui.widgets').hover()<CR>";
-      }
+      #{
+      #  key = "<leader>db";
+      #  action = ":lua require('dap').toggle_breakpoint()<CR>";
+      #}
 
-      {
-        key = "<F5>";
-        action = ":lua require('dap').continue()<CR>";
-      }
+      #{
+      #  key = "<leader>dh";
+      #  action = ":lua require('dap.ui.widgets').hover()<CR>";
+      #}
 
-      {
-        key = "<S>-<F5>";
-        action = ":lua require('dap').terminate()<CR>";
-      }
+      #{
+      #  key = "<F5>";
+      #  action = ":lua require('dap').continue()<CR>";
+      #}
 
-      {
-        key = "<F10>";
-        action = ":lua require('dap').step_over()<CR>";
-      }
+      #{
+      #  key = "<S>-<F5>";
+      #  action = ":lua require('dap').terminate()<CR>";
+      #}
 
-      {
-        key = "<F11>";
-        action = ":lua require('dap').step_into()<CR>";
-      }
+      #{
+      #  key = "<F10>";
+      #  action = ":lua require('dap').step_over()<CR>";
+      #}
 
-      {
-        key = "<S><F11>";
-        action = ":lua require('dap').step_out()<CR>";
-      }
+      #{
+      #  key = "<F11>";
+      #  action = ":lua require('dap').step_into()<CR>";
+      #}
+
+      #{
+      #  key = "<S><F11>";
+      #  action = ":lua require('dap').step_out()<CR>";
+      #}
     ];
 
     plugins = {
       lsp = {
-        enable = true;
+        # disabled for now because of limitations
+        enable = false;
 
         servers = {
           ccls.enable = true;
@@ -131,7 +139,7 @@
 
       # disabled for now because of limitations
       dap = {
-        #enable = true;
+        enable = false;
         #extensions.dap-ui.enable = true;
           
         adapters = {
@@ -151,8 +159,9 @@
         };
       };
 
+      # disabled for now because of limitations
       coq-nvim = {
-        enable = true;
+        enable = false;
         
         settings = {
           auto_start = "shut-up";
@@ -170,7 +179,7 @@
 
         keymaps = {
           previous = "<leader>a";
-          next = "<leader>s";
+          next = "<leader>d";
           close = "<leader>w";
         };
       };
@@ -186,8 +195,9 @@
         };
       };
   
+      # disabled for now because of limitations
       treesitter = {
-        enable = true;
+        enable = false;
   
         grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
           bash
