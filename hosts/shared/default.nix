@@ -14,6 +14,7 @@ in
     ./features/system/pipewire.nix
     ./features/system/ssh.nix
     ./features/system/font.nix
+    ./features/system/printing.nix
     ./features/system/hyprland.nix
     ./features/system/greetd.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
