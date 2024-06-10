@@ -29,8 +29,9 @@
 
 Todo:
 * Global justfile for shared cmds like develop, export/import db, make certs
-* Change to a shared azure sql server for umbraco dbs?
-* Local url mapping with traefik or other?
+* Put certs and dockerfiles outside projects
+* Setup commands should create .env, put in gitignore
+* Local url mapping with traefik or other
 * Set AZ subscription automatically
 
 Global command ideas:
