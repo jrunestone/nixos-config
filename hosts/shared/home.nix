@@ -17,7 +17,6 @@
     ./features/home/waybar.nix
     ./features/home/fuzzel.nix
     ./features/home/dunst.nix
-    ./features/home/sublimetext.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules );
 
   colorScheme = inputs.nix-colors.colorSchemes.tomorrow-night;

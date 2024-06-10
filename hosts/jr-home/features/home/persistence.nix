@@ -40,6 +40,9 @@
       ".config/Slack"
       ".config/1Password"
       ".config/Insomnia"
+
+      # minecraft
+      ".local/share/PrismLauncher"
     ];
 
     files = [

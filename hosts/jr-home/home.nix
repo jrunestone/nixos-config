@@ -15,6 +15,7 @@
     ./features/home/sound.nix
     ./features/home/persistence.nix
     ./features/home/hyprland.nix
+    ./features/home/minecraft.nix
   ];
 
   host-options.home = {

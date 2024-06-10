@@ -26,13 +26,15 @@
       # window rules
       windowrulev2 = [
         "workspace special,title:^(Spotify)(.*)$"
-        "float,title:^(Spotify)(.*)$"
+        "float, title:^(Spotify)(.*)$"
 
         "workspace special,class:^(1Password)(.*)$"
-        "float,class:^(1Password)(.*)$"
+        "float, class:^(1Password)(.*)$"
 
         "workspace special,class:^(Notesnook)(.*)$"
-        "float,class:^(Notesnook)(.*)$"
+        "float, class:^(Notesnook)(.*)$"
+
+        "stayfocused, title:^()$, class:^(jetbrains-rider)$, floating:1"
       ];
 
       # plugins
@@ -44,7 +46,6 @@
 
       bind = [
         "$mod CTRL, T, exec, [float] kitty"
-        "$mod CTRL SHIFT, N, exec, [float] sublime"
         "$mod CTRL, N, exec, [float] kitty --hold nvim"
         "$mod, T, exec, kitty"
         "$mod, W, exec, firefox"
@@ -57,7 +58,7 @@
         "$mod CTRL, Pause, exec, shutdown -r now"
         "$mod CTRL, Delete, exec, shutdown now"
         "$mod SHIFT, S, exec, grimblast copysave area"
-        "$mod CTRL, S, exec, grimblast edit area"
+        "$mod CTRL, S, exec, grimblast save area - | satty --filename -"
 
         "$mod, Pause, exec, playerctl play-pause"
         "$mod, Delete, exec, playerctl next"
@@ -73,11 +74,15 @@
         "$mod, 2, workspace, 2"
         "$mod, 3, workspace, 3"
         "$mod, 4, workspace, 4"
+        "$mod, 5, workspace, 5"
+        "$mod, 6, workspace, 6"
         
         "$mod SHIFT, 1, movetoworkspace, 1"
         "$mod SHIFT, 2, movetoworkspace, 2"
         "$mod SHIFT, 3, movetoworkspace, 3"
         "$mod SHIFT, 4, movetoworkspace, 4"
+        "$mod SHIFT, 5, movetoworkspace, 6"
+        "$mod SHIFT, 5, movetoworkspace, 6"
         
         "$mod CTRL, Left, workspace, -1"
         "$mod CTRL, Right, workspace, +1"

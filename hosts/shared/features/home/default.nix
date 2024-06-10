@@ -44,6 +44,5 @@
 
   # envs
   home.sessionVariables = {
-    GRIMBLAST_EDITOR = "satty --filename";
   };
 }
