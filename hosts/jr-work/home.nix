@@ -14,6 +14,10 @@
     ./features/home/hyprland.nix
   ];
 
+  home.packages = [
+    pkgs.brightnessctl
+  ];
+
   host-options.home = {
 
   };
