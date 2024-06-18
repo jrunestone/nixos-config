@@ -81,6 +81,10 @@
         p10k display -r
       }
 
+      function run() {
+        $1 > /dev/null 2>&1 & disown
+      }
+
       # cd up and back (alt-up, alt-left)
       cd-up() { builtin cd .. && redraw-prompt }
       cd-prev() { builtin cd - && redraw-prompt }

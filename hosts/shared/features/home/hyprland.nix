@@ -56,6 +56,7 @@
         "$mod, L, exec, hyprlock"
         "$mod, dead_diaeresis, overview:toggle"
         "$mod CTRL, Pause, exec, shutdown -r now"
+        "$mod CTRL, Insert, exec, shutdown -r now"
         "$mod CTRL, Delete, exec, shutdown now"
         "$mod SHIFT, S, exec, grimblast copysave area"
         "$mod CTRL, S, exec, grimblast save area - | satty --filename -"
@@ -126,6 +127,7 @@
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ", XF86AudioMute, exec, notify-send ' ' -a 'Volume' -h string:x-dunst-stack-tag:audio -h int:value:$(awk '{printf(\"%d\", 100 * $2)}' <<< $(wpctl get-volume @DEFAULT_AUDIO_SINK@))"
         "$mod, Pause, exec, playerctl play-pause"
+        "$mod, Insert, exec, playerctl play-pause"
       ];
 
       general = {
