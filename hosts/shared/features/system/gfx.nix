@@ -2,8 +2,8 @@
   services.hardware.openrgb.enable = true;
 
   hardware = {
-    opengl.enable = true;
-    opengl.driSupport32Bit = true;
+    graphics.enable = true;
+    graphics.enable32Bit = true;
     opentabletdriver.enable = true;
   };
 }

@@ -7,9 +7,13 @@
     impermanence.url = "github:nix-community/impermanence";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nix-colors.url = "github:misterio77/nix-colors";
-    hyprland.url = "github:hyprwm/Hyprland";
-    hyprpaper.url = "github:hyprwm/hyprpaper";
-    hyprlock.url = "github:hyprwm/hyprlock";
+
+    hyprland = {
+      type = "git";
+      url = "https://github.com/hyprwm/Hyprland";
+      ref = "refs/tags/v0.41.2";
+      submodules = true;
+    };
 
     disko = {
       url = "github:nix-community/disko";
@@ -51,8 +55,6 @@
     nix-flatpak,
     nixvim,
     hyprland,
-    hyprpaper,
-    hyprlock,
     hyprland-contrib,
     hyprland-plugins,
     Hyprspace,
