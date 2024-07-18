@@ -43,6 +43,9 @@
 
       # minecraft
       ".local/share/PrismLauncher"
+
+      # vintage story
+      ".config/VintagestoryData"
     ];
 
     files = [

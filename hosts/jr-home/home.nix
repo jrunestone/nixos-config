@@ -16,6 +16,7 @@
     ./features/home/persistence.nix
     ./features/home/hyprland.nix
     ./features/home/minecraft.nix
+    ./features/home/vintagestory.nix
   ];
 
   host-options.home = {
