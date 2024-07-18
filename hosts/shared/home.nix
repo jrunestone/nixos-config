@@ -11,6 +11,7 @@
     ./features/home/lf.nix
     ./features/home/tmux.nix
     ./features/home/nixvim.nix
+    ./features/home/zed.nix
     ./features/home/hyprland.nix
     ./features/home/hyprpaper.nix
     ./features/home/hyprlock.nix

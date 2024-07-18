@@ -25,6 +25,10 @@
       ".config/JetBrains"
       ".cache/JetBrains"
 
+      # zed
+      ".config/zed"
+      ".local/share/zed"
+
       # spotify
       ".config/spotify"
       ".cache/spotify"

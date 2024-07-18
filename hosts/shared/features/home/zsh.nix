@@ -19,7 +19,7 @@
 
       {
         name = "powerlevel10k-config";
-        src = ../../../../assets/config;
+        src = ../../../../assets/config/zsh;
         file = ".p10k.zsh";
       }
 
@@ -59,7 +59,7 @@
     sessionVariables = {
       NIXCONFIG = "/etc/nixos/nixos-config";
       EZA_COLORS = "xx=36:sn=36:sb=36:uu=36:uR=36:un=36:gu=36:gR=36:gn=36:da=36:or=31";
-      LS_COLORS = builtins.readFile ../../../../assets/LS_COLORS;
+      LS_COLORS = builtins.readFile ../../../../assets/config/LS_COLORS;
     };
 
     shellAliases = {
