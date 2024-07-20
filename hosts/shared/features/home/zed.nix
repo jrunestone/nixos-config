@@ -6,6 +6,30 @@
     source = ../../../../assets/config/zed/base16-tomorrow-night.json;
   };
 
+  home.file."${config.xdg.configHome}/zed/keymap.json" = {
+    force = true;
+
+    text = ''
+      [
+        {
+          "bindings": {
+            "f5": ["task::Spawn", { "task_name": "Debug" }],
+            "shift-f5": ["task::Spawn", { "task_name": "Run" }],
+            "f6": ["task::Spawn", { "task_name": "Build" }]
+          }
+        }, 
+
+        {
+          "context": "Editor",
+          "bindings": {
+            "shift-delete": "editor::DeleteLine",
+            "ctrl-*": ["editor::ToggleComments", { "advance_downwards": false }]
+          }
+        }
+      ]
+    '';
+  };
+
   home.file."${config.xdg.configHome}/zed/settings.json" = {
     force = true;
 
@@ -20,12 +44,26 @@
       // from the command palette or from `Zed` application menu.
       {
         "theme": "Base16 Tomorrow Night",
+        
         "ui_font_family": "FiraCode Nerd Font",
         "ui_font_size": 20,
+        
         "buffer_font_family": "FiraCode Nerd Font",
         "buffer_font_size": 18,
         "buffer_font_weight": 100,
+        "buffer_font_features": {
+          "calt": false
+        },
+
         "scroll_sensitivity": 0.7,
+
+        "gutter": {
+          "line_numbers": false
+        },
+        
+        "indent_guides": {
+          "enabled": false
+        },
 
         "git": {
           "inline_blame": {

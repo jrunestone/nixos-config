@@ -6,6 +6,7 @@
       general = {
         disable_loading_bar = true;
         ignore_empty_input = true;
+        no_fade_out = true;
       };
 
       background = [{
@@ -16,17 +17,6 @@
         brightness = 0.8172;
         vibrancy = 0.1696;
         vibrancy_darkness = 0.0;
-      }];
-
-      label = [{
-        monitor = "";
-        text = ''cmd[update:1000] echo "$(date +"%H:%M%p")"'';
-        color = "rgb(${config.colorScheme.palette.base06})";
-        font_size = 120;
-        font_family = "Noto Sans";
-        position = { x = 0; y = 400; };
-        halign = "center";
-        valign = "center";
       }];
 
       image = [{
@@ -40,15 +30,18 @@
 
       input-field = [{
         monitor = "";
-        size = { width = 250; height = 40; };
-        outline_thickness = 3;
-        rounding = 8;
+        size = { width = 250; height = 20; };
+        outline_thickness = 4;
+        rounding = 0;
         dots_size = 0.2;
         dots_spacing = 0.2;
         dots_center = true;
-        outer_color = "rgb(${config.colorScheme.palette.base0E})";
+        outer_color = "rgb(${config.colorScheme.palette.base03})";
         inner_color = "rgb(${config.colorScheme.palette.base06})";
-        font_color = "rgb(${config.colorScheme.palette.base00})";
+        font_color = "rgb(${config.colorScheme.palette.base02})";
+        fail_color = "rgb(${config.colorScheme.palette.base0F})";
+        fail_text = "";
+        fail_timeout = 1000;
         fade_on_empty = false;
         hide_input = false;
         halign = "center";
