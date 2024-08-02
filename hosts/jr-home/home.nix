@@ -17,6 +17,7 @@
     ./features/home/hyprland.nix
     ./features/home/minecraft.nix
     ./features/home/vintagestory.nix
+    ./features/home/qbittorrent.nix
   ];
 
   host-options.home = {
@@ -24,6 +25,6 @@
   };
 
   programs.git = {
-    userEmail = "johanrunsten86@gmail.com";
+    userEmail = "johan85@hotmail.com";
   };
 }

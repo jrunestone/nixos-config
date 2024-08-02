@@ -50,6 +50,11 @@
 
       # vintage story
       ".config/VintagestoryData"
+
+      # qbittorrent
+      ".config/qBittorrent"
+      ".cache/qBittorrent"
+      ".local/share/qBittorrent"
     ];
 
     files = [
