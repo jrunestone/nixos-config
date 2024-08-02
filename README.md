@@ -21,10 +21,8 @@
 
 Todo:
 * Global justfile for shared cmds like develop, export/import db, make certs
-* Put certs and dockerfiles outside projects
 * Setup commands should create .env, put in gitignore
 * Local url mapping with traefik or other
-* Set AZ subscription automatically
 
 Global command ideas:
 * Dockerify an umbraco project
@@ -43,4 +41,6 @@ User is hard-coded to "jr" in flake for all hosts.
 9. `nixos-generate-config --no-filesystems --root /mnt` and copy hardware-info.nix to repo/host if new host
 10. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
 11. `reboot`
-12. Copy over ssh keys
+12. Do manual things:
+    * Copy over ssh keys
+    * Create /etc/nixos/smb-secrets for automounting network storage

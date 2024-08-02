@@ -14,6 +14,7 @@
     ../shared/features/system/1password.nix
     
     ./features/system
+    ./features/system/mounts.nix
   ];
 
   host-options.system = {
