@@ -66,6 +66,14 @@
         "$mod, V, fullscreen, 1"
         "$mod, P, setfloating"
         "$mod, P, pin"
+        
+        "$mod CTRL, G, togglegroup"
+        "$mod CTRL, Tab, changegroupactive, f"
+        "$mod CTRL SHIFT, Tab, changegroupactive, b"
+        "$mod CTRL ALT, Left, movewindoworgroup, l"
+        "$mod CTRL ALT, Right, movewindoworgroup, r"
+        "$mod CTRL ALT, Up, movewindoworgroup, u"
+        "$mod CTRL ALT, Down, movewindoworgroup, d"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
@@ -126,6 +134,11 @@
       bindl = [
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ", XF86AudioMute, exec, notify-send ' ' -a 'Volume' -h string:x-dunst-stack-tag:audio -h int:value:$(awk '{printf(\"%d\", 100 * $2)}' <<< $(wpctl get-volume @DEFAULT_AUDIO_SINK@))"
+
+        # phone buttons (F10, F11)
+        ", XF86Go, exec, sleep 1 && hyprctl dispatch dpms on eDP-1"
+        ", Cancel, exec, sleep 1 && hyprctl dispatch dpms off eDP-1"
+
         "$mod, Pause, exec, playerctl play-pause"
         "$mod, Insert, exec, playerctl play-pause"
       ];
@@ -134,8 +147,8 @@
         gaps_in = 15;
         gaps_out = 20;
         border_size = 5;
-        "col.inactive_border" = "rgb(${config.colorScheme.palette.base02})";
         "col.active_border" = "rgb(${config.colorScheme.palette.base05})";
+        "col.inactive_border" = "rgb(${config.colorScheme.palette.base02})";
       };
 
       decoration = {
@@ -148,9 +161,21 @@
         dim_special = 0.4;
       };
 
+      group = {
+        "col.border_active" = "rgb(${config.colorScheme.palette.base05})";
+        "col.border_inactive" = "rgb(${config.colorScheme.palette.base02})";
+
+        groupbar = {
+            "col.active" = "rgb(${config.colorScheme.palette.base02})";
+            "col.inactive" = "rgb(${config.colorScheme.palette.base02})";
+            text_color = "rgb(${config.colorScheme.palette.base07})";
+          };
+      };
+
       misc = {
         disable_hyprland_logo = true;
         force_default_wallpaper = 0;
+        font_family = "FiraCode Nerd Font";
       };
 
       debug = {
