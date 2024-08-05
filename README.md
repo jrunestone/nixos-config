@@ -3,6 +3,7 @@
 * pwa: outlook, teams, proton
 * Keyring doesn't unlock on boot
 * fzf default command doesnt ignore git folder
+* Scale down hyprlock
 
 ## Known issues
 * History scan up/down (history substring search) doesn't work with p10k
@@ -19,7 +20,7 @@
 * A devenv is a parent folder with meta files and then the project in a project dir gitignored
 * Run `just develop` to init the devenv with the correct dirs, setup certs etc
 
-Todo:
+TODO:
 * Global justfile for shared cmds like develop, export/import db, make certs
 * Setup commands should create .env, put in gitignore
 * Local url mapping with traefik or other

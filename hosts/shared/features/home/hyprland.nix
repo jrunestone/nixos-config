@@ -169,6 +169,7 @@
             "col.active" = "rgb(${config.colorScheme.palette.base02})";
             "col.inactive" = "rgb(${config.colorScheme.palette.base02})";
             text_color = "rgb(${config.colorScheme.palette.base07})";
+            font_size = 12;
           };
       };
 
