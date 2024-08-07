@@ -11,7 +11,7 @@
     hyprland = {
       type = "git";
       url = "https://github.com/hyprwm/Hyprland";
-      ref = "refs/tags/v0.41.2";
+      #ref = "refs/tags/v0.41.2";
       submodules = true;
     };
 
@@ -39,11 +39,6 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
-
-    Hyprspace = {
-      url = "github:KZDKM/Hyprspace";
-      inputs.hyprland.follows = "hyprland";
-    };
   };
 
   outputs = { 
@@ -57,7 +52,6 @@
     hyprland,
     hyprland-contrib,
     hyprland-plugins,
-    Hyprspace,
     nix-colors,
     ... }@inputs:
     let

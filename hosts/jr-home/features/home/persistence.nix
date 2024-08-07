@@ -13,6 +13,8 @@
       ".nuget"
       ".pki"
 
+      ".cache/hyprland"
+
       ".local/share/keyrings"
       ".local/share/containers"
       ".local/share/icons"
@@ -37,14 +39,6 @@
       ".cache/mozilla/firefox"
       "./.mozilla/firefox"
 
-      # misc
-      ".local/share/bottles"
-      ".config/Notesnook"
-      ".var/app/com.valvesoftware.Steam"
-      ".config/Slack"
-      ".config/1Password"
-      ".config/Insomnia"
-
       # minecraft
       ".local/share/PrismLauncher"
 
@@ -55,6 +49,14 @@
       ".config/qBittorrent"
       ".cache/qBittorrent"
       ".local/share/qBittorrent"
+
+      # other
+      ".local/share/bottles"
+      ".config/Notesnook"
+      ".var/app/com.valvesoftware.Steam"
+      ".config/Slack"
+      ".config/1Password"
+      ".config/Insomnia"
     ];
 
     files = [

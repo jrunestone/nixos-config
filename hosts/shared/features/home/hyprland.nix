@@ -4,10 +4,6 @@
     systemd.enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
 
-    plugins = [
-      inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
-    ];
-
     settings = {
       monitor = lib.mkDefault ",preferred,auto,auto";
       
@@ -54,7 +50,6 @@
         "$mod, Space, exec, fuzzel"
 
         "$mod, L, exec, hyprlock"
-        "$mod, dead_diaeresis, overview:toggle"
         "$mod CTRL, Pause, exec, shutdown -r now"
         "$mod CTRL, Insert, exec, shutdown -r now"
         "$mod CTRL, Delete, exec, shutdown now"
