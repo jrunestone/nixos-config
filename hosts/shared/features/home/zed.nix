@@ -57,6 +57,7 @@
 
         "scroll_sensitivity": 0.7,
         "show_wrap_guides": false,
+        "soft_wrap": "none",
 
         "gutter": {
           "line_numbers": false
