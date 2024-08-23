@@ -1,12 +1,9 @@
 set dotenv-load
 
-develop:
-  DEVENV_DIR=${{ justfile_directory() }} nix develop
-
 config:
   cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -B build -S .
 
-build: 
+build:
   cmake --build build
 
 run:
