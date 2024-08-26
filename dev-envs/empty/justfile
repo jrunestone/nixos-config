@@ -1,4 +1,1 @@
 set dotenv-load
-
-develop:
-  DEVENV=${{ justfile_directory() }} nix develop

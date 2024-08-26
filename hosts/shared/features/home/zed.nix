@@ -47,6 +47,9 @@
         
         "ui_font_family": "FiraCode Nerd Font",
         "ui_font_size": 20,
+        "ui_font_features": {
+          "calt": false
+        },
         
         "buffer_font_family": "FiraCode Nerd Font",
         "buffer_font_size": 18,

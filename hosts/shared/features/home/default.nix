@@ -45,4 +45,7 @@
   # envs
   home.sessionVariables = {
   };
+
+  # global justfile
+  home.file.justfile.source = ../../../../dev-envs/justfile;
 }

@@ -1,0 +1,40 @@
+set dotenv-load
+
+[no-cd]
+develop:
+  DEVENV_DIR=$(pwd) nix develop
+
+[no-cd]
+up *SERVICE:
+  podman compose --file $DEVENV_PROJECT_ROOT/docker-compose.yml up --build -d {{SERVICE}}
+
+[no-cd]
+down *SERVICE:
+  podman compose --file $DEVENV_PROJECT_ROOT/docker-compose.yml down {{SERVICE}}
+
+[no-cd]
+restart SERVICE:
+  podman compose --file $DEVENV_PROJECT_ROOT/docker-compose.yml restart {{SERVICE}}
+
+[no-cd]
+log *SERVICE:
+  podman compose --file $DEVENV_PROJECT_ROOT/docker-compose.yml logs --timestamps -f {{SERVICE}}
+
+[no-cd]
+create-bare-env NAME ENV:
+  cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
+  sed -i s/projectname/{{NAME}}/g {{NAME}}/flake.nix
+  echo "DEVENV_PROJECT_ROOT=." >> {{NAME}}/.env
+
+[no-cd]
+create-env NAME REPO ENV:
+  # TODO: run create-bare-env
+  cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
+  sed -i s/projectname/{{NAME}}/g {{NAME}}/flake.nix
+  echo "DEVENV_PROJECT_ROOT=$(echo {{REPO}} | cut -d '/' -f 2)" >> {{NAME}}/.env
+  (cd {{NAME}} && git clone git@github.com/{{REPO}})
+
+[no-cd]
+create-web-env NAME REPO:
+  # TODO: run create-env
+  # TODO: cp docker-compose and Dockerfile with substitutions
