@@ -102,9 +102,13 @@
         "$mod ALT, Down, movewindow, d"
 
         "$mod, Left, movefocus, l"
+        "$mod, Left, alterzorder, top"
         "$mod, Right, movefocus, r"
+        "$mod, Right, alterzorder, top"
         "$mod, Up, movefocus, u"
+        "$mod, Up, alterzorder, top"
         "$mod, Down, movefocus, d"
+        "$mod, Down, alterzorder, top"
       ];
 
       # mouse
