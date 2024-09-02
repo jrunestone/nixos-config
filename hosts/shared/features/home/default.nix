@@ -12,6 +12,7 @@
     pkgs.hyprpicker
     pkgs.playerctl # for media key ctl
     pkgs.satty # screenshot editor
+    pkgs.nix-search-cli
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];
 
