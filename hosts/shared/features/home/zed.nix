@@ -33,7 +33,9 @@ in {
           "context": "Editor",
           "bindings": {
             "shift-delete": "editor::DeleteLine",
-            "ctrl-*": ["editor::ToggleComments", { "advance_downwards": false }]
+            "ctrl-'": ["editor::ToggleComments", { "advance_downwards": false }],
+            "ctrl-enter": "editor::NewlineAbove",
+            "ctrl-shift-enter": "editor::NewlineBelow"
           }
         }
       ]
