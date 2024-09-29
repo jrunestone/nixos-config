@@ -80,13 +80,28 @@
   security.polkit.enable = true;
   security.pam.services.hyprlock = {};
 
+  # number of open files..
+  security.pam.loginLimits = [{
+    domain = "*";
+    type = "soft";
+    item = "nofile";
+    value = "1048576";
+  }];
+
   boot.kernel.sysctl = {
+    "fs.file-max" = 1048576;
     "fs.inotify.max_queued_events" = 1048576;
     "fs.inotify.max_user_instances" = 1048576;
     "fs.inotify.max_user_watches" = 1048576;
   };
 
   systemd.extraConfig = ''
+    DefaultLimitNOFILE=1048576
+    DefaultLimitMEMLOCK=infinity
+    DefaultTimeoutStopSec=10s
+  '';
+
+  systemd.user.extraConfig = ''
     DefaultLimitNOFILE=1048576
     DefaultLimitMEMLOCK=infinity
     DefaultTimeoutStopSec=10s
