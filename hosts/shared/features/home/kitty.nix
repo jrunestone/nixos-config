@@ -3,7 +3,7 @@
 
   programs.kitty = {
     enable = true;
-    theme = "Tomorrow Night";
+    themeFile = "Tomorrow_Night";
 
     settings = {
       #background_opacity = "0.93";
