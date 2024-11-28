@@ -2,6 +2,7 @@
   home.packages = [
     pkgs.libnotify
     pkgs.unzip
+    pkgs.unar
     pkgs.file
     pkgs.tree
     pkgs.just
