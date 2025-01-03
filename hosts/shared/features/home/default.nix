@@ -14,6 +14,7 @@
     pkgs.playerctl # for media key ctl
     pkgs.satty # screenshot editor
     pkgs.nix-search-cli
+    pkgs.bat
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];
 

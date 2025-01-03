@@ -5,11 +5,12 @@
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
-    vintagestory = prev.vintagestory.overrideAttrs (old: {
-      preFixup = builtins.replaceStrings
-        ["--prefix LD_LIBRARY_PATH"]
-        ["--set LD_PRELOAD ${final.xorg.libXcursor}/lib/libXcursor.so.1 --prefix LD_LIBRARY_PATH"]
-        old.preFixup;
+    vintagestory = prev.vintagestory.overrideAttrs (old: rec {
+      version = "1.20.0-rc.6";
+      src = prev.fetchurl {
+        url = "https://cdn.vintagestory.at/gamefiles/unstable/vs_client_linux-x64_${version}.tar.gz";
+        sha256 = "sha256-JxyQrZrAmMkUy28JUak0BHHpuGEb2fbxNrtOGVKGhOQ=";
+      };
     });
   };
 
