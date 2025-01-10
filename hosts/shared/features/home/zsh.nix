@@ -64,6 +64,7 @@
 
     shellAliases = {
       ls = "eza -lgaa --group-directories-first";
+      cat = "bat";
       jd = "just develop";
 
       nixdir = "cd $NIXCONFIG";
