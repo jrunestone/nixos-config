@@ -8,7 +8,7 @@
       logp = "log --pretty='%C(Yellow)%h %C(reset)%ad (%C(Green)%cr%C(reset)) %C(Cyan)%an %C(auto)%d %C(reset)%s' --date=format:'%Y-%m-%d %H:%M' --graph";
       undoc = "reset HEAD~1";
       pp = "push origin HEAD";
-      pl = "pull origin $(git branch --show-current)";
+      pl = "!git pull origin $(git branch --show-current)";
     };
 
     extraConfig = {
