@@ -38,3 +38,6 @@ create-env NAME REPO ENV:
 create-web-env NAME REPO:
   # TODO: run create-env
   # TODO: cp docker-compose and Dockerfile with substitutions
+
+env TYPE NAME:
+  (cd ~/dev/src/{{TYPE}}/{{NAME}} && just develop)
