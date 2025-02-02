@@ -4,4 +4,7 @@
   networking = {
     hostName = "jr-home";
   };
+
+  # quemu
+  virtualisation.spiceUSBRedirection.enable = true;
 }

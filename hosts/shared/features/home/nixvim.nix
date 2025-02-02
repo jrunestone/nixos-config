@@ -20,6 +20,12 @@
       colorscheme = "tomorrow-night";
     };
 
+    # TODO: color scheme
+    #highlightOverride = {
+    #  NeoTreeNormal.bg = "#2B2D30";
+    #  NeoTreeNormalNC.bg = "#2B2D30";
+    #};
+
     globals = {
       mapleader = " ";
     };
@@ -73,6 +79,24 @@
     ];
 
     plugins = {
+      lsp = {
+        enable = true;
+        servers = {
+          csharp_ls.enable = true;
+        };
+      };
+
+      cmp = {
+        enable = true;
+        autoEnableSources = true;
+
+        settings.sources = [
+          { name = "nvim_lsp"; }
+          { name = "path"; }
+          { name = "buffer"; }
+        ];
+      };
+
       web-devicons ={
         enable = true;
       };

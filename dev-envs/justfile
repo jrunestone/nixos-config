@@ -4,6 +4,9 @@ set dotenv-load
 develop:
   DEVENV_DIR=$(pwd) nix develop
 
+env TYPE NAME:
+  (cd ~/dev/src/{{TYPE}}/{{NAME}} && just -g develop)
+
 [no-cd]
 up *SERVICE:
   podman compose --file $DEVENV_PROJECT_ROOT/docker-compose.yml up --build -d {{SERVICE}}
@@ -38,6 +41,3 @@ create-env NAME REPO ENV:
 create-web-env NAME REPO:
   # TODO: run create-env
   # TODO: cp docker-compose and Dockerfile with substitutions
-
-env TYPE NAME:
-  (cd ~/dev/src/{{TYPE}}/{{NAME}} && just develop)
