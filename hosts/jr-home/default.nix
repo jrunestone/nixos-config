@@ -12,9 +12,10 @@
     ../shared
     ../shared/features/system/podman.nix
     ../shared/features/system/1password.nix
-    
+
     ./features/system
     ./features/system/mounts.nix
+    ./features/system/persistence.nix
   ];
 
   host-options.system = {

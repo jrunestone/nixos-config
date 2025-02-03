@@ -75,7 +75,7 @@ in {
         "soft_wrap": "none",
 
         "gutter": {
-          "line_numbers": false
+          "line_numbers": true
         },
         
         "indent_guides": {
