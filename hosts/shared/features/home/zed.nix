@@ -35,7 +35,8 @@ in {
             "shift-delete": "editor::DeleteLine",
             "ctrl-'": ["editor::ToggleComments", { "advance_downwards": false }],
             "ctrl-enter": "editor::NewlineAbove",
-            "ctrl-shift-enter": "editor::NewlineBelow"
+            "ctrl-shift-enter": "editor::NewlineBelow",
+            "ctrl-shift-space": "editor::ShowSignatureHelp"
           }
         }
       ]
