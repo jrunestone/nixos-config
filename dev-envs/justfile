@@ -26,14 +26,12 @@ log *SERVICE:
 [no-cd]
 create-bare-env NAME ENV:
   cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
-  sed -i s/projectname/{{NAME}}/g {{NAME}}/flake.nix
+  sed -i s/my-env/{{NAME}}/g {{NAME}}/flake.nix
   echo "DEVENV_PROJECT_ROOT=." >> {{NAME}}/.env
 
 [no-cd]
 create-env NAME REPO ENV:
-  # TODO: run create-bare-env
-  cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
-  sed -i s/projectname/{{NAME}}/g {{NAME}}/flake.nix
+  just create-bare-env {{NAME}} {{ENV}}
   echo "DEVENV_PROJECT_ROOT=$(echo {{REPO}} | cut -d '/' -f 2)" >> {{NAME}}/.env
   (cd {{NAME}} && git clone git@github.com/{{REPO}})
 
