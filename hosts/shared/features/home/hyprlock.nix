@@ -6,7 +6,10 @@
       general = {
         disable_loading_bar = true;
         ignore_empty_input = true;
-        no_fade_out = true;
+      };
+
+      animations = {
+        enabled = false;
       };
 
       background = [{
@@ -23,14 +26,13 @@
         monitor = "";
         path = "${config.host-options.home.user-icon}";
         rounding = -1;
-        position = { x = 0; y = 140; };
+        position = "0, 200";
         halign = "center";
         valign = "center";
       }];
 
       input-field = [{
         monitor = "";
-        size = { width = 250; height = 20; };
         outline_thickness = 4;
         rounding = 0;
         dots_size = 0.2;
@@ -41,7 +43,6 @@
         font_color = "rgb(${config.colorScheme.palette.base02})";
         fail_color = "rgb(${config.colorScheme.palette.base0F})";
         fail_text = "";
-        fail_timeout = 1000;
         fade_on_empty = false;
         hide_input = false;
         halign = "center";

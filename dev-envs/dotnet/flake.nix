@@ -15,9 +15,7 @@
       DEVENV_NAME = "my-env";
 
       packages = with pkgs; [
-        (with dotnetCorePackages; combinePackages [
-          sdk_9_0
-        ])
+        dotnetCorePackages.sdk_9_0
         jetbrains.rider
       ];
 

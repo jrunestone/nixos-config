@@ -57,8 +57,8 @@
       allowUnfreePredicate = (_: true);
 
       permittedInsecurePackages = [
-        # required for sublime4 atm
-        "openssl-1.1.1w"
+        # required for some packages atm
+        "dotnet-runtime-7.0.20"
       ];
     };
   };

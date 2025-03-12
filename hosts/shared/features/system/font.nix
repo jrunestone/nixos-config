@@ -1,7 +1,7 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   fonts.packages = [
     (pkgs.noto-fonts.override { variants = [ "NotoSans" ]; })
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
+    pkgs.nerd-fonts.fira-code
   ];
 
   fonts.fontconfig.enable = true;
