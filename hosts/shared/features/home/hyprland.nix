@@ -30,7 +30,8 @@
         "workspace special,class:^(Notesnook)(.*)$"
         "float, class:^(Notesnook)(.*)$"
 
-        "stayfocused, title:^()$, class:^(jetbrains-rider)$, floating:1"
+        "stayfocused, title:^()$, class:(jetbrains-)(.*), floating:1"
+        "noinitialfocus,class:(jetbrains-)(.*),title:^win(.*), initialTitle:win.*, floating:1"
       ];
 
       # plugins
@@ -143,8 +144,8 @@
       ];
 
       general = {
-        gaps_in = 15;
-        gaps_out = 20;
+        gaps_in = 8;
+        gaps_out = 15;
         border_size = 5;
         "col.active_border" = "rgb(${config.colorScheme.palette.base05})";
         "col.inactive_border" = "rgb(${config.colorScheme.palette.base02})";
@@ -169,11 +170,11 @@
         "col.border_inactive" = "rgb(${config.colorScheme.palette.base02})";
 
         groupbar = {
-            "col.active" = "rgb(${config.colorScheme.palette.base02})";
-            "col.inactive" = "rgb(${config.colorScheme.palette.base02})";
-            text_color = "rgb(${config.colorScheme.palette.base07})";
-            font_size = 12;
-          };
+          "col.active" = "rgb(${config.colorScheme.palette.base05})";
+          "col.inactive" = "rgb(${config.colorScheme.palette.base02})";
+          text_color = "rgb(${config.colorScheme.palette.base07})";
+          font_size = 12;
+        };
       };
 
       misc = {

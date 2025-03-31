@@ -7,7 +7,7 @@
       primary = {
         layer = "top";
         position = "bottom";
-        margin = "5 20 15 20";
+        margin = "0 15 10 15";
         height = 40;
         modules-left = [ "hyprland/workspaces" ];
         modules-right = [ "tray" "battery" "clock" ];

@@ -1,6 +1,7 @@
 { inputs, lib, pkgs, config, outputs, ... }: {  
   home.packages = [
     pkgs.libnotify
+    pkgs.zip
     pkgs.unzip
     pkgs.unar
     pkgs.file

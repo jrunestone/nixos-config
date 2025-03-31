@@ -11,6 +11,7 @@
     ../shared/features/home/steam.nix
     ../shared/features/home/notesnook.nix
     ../shared/features/home/bottles.nix
+    ../shared/features/home/hypridle.nix
 
     ./features/home/sound.nix
     ./features/home/hyprland.nix

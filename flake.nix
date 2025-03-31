@@ -11,6 +11,7 @@
     hyprland = {
       type = "git";
       url = "https://github.com/hyprwm/Hyprland";
+      # to pin a version:
       #ref = "refs/tags/v0.41.2";
       submodules = true;
     };
