@@ -12,7 +12,7 @@
         config.allowUnfree = true;
       };
     in pkgs.mkShell {
-      DEVENV_NAME = "myenv";
+      DEVENV_NAME = "projectname";
 
       packages = with pkgs; [
       ];

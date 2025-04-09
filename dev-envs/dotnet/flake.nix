@@ -12,7 +12,7 @@
         config.allowUnfree = true;
       };
     in pkgs.mkShell {
-      DEVENV_NAME = "my-env";
+      DEVENV_NAME = "projectname";
 
       packages = with pkgs; [
         dotnetCorePackages.sdk_9_0

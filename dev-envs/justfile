@@ -28,15 +28,21 @@ create-bare-env NAME ENV:
   cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
   sed -i s/my-env/{{NAME}}/g {{NAME}}/flake.nix
   echo "DEVENV_PROJECT_ROOT=." >> {{NAME}}/.env
+  echo "DEVENV_ABS_PATH=$(pwd)/{{NAME}}" >> {{NAME}}/.env
 
 [no-cd]
 create-env NAME REPO ENV:
-  just create-bare-env {{NAME}} {{ENV}}
-  echo "DEVENV_PROJECT_ROOT=$(echo {{REPO}} | cut -d '/' -f 2)" >> {{NAME}}/.env
-  (cd {{NAME}} && git clone git@github.com/{{REPO}})
+  #!/usr/bin/env bash
+  # TODO: run create-bare-env
+  cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
+  sed -i s/projectname/{{NAME}}/g {{NAME}}/flake.nix
+  REPO_DIR_NAME=$(echo {{REPO}} | cut -d '/' -f 2)
+  echo "DEVENV_PROJECT_ROOT=$REPO_DIR_NAME" >> {{NAME}}/.env
+  echo "$REPO_DIR_NAME/" >> {{NAME}}/.gitignore
+  (cd {{NAME}} && git clone {{REPO}})
 
 [no-cd]
 create-web-env NAME REPO:
   just create-env {{NAME}} {{REPO}} dotnet-web
-  echo "DEVENV_CERT_PATH=/home/jr/src/shared/dev-certs/localhost.pfx" >> {{NAME}}/.env
+  echo "dev-certs/" >> {{NAME}}/.gitignore
   # TODO: cp docker-compose and Dockerfile with substitutions
