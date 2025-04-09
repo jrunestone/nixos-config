@@ -26,7 +26,7 @@
         monitor = "";
         path = "${config.host-options.home.user-icon}";
         rounding = -1;
-        position = "0, 200";
+        position = "0, 140";
         halign = "center";
         valign = "center";
       }];

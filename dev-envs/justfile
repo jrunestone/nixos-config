@@ -37,5 +37,6 @@ create-env NAME REPO ENV:
 
 [no-cd]
 create-web-env NAME REPO:
-  # TODO: run create-env
+  just create-env {{NAME}} {{REPO}} dotnet-web
+  echo "DEVENV_CERT_PATH=/home/jr/src/shared/dev-certs/localhost.pfx" >> {{NAME}}/.env
   # TODO: cp docker-compose and Dockerfile with substitutions

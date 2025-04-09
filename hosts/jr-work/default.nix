@@ -9,6 +9,7 @@
     ../shared/features/system/1password.nix
     
     ./features/system
+    ./features/system/persistence.nix
   ];
 
   host-options.system = {

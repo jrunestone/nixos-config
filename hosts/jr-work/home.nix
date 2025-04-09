@@ -10,7 +10,6 @@
     ../shared/features/home/podman.nix
     ../shared/features/home/notesnook.nix
 
-    ./features/home/persistence.nix
     ./features/home/hyprland.nix
   ];
 
