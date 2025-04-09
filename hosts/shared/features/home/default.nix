@@ -16,6 +16,7 @@
     pkgs.satty # screenshot editor
     pkgs.nix-search-cli
     pkgs.bat
+    pkgs.htop
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];
 
