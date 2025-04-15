@@ -16,7 +16,11 @@
 
       packages = with pkgs; [
         cmake
+        ninja
+        ccache
+        clang-tools
         gdb
+        valgrind
       ];
 
       shellHook = ''

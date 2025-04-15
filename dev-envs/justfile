@@ -26,7 +26,7 @@ log *SERVICE:
 [no-cd]
 create-bare-env NAME ENV:
   cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
-  sed -i s/my-env/{{NAME}}/g {{NAME}}/flake.nix
+  sed -i s/projectname/{{NAME}}/g {{NAME}}/*
   echo "DEVENV_PROJECT_ROOT=." >> {{NAME}}/.env
   echo "DEVENV_ABS_PATH=$(pwd)/{{NAME}}" >> {{NAME}}/.env
 
@@ -35,7 +35,7 @@ create-env NAME REPO ENV:
   #!/usr/bin/env bash
   # TODO: run create-bare-env
   cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
-  sed -i s/projectname/{{NAME}}/g {{NAME}}/flake.nix
+  sed -i s/projectname/{{NAME}}/g {{NAME}}/*
   REPO_DIR_NAME=$(echo {{REPO}} | cut -d '/' -f 2)
   echo "DEVENV_PROJECT_ROOT=$REPO_DIR_NAME" >> {{NAME}}/.env
   echo "$REPO_DIR_NAME/" >> {{NAME}}/.gitignore
