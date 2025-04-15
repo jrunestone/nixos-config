@@ -5,7 +5,7 @@ project(projectname
   LANGUAGES CXX)
 
 include_directories(
-  include)
+  inc)
 
 file(GLOB_RECURSE SOURCE_FILES "src/**/*.cpp")
 
