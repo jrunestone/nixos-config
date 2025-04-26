@@ -74,6 +74,7 @@ in {
         "scroll_sensitivity": 0.7,
         "show_wrap_guides": false,
         "soft_wrap": "none",
+        "tab_size": 2,
 
         "gutter": {
           "line_numbers": true

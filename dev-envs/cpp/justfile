@@ -6,11 +6,11 @@ config:
 build:
   ninja -C build
 
-run:
-  just build && ./build/projectname
+run *ARGS:
+  just build && ./build/projectname {{ARGS}}
 
 debug:
-    just build && gdb -ex run -ex quit -batch ./build/projectname
+  just build && gdb -ex run -ex quit -batch ./build/projectname
 
 profile:
-    just build && valgrind --leak-check=full ./build/projectname
+  just build && valgrind --leak-check=full ./build/projectname
