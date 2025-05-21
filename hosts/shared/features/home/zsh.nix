@@ -8,6 +8,7 @@
       extended = true;
       ignoreDups = true;
       ignoreSpace = true;
+      append = true;
     };
 
     plugins = [
@@ -109,6 +110,7 @@
       bindkey "^[[1;5C" forward-word
 
       ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#464d57"
+      unsetopt HIST_SAVE_BY_COPY
     '';
   };
 }
