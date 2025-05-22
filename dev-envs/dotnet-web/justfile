@@ -1,4 +1,4 @@
 set dotenv-load
 
-ide:
-  find . -type f -name '*.sln' | head -n 1 | xargs -I{} rider {} > /dev/null 2>&1 & disown
+ide NAME="*.sln":
+  find . -type f -name '{{NAME}}' | head -n 1 | xargs -I{} rider {} > /dev/null 2>&1 & disown
