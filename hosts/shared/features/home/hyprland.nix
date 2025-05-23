@@ -186,6 +186,10 @@
       debug = {
         disable_logs = false;
       };
+
+      ecosystem = {
+        no_update_news = true;
+      };
     };
   };
 }

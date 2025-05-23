@@ -77,7 +77,7 @@
       nixcleanup = "sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +5; nix-collect-garbage; nix-store --optimise";
     };
 
-    initExtra = ''
+    initContent = ''
       function redraw-prompt() {
         local f
         for f in chpwd "''${chpwd_functions[@]}" precmd "''${precmd_functions[@]}"; do

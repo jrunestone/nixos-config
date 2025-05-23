@@ -4,7 +4,7 @@
       EDITOR = "nvim";
     };
 
-    initExtra = ''
+    initContent = ''
       nv() { nvim -c "lcd $1" $1; }
     '';
   };
