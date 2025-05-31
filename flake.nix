@@ -40,11 +40,16 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+
+    nixos-secrets = {
+      url = "git+ssh://git@github.com/jrunestone/nixos-secrets?ref=main";
+    };
   };
 
   outputs = { 
     self, 
     nixpkgs, 
+    nixos-secrets,
     disko, 
     impermanence, 
     home-manager, 

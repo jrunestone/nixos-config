@@ -1,0 +1,38 @@
+{
+  "name": "projectname",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:9.0-bookworm",
+
+  "features": {
+    
+  },
+
+  "forwardPorts": [5000],
+
+  "portsAttributes": {
+    "5000": {
+      "label": "web",
+      "protocol": "https"
+    }
+  },
+
+  "remoteEnv": {
+    "ASPNETCORE_Kestrel__Certificates__Default__Path": "${containerWorkspaceFolder}/.devcontainer/localhost.pfx",
+    "ASPNETCORE_Kestrel__Certificates__Default__Password": "changeit"
+  },
+
+  "runArgs": [
+    "--env-file=.devcontainer/.env"
+  ],
+
+  "initializeCommand": {
+    "ensure-env-file": "touch .devcontainer/.env"
+  },
+
+  "postCreateCommand": {
+    "create-cert": "mkcert -pkcs12 -p12-file .devcontainer/localhost.pfx localhost"
+  },
+
+  "postStartCommand": {
+    //"restore-tools": "dotnet tool restore --tool-manifest .config/dotnet-tools.json"
+  }
+}

@@ -9,6 +9,7 @@ in
     ./features/system
     ./features/system/boot.nix
     ./features/system/persistence.nix
+    ./features/system/root-cert.nix
     ./features/system/gfx.nix
     ./features/system/wired.nix
     ./features/system/pipewire.nix

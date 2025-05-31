@@ -1,18 +1,19 @@
 ## TODO
 * stylix
-* pwa: outlook, teams, proton
-* Keyring doesn't unlock on boot
-* fzf default command doesnt ignore git folder
-* Scale down hyprlock
 
 ## Known issues
 * History scan up/down (history substring search) doesn't work with p10k
-* No audio in games running in bottles if Spotify is running
+* Keyring doesn't unlock on boot
+* fzf default command doesnt ignore git folder
 
 ## Aliases
 * `$NIXCONFIG` or `nixdir`
 * `nixedit`
 * `nix-rebuild [switch|boot] $NIXCONFIG.#$HOSTNAME` or `nixbuild [switch|boot]`
+* `nix flake update && nixupdates` to show what will be updated
+* `nix flake update <input>` update a single input
+* `nixversions` to show current versions
+* `nixgenerations`
 
 ### devshells
 * Uses devenvs with flakes and nix develop.
@@ -20,16 +21,12 @@
 * A devenv is a parent folder with meta files and then the project in a project dir gitignored
 * Run `just develop` to init the devenv with the correct dirs, setup certs etc
 
-TODO:
-* Global justfile for shared cmds like develop, export/import db, make certs
-* Setup commands should create .env, put in gitignore
-* Local url mapping with traefik or other
-
-Global command ideas:
-* Dockerify an umbraco project
-
 ## Install
-User is hard-coded to "jr" in flake for all hosts.
+NOTE: User is hard-coded to "jr" in flake for all hosts. 
+
+NOTE: Secrets are fetched from a private git repo as a flake input.
+
+TODO: do this with nixos-anywhere to transfer ssh keys etc
 
 1. Run installer iso
 2. Exit installer into cmd
@@ -40,8 +37,6 @@ User is hard-coded to "jr" in flake for all hosts.
 7. `mv nixos-config /mnt/nix/persist/system/etc/nixos`
 8. `mkpasswd -m sha-512 "<password>" > /mnt/nix/persist/system/passwords/jr`
 9. `nixos-generate-config --no-filesystems --root /mnt` and copy hardware-info.nix to repo/host if new host
-10. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
-11. `reboot`
-12. Do manual things:
-    * Copy over ssh keys
-    * Create /etc/nixos/smb-secrets for automounting network storage
+10. Copy over ssh keys to be able to authenticate with GitHub.
+11. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
+12. `reboot`

@@ -17,11 +17,9 @@
     pkgs.brightnessctl
   ];
 
+  host-options.hostname = "jr-work";
+
   host-options.home = {
 
-  };
-
-  programs.git = {
-    userEmail = "johan.runsten@toxic.se";
   };
 }

@@ -1,14 +1,4 @@
-{ pkgs, lib, config, ... }: let
-  #zed-fhs = pkgs.buildFHSUserEnv {
-  #  name = "zed";
-  #  targetPkgs = pkgs:
-  #    with pkgs; [
-  #      zed-editor
-  #    ];
-  #  runScript = "zed";
-  #};
-in {
-  #home.packages = [zed-fhs];
+{ pkgs, lib, config, ... }: {
   home.packages = [ pkgs.zed-editor ];
 
   home.file."${config.xdg.configHome}/zed/themes/base16-tomorrow-night.json" = {
@@ -75,6 +65,7 @@ in {
         "show_wrap_guides": false,
         "soft_wrap": "none",
         "tab_size": 2,
+        "format_on_save": "off",
 
         "gutter": {
           "line_numbers": true

@@ -70,7 +70,7 @@
 
       nixdir = "cd $NIXCONFIG";
       nixedit = "nv $NIXCONFIG";
-      nixbuild = "git -C $NIXCONFIG add . && sudo nixos-rebuild --flake $NIXCONFIG/#$HOST";
+      nixbuild = "git -C $NIXCONFIG add . && nixos-rebuild --flake $NIXCONFIG/#$HOST --use-remote-sudo";
       nixupdates = "echo 'Run sudo nix flake update first' && nixbuild build && nix store diff-closures /run/current-system ./result && rm ./result";
       nixversions = "find /etc/profiles/per-user/jr/bin -type l | xargs readlink -f | cut -d- -f2- | cut -d/ -f1 | sort -u";
       nixgenerations = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";

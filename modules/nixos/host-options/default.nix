@@ -1,6 +1,10 @@
 { lib, ... }: {
   options = {
     host-options = {
+      hostname = lib.mkOption {
+        type = lib.types.str;
+      };
+
       home = {
         wallpaper = lib.mkOption {
           type = lib.types.path;

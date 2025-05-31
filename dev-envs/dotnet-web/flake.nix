@@ -16,16 +16,17 @@
 
       packages = with pkgs; [
         (with dotnetCorePackages; combinePackages [
-          sdk_8_0
+          sdk_9_0
         ])
         jetbrains.rider
+        devpod
         mkcert
       ];
 
       shellHook = ''
-        if ! [ -f $DEVENV_DIR/dev-certs/localhost.pfx ]; then
-          # password is "changeit"
-          mkdir -p $DEVENV_DIR/dev-certs && mkcert -p12-file $DEVENV_DIR/dev-certs/localhost.pfx -pkcs12 localhost
+        if ! [ -f $DEVENV_PROJECT_ROOT/.devcontainer/localhost.pfx ]; then
+          # assumes rootCA is present in $CAROOT, password is "changeit"
+          mkdir -p $DEVENV_PROJECT_ROOT/.devcontainer && mkcert -p12-file $DEVENV_PROJECT_ROOT/.devcontainer/localhost.pfx -pkcs12 localhost
         fi
 
         exec zsh

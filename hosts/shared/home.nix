@@ -4,12 +4,12 @@
     inputs.nix-colors.homeManagerModules.default
 
     ./features/home
+    ./features/home/root-cert.nix
     ./features/home/zsh.nix
     ./features/home/kitty.nix
     ./features/home/fzf.nix
     ./features/home/git.nix
     ./features/home/lf.nix
-    ./features/home/tmux.nix
     ./features/home/nixvim.nix
     ./features/home/zed.nix
     ./features/home/hyprland.nix

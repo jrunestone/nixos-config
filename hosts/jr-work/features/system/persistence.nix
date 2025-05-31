@@ -31,6 +31,7 @@
         ".ssh"
         ".nuget"
         ".pki"
+        ".devpod"
 
         ".cache/hyprland"
 
@@ -39,6 +40,7 @@
         ".local/share/icons"
         ".local/share/NuGet"
         ".local/share/flatpak"
+        ".local/share/mkcert"
 
         # jetbrains
         ".java"

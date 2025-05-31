@@ -10,7 +10,6 @@
     ../shared/features/home/podman.nix
     ../shared/features/home/steam.nix
     ../shared/features/home/notesnook.nix
-    ../shared/features/home/bottles.nix
     ../shared/features/home/hypridle.nix
 
     ./features/home/sound.nix
@@ -20,11 +19,9 @@
     ./features/home/qbittorrent.nix
   ];
 
+  host-options.hostname = "jr-home";
+
   host-options.home = {
 
-  };
-
-  programs.git = {
-    userEmail = "johan85@hotmail.com";
   };
 }

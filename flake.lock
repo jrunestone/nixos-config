@@ -569,6 +569,22 @@
         "type": "github"
       }
     },
+    "nixos-secrets": {
+      "locked": {
+        "lastModified": 1748680680,
+        "narHash": "sha256-MO3gqcQckJIE+Nql67clvKvDJkMbndZEF5UkVPsjJWs=",
+        "ref": "main",
+        "rev": "72bcac8535fecb090ed39d550dc849b7a01ca0bd",
+        "revCount": 10,
+        "type": "git",
+        "url": "ssh://git@github.com/jrunestone/nixos-secrets"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "ssh://git@github.com/jrunestone/nixos-secrets"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1747744144,
@@ -696,6 +712,7 @@
         "impermanence": "impermanence",
         "nix-colors": "nix-colors",
         "nix-flatpak": "nix-flatpak",
+        "nixos-secrets": "nixos-secrets",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim"
       }

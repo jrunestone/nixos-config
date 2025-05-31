@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }: {
+{ inputs, pkgs, lib, config, ... }: {
   home.packages = [ pkgs.gitstatus ];
 
   programs.git = {
@@ -26,5 +26,6 @@
     };
 
     userName = "Johan Runsten";
+    userEmail = inputs.nixos-secrets.hosts.${config.host-options.hostname}.email;
   };
 }

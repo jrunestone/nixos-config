@@ -16,6 +16,7 @@
     ./features/system
     ./features/system/mounts.nix
     ./features/system/persistence.nix
+    ./features/system/reverse-proxy.nix
   ];
 
   host-options.system = {
