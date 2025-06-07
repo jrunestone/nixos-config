@@ -49,6 +49,10 @@
         ".config/zed"
         ".local/share/zed"
 
+        # vscode
+        ".config/Code"
+        ".vscode"
+
         # spotify
         ".config/spotify"
         ".cache/spotify"
@@ -62,16 +66,15 @@
         ".cache/qBittorrent"
         ".local/share/qBittorrent"
 
-        # other
+        # misc
         ".config/Notesnook"
         ".var/app/com.valvesoftware.Steam"
         ".config/Slack"
         ".config/1Password"
         ".config/Insomnia"
-        ".devpod"
-        ".vscode"
         ".config/VintagestoryData"
         ".local/share/PrismLauncher"
+        ".devpod"
         ".cache/hyprland"
       ];
 

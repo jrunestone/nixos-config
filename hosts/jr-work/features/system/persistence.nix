@@ -31,10 +31,7 @@
         ".ssh"
         ".nuget"
         ".pki"
-        ".devpod"
-
-        ".cache/hyprland"
-
+        
         ".local/share/keyrings"
         ".local/share/containers"
         ".local/share/icons"
@@ -52,6 +49,10 @@
         ".config/zed"
         ".local/share/zed"
 
+        # vscode
+        ".config/Code"
+        ".vscode"
+
         # spotify
         ".config/spotify"
         ".cache/spotify"
@@ -65,6 +66,8 @@
         ".config/Slack"
         ".config/1Password"
         ".config/Insomnia"
+        ".devpod"
+        ".cache/hyprland"
       ];
 
       files = [

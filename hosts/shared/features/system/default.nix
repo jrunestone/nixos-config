@@ -63,6 +63,9 @@
     };
   };
 
+  # nix-ld (run unpatched executables)
+  programs.nix-ld.enable = true;
+
   # fwupd
   services.fwupd.enable = true;
 
