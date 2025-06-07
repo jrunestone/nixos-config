@@ -3,7 +3,8 @@
   "image": "mcr.microsoft.com/devcontainers/dotnet:9.0-bookworm",
 
   "features": {
-    
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/node:1": {}
   },
 
   "forwardPorts": [5000],
@@ -15,24 +16,32 @@
     }
   },
 
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode-remote.remote-containers",
+        "ms-dotnettools.csdevkit",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "EditorConfig.EditorConfig"
+      ]
+    }
+  },
+
   "remoteEnv": {
     "ASPNETCORE_Kestrel__Certificates__Default__Path": "${containerWorkspaceFolder}/.devcontainer/localhost.pfx",
-    "ASPNETCORE_Kestrel__Certificates__Default__Password": "changeit"
+    "ASPNETCORE_Kestrel__Certificates__Default__Password": "changeit",
+    "DOTNET_WATCH_RESTART_ON_RUDE_EDIT": "true"
   },
 
   "runArgs": [
-    "--env-file=.devcontainer/.env"
+    //"--env-file=${localWorkspaceFolder}/.devcontainer/.env"
   ],
 
-  "initializeCommand": {
-    "ensure-env-file": "touch .devcontainer/.env"
+  "updateContentCommand": {
+    //"install-frontend-deps": "pnpm install --prefix src/Project.Folder",
+    //"restore-dotnet-tools": "dotnet tool restore --tool-manifest .config/dotnet-tools.json"
   },
 
-  "postCreateCommand": {
-    "create-cert": "mkcert -pkcs12 -p12-file .devcontainer/localhost.pfx localhost"
-  },
-
-  "postStartCommand": {
-    //"restore-tools": "dotnet tool restore --tool-manifest .config/dotnet-tools.json"
-  }
+  //"postStartCommand": "dotnet watch run --project src/Project.Folder"
 }

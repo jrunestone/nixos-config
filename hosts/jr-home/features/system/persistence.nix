@@ -31,9 +31,6 @@
         ".ssh"
         ".nuget"
         ".pki"
-        ".devpod"
-
-        ".cache/hyprland"
 
         ".local/share/keyrings"
         ".local/share/containers"
@@ -60,12 +57,6 @@
         ".cache/mozilla/firefox"
         "./.mozilla/firefox"
 
-        # minecraft
-        ".local/share/PrismLauncher"
-
-        # vintage story
-        ".config/VintagestoryData"
-
         # qbittorrent
         ".config/qBittorrent"
         ".cache/qBittorrent"
@@ -77,6 +68,11 @@
         ".config/Slack"
         ".config/1Password"
         ".config/Insomnia"
+        ".devpod"
+        ".vscode"
+        ".config/VintagestoryData"
+        ".local/share/PrismLauncher"
+        ".cache/hyprland"
       ];
 
       files = [

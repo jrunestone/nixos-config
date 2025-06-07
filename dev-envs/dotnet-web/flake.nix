@@ -1,10 +1,12 @@
 {
   inputs = {
       nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+      nixos-secrets.url = "git+ssh://git@github.com/jrunestone/nixos-secrets?ref=main";
   };
 
   outputs = { self, nixpkgs, ... }: let
     system = "x86_64-linux";    
+    certPath = nixos-secrets.hosts.jr-home.certs;
   in {
     devShells."${system}".default = let
       pkgs = import nixpkgs {
@@ -19,16 +21,10 @@
           sdk_9_0
         ])
         jetbrains.rider
-        devpod
-        mkcert
       ];
 
       shellHook = ''
-        if ! [ -f $DEVENV_PROJECT_ROOT/.devcontainer/localhost.pfx ]; then
-          # assumes rootCA is present in $CAROOT, password is "changeit"
-          mkdir -p $DEVENV_PROJECT_ROOT/.devcontainer && mkcert -p12-file $DEVENV_PROJECT_ROOT/.devcontainer/localhost.pfx -pkcs12 localhost
-        fi
-
+        cp ${certPath.localhost-pfx} $DEVENV_PROJECT_ROOT/.devcontainer/localhost.pfx
         exec zsh
         #trap 'echo "Bye"' EXIT
       '';

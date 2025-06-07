@@ -1,0 +1,11 @@
+bin/
+obj/
+.vscode/
+.idea/
+node_modules/
+publish/
+.suo
+.user
+.env
+.pfx
+.pem
