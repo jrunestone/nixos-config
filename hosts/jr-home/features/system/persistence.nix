@@ -67,6 +67,7 @@
         ".local/share/qBittorrent"
 
         # misc
+        ".config/Moonlight Game Streaming Project"
         ".config/Notesnook"
         ".var/app/com.valvesoftware.Steam"
         ".config/Slack"
