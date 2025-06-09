@@ -19,10 +19,25 @@
             command = "editor.action.commentLine";
             when = "editorTextFocus && !editorReadonly";
           }
+
+          {
+            key = "ctrl+shift+d";
+            command = "editor.action.copyLinesDownAction";
+            when = "editorTextFocus && !editorReadOnly";
+          }
+
+          {
+            key = "ctrl+alt+s";
+            command = "workbench.action.files.saveAll";
+          }
         ];
 
         userSettings = {
           "workbench.colorTheme" = "Tomorrow Night";
+          "dev.containers.dockerPath" = "podman";
+          "dev.container.dockerSocketPath" = "/run/user/1000/podman/podman.sock";
+          "explorer.confirmDragAndDrop" = false;
+          "remote.autoForwardPortsSource" = "hybrid";
         };
       };
     };

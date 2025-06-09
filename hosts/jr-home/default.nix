@@ -17,6 +17,7 @@
     ./features/system/mounts.nix
     ./features/system/persistence.nix
     ./features/system/reverse-proxy.nix
+    ./features/system/moonlight.nix
   ];
 
   host-options.system = {
