@@ -36,7 +36,7 @@ create-env NAME REPO ENV:
   # TODO: run create-bare-env
   cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
   find {{NAME}}/ -type f | xargs -I{} sed -i s/projectname/{{NAME}}/g {}
-  REPO_DIR_NAME=$(echo {{REPO}} | cut -d '/' -f 2)
+  REPO_DIR_NAME=$(echo {{REPO}} | sed 's/\.git$//')
   echo "DEVENV_PROJECT_ROOT=$REPO_DIR_NAME" >> {{NAME}}/.env
   echo "$REPO_DIR_NAME/" >> {{NAME}}/.gitignore
   (cd {{NAME}} && git clone {{REPO}})
