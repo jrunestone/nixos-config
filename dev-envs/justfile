@@ -41,8 +41,3 @@ create-env NAME REPO ENV:
   echo "$REPO_DIR_NAME/" >> {{NAME}}/.gitignore
   (cd {{NAME}} && git clone {{REPO}})
 
-[no-cd]
-create-web-env NAME REPO:
-  just create-env {{NAME}} {{REPO}} dotnet-web
-  echo "dev-certs/" >> {{NAME}}/.gitignore
-  # TODO: cp docker-compose and Dockerfile with substitutions
