@@ -38,6 +38,10 @@
           "dev.container.dockerSocketPath" = "/run/user/1000/podman/podman.sock";
           "explorer.confirmDragAndDrop" = false;
           "remote.autoForwardPortsSource" = "hybrid";
+          "update.mode" = "none";
+          "extensions.ignoreRecommendations" = true;
+          "extensions.autoUpdate" = false;
+          "workbench.startupEditor" = "none";
         };
       };
     };
