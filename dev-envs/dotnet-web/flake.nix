@@ -24,7 +24,14 @@
       ];
 
       shellHook = ''
-        cp ${certPath.localhost-pfx} $DEVENV_PROJECT_ROOT/.devcontainer/localhost.pfx
+        set +a
+        source ./.env
+        set -a
+
+        if ! [ -f $DEVENV_PROJECT_ROOT/.devcontainer/jr-home.pfx ]; then
+          cp ${certPath.localhost-pfx} $DEVENV_PROJECT_ROOT/.devcontainer/jr-home.pfx
+        fi
+
         exec zsh
         #trap 'echo "Bye"' EXIT
       '';
