@@ -42,6 +42,7 @@
           "extensions.ignoreRecommendations" = true;
           "extensions.autoUpdate" = false;
           "workbench.startupEditor" = "none";
+          "editor.codeLens" = false;
         };
       };
     };
