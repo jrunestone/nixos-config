@@ -49,6 +49,7 @@
 
   # envs
   home.sessionVariables = {
+    HOSTNAME = "${config.host-options.hostname}";
   };
 
   # global justfile

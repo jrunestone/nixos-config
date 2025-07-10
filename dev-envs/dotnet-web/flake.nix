@@ -28,8 +28,15 @@
         source ./.env
         set -a
 
-        if ! [ -f $DEVENV_PROJECT_ROOT/.devcontainer/jr-home.pfx ]; then
-          cp ${certPath.localhost-pfx} $DEVENV_PROJECT_ROOT/.devcontainer/jr-home.pfx
+        DEVCONTAINER_PATH=$DEVENV_PROJECT_ROOT/.devcontainer
+
+        if ! [ -f $DEVCONTAINER_PATH ]; then
+          cp -r ./.devcontainer $DEVENV_PROJECT_ROOT/
+        fi
+
+        if ! [ -f $DEVCONTAINER_PATH/localhost.pfx ]; then
+          cp ${certPath.localhost-pfx} $DEVCONTAINER_PATH/localhost.pfx
+          chmod +w $DEVCONTAINER_PATH/localhost.pfx
         fi
 
         exec zsh
