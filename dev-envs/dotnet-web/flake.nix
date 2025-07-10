@@ -4,7 +4,7 @@
       nixos-secrets.url = "git+ssh://git@github.com/jrunestone/nixos-secrets?ref=main";
   };
 
-  outputs = { self, nixpkgs, ... }: let
+  outputs = { self, nixpkgs, nixos-secrets, ... }: let
     system = "x86_64-linux";    
     certPath = nixos-secrets.hosts.jr-home.certs;
   in {
@@ -18,9 +18,9 @@
 
       packages = with pkgs; [
         (with dotnetCorePackages; combinePackages [
-          sdk_9_0
+          #sdk_9_0
         ])
-        jetbrains.rider
+        #jetbrains.rider
       ];
 
       shellHook = ''
