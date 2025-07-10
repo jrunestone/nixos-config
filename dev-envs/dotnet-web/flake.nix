@@ -30,7 +30,7 @@
 
         DEVCONTAINER_PATH=$DEVENV_PROJECT_ROOT/.devcontainer
 
-        if ! [ -f $DEVCONTAINER_PATH ]; then
+        if ! [ -d $DEVCONTAINER_PATH ]; then
           cp -r ./.devcontainer $DEVENV_PROJECT_ROOT/
         fi
 
