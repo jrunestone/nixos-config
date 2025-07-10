@@ -75,7 +75,6 @@
         ".config/Insomnia"
         ".config/VintagestoryData"
         ".local/share/PrismLauncher"
-        ".devpod"
         ".cache/hyprland"
       ];
 

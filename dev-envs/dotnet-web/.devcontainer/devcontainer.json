@@ -31,7 +31,8 @@
   "remoteEnv": {
     "ASPNETCORE_Kestrel__Certificates__Default__Path": "${containerWorkspaceFolder}/.devcontainer/localhost.pfx",
     "ASPNETCORE_Kestrel__Certificates__Default__Password": "changeit",
-    "DOTNET_WATCH_RESTART_ON_RUDE_EDIT": "true"
+    "DOTNET_WATCH_RESTART_ON_RUDE_EDIT": "true",
+    "DOTNET_WATCH_SUPPRESS_LAUNCH_BROWSER": "true"
   },
 
   "runArgs": [
@@ -43,5 +44,6 @@
     //"restore-dotnet-tools": "dotnet tool restore --tool-manifest .config/dotnet-tools.json"
   },
 
+  "postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/post-create.sh"
   //"postStartCommand": "dotnet watch run --project src/Project.Folder"
 }

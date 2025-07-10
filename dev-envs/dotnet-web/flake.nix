@@ -17,9 +17,9 @@
       DEVENV_NAME = "projectname";
 
       packages = with pkgs; [
-        (with dotnetCorePackages; combinePackages [
+        #(with dotnetCorePackages; combinePackages [
           #sdk_9_0
-        ])
+        #])
         #jetbrains.rider
       ];
 

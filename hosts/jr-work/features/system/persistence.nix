@@ -66,7 +66,6 @@
         ".config/Slack"
         ".config/1Password"
         ".config/Insomnia"
-        ".devpod"
         ".cache/hyprland"
       ];
 
