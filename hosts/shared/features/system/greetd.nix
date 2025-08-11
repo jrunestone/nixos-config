@@ -1,5 +1,5 @@
 { lib, config, pkgs, inputs, ...}: let
-  tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
+  tuigreet = "${pkgs.tuigreet}/bin/tuigreet";
   hyprland-pkg = "${inputs.hyprland.packages.${pkgs.system}.hyprland}";
 in {
   services.greetd = {

@@ -7,6 +7,8 @@
     impermanence.url = "github:nix-community/impermanence";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nix-colors.url = "github:misterio77/nix-colors";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    nixos-secrets.url = "git+ssh://git@github.com/jrunestone/nixos-secrets?ref=main";
 
     hyprland = {
       type = "git";
@@ -40,10 +42,6 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
-
-    nixos-secrets = {
-      url = "git+ssh://git@github.com/jrunestone/nixos-secrets?ref=main";
-    };
   };
 
   outputs = { 
@@ -59,6 +57,7 @@
     hyprland-contrib,
     hyprland-plugins,
     nix-colors,
+    nix-vscode-extensions,
     ... }@inputs:
     let
       inherit (self) outputs;

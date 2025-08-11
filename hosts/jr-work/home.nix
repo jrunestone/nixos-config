@@ -1,6 +1,6 @@
 { inputs, config, lib, pkgs, ... }: {
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeModules.nixvim
 
     ../shared/home.nix
 

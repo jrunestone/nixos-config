@@ -98,11 +98,11 @@
     "fs.inotify.max_user_watches" = 1048576;
   };
 
-  systemd.extraConfig = ''
-    DefaultLimitNOFILE=1048576
-    DefaultLimitMEMLOCK=infinity
-    DefaultTimeoutStopSec=10s
-  '';
+  systemd.settings.Manager = {
+    DefaultLimitNOFILE = 1048576;
+    DefaultLimitMEMLOCK = "infinity";
+    DefaultTimeoutStopSec = "10s";
+  };
 
   systemd.user.extraConfig = ''
     DefaultLimitNOFILE=1048576
