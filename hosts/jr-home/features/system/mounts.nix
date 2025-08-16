@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }: {
-  fileSystems."/media/shield" = {
-    device = "//192.168.8.213/WD USB drive/NVIDIA_SHIELD";
+  fileSystems."/media/openmediavault" = {
+    device = "//openmediavault.local/media";
     fsType = "cifs";
     options = let
       # this line prevents hanging on network split
