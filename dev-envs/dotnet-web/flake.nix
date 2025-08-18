@@ -34,6 +34,10 @@
           cp -r ./.devcontainer $DEVENV_PROJECT_ROOT/
         fi
 
+        if ! [ -f $DEVENV_PROJECT_ROOT/.editorconfig ]; then
+          cp ./.editorconfig $DEVENV_PROJECT_ROOT/
+        fi
+
         if ! [ -f $DEVCONTAINER_PATH/localhost.pfx ]; then
           cp ${certPath.localhost-pfx} $DEVCONTAINER_PATH/localhost.pfx
           chmod +w $DEVCONTAINER_PATH/localhost.pfx
