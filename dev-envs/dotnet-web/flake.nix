@@ -43,6 +43,10 @@
           chmod +w $DEVCONTAINER_PATH/localhost.pfx
         fi
 
+        if [ -f $DEVCONTAINER_PATH/post-create.sh ]; then
+          chmod +x $DEVCONTAINER_PATH/post-create.sh
+        fi
+
         exec zsh
         #trap 'echo "Bye"' EXIT
       '';
