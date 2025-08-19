@@ -1,5 +1,5 @@
-.pfx
-.pem
-.crt
-.key
-.env
+*.pfx
+*.pem
+*.crt
+*.key
+*.env
