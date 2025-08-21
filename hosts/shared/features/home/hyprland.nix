@@ -63,6 +63,7 @@
         "$mod CTRL, Delete, exec, shutdown now"
         "$mod SHIFT, S, exec, grimblast copysave area"
         "$mod CTRL, S, exec, grimblast save area - | satty --filename -"
+        "$mod CTRL, P, exec, hyprpicker -a -q"
 
         "$mod, X, killactive"
         "$mod, C, togglefloating"

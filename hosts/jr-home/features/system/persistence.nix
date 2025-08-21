@@ -26,6 +26,7 @@
       directories = [
         "Documents"
         "dev"
+        "vm"
 
         ".gnupg"
         ".ssh"

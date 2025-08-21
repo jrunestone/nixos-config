@@ -14,8 +14,8 @@ fi
 touch ./.devcontainer/.env
 
 # set correct envs if we are running in codespace
-if [ "$CODESPACES" = true ]; then
-fi
+#if [ "$CODESPACES" = true ]; then
+#fi
 
 # load the variables in the env file if any
 cat ./.devcontainer/.env | xargs -I{} echo "export {}" >> ~/.bashrc

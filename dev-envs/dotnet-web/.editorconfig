@@ -9,5 +9,5 @@ indent_style = space
 [*.{cs,csproj,sln,md}]
 indent_size = 4
 
-[*.{js,jsx,ts,tsx,html,css,json}]
+[*.{js,jsx,ts,tsx,html,css,json,cshtml}]
 indent_size = 2
