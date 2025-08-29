@@ -33,7 +33,6 @@ create-bare-env NAME ENV:
 create-env NAME REPO ENV:
   #!/usr/bin/env bash
   cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
-  sed -i "s/jr-home/$HOSTNAME/g" {{NAME}}/flake.nix
   find {{NAME}}/ -type f | xargs -I{} sed -i 's/projectname/{{NAME}}/g' {}
   REPO_DIR_NAME=$(echo {{REPO}} | sed 's/^.*\/\(.*\)\.git$/\1/')
   echo "DEVENV_PROJECT_ROOT=$REPO_DIR_NAME" >> {{NAME}}/.env

@@ -6,7 +6,6 @@
 
   outputs = { self, nixpkgs, nixos-secrets, ... }: let
     system = "x86_64-linux";    
-    certPath = nixos-secrets.hosts.jr-home.certs;
   in {
     devShells."${system}".default = let
       pkgs = import nixpkgs {
@@ -39,7 +38,7 @@
         fi
 
         if ! [ -f $DEVCONTAINER_PATH/localhost.pfx ]; then
-          cp ${certPath.localhost-pfx} $DEVCONTAINER_PATH/localhost.pfx
+          cp ${nixos}/hosts/$HOSTNAME/certs/localhost.pfx $DEVCONTAINER_PATH/localhost.pfx
           chmod +w $DEVCONTAINER_PATH/localhost.pfx
         fi
 
