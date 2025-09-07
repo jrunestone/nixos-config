@@ -30,7 +30,7 @@ in
       "networkmanager"
     ];
 
-    hashedPasswordFile = "/nix/persist/system/passwords/jr";
+    hashedPasswordFile = "/etc/passwords/jr";
   };
 
   home-manager.useGlobalPkgs = true;

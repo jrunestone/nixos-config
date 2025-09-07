@@ -48,7 +48,7 @@
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
- 
+
   config = {
       allowUnfree = true;
       allowUnfreePredicate = (_: true);
@@ -70,9 +70,6 @@
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   environment.pathsToLink = [ "/share/zsh" ];
-
-  # flatpak
-  services.flatpak.enable = true;
 
   # security/policies
   services.gnome.gnome-keyring.enable = true;

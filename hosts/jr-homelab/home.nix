@@ -1,7 +1,6 @@
-{ inputs, config, lib, pkgs, ... }: {
+{ inputs, config, lib, pkgs, outputs, ... }: {
   imports = [
     inputs.nixvim.homeModules.nixvim
-    inputs.nix-flatpak.homeManagerModules.nix-flatpak
     inputs.nix-colors.homeManagerModules.default
 
     ../shared/features/home/default-barebones.nix
@@ -22,5 +21,18 @@
 
   host-options.home = {
 
+  };
+
+  colorScheme = inputs.nix-colors.colorSchemes.tomorrow-night;
+
+  programs = {
+    home-manager.enable = true;
+    eza.enable = true;
+  };
+
+  home = {
+    username = lib.mkDefault "jr";
+    homeDirectory = lib.mkDefault "/home/${config.home.username}";
+    stateVersion = lib.mkDefault "24.05";
   };
 }
