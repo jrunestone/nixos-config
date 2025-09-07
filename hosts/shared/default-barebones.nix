@@ -8,16 +8,12 @@ in
 
     ./features/system
     ./features/system/boot.nix
-    ./features/system/persistence.nix
     ./features/system/root-cert.nix
     ./features/system/gfx.nix
     ./features/system/wired.nix
-    ./features/system/pipewire.nix
     ./features/system/ssh.nix
     ./features/system/font.nix
     ./features/system/printing.nix
-    ./features/system/hyprland.nix
-    ./features/system/greetd.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   users.mutableUsers = false;
@@ -32,7 +28,6 @@ in
       "audio"
     ] ++ ifTheyExist [
       "networkmanager"
-      "jackaudio"
     ];
 
     hashedPasswordFile = "/nix/persist/system/passwords/jr";
