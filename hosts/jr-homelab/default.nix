@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }: {
   imports = [
-    (import ./disko-config.nix { disk = "/dev/nvme0n1"; })
+    (import ../shared/disko-config-barebones.nix { disk = "/dev/nvme0n1"; })
 
     ./hardware-configuration.nix
 
