@@ -6,12 +6,14 @@
     settings = {
       AllowUsers = ["jr"];
       PasswordAuthentication = false;
+      KbdInteractiveAuthentication = false;
+      PermitRootLogin = "no";
     };
   };
 
   users.users.jr.openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAt6S7VQGYS2X2RM44KNcbvtCbrTURZgIEWUOtrzQ26T johan85@hotmail.com"
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII24IDUM7AHXVxtXU6P0lQ4gn4FEvUPwOIjDutuH4Rp+ johan.runsten@toxic.se"
+    inputs.nixos-secrets.hosts.jr-home.pubkey
+    inputs.nixos-secrets.hosts.jr-work.pubkey
   ];
 
   networking.firewall.allowedTCPPorts = [22];

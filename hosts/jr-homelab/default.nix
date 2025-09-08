@@ -8,6 +8,7 @@
 
     ./features/system
     ./features/system/ssh.nix
+    ./features/system/incus.nix
   ];
 
   system.stateVersion = "24.05";
