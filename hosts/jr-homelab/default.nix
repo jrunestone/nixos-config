@@ -5,7 +5,9 @@
     ./hardware-configuration.nix
 
     ../shared/default-barebones.nix
+
     ./features/system
+    ./features/system/ssh.nix
   ];
 
   system.stateVersion = "24.05";
