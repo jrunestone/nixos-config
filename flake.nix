@@ -44,13 +44,13 @@
     };
   };
 
-  outputs = { 
-    self, 
-    nixpkgs, 
+  outputs = {
+    self,
+    nixpkgs,
     nixos-secrets,
-    disko, 
-    impermanence, 
-    home-manager, 
+    disko,
+    impermanence,
+    home-manager,
     nix-flatpak,
     nixvim,
     hyprland,
@@ -78,15 +78,22 @@
       nixosConfigurations = {
         jr-home = lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ 
+          modules = [
             ./hosts/jr-home
           ];
         };
 
         jr-work = lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ 
+          modules = [
             ./hosts/jr-work
+          ];
+        };
+
+        jr-homelab = lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./hosts/jr-homelab
           ];
         };
       };

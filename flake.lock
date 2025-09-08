@@ -608,11 +608,11 @@
     },
     "nixos-secrets": {
       "locked": {
-        "lastModified": 1755333331,
-        "narHash": "sha256-2mn+eVGaws2v1d4NhrYt28AHL99rNZyU5SJSBhNMgyQ=",
+        "lastModified": 1757344594,
+        "narHash": "sha256-kxCLw79QW4uptk+FuCLYKNF41REQmtOIyXip/JKHBv0=",
         "ref": "main",
-        "rev": "ad645dc697edb03fabb2c09408e935a538211433",
-        "revCount": 15,
+        "rev": "e33582520c7dc39df1b543c665b204ef4bc4f480",
+        "revCount": 21,
         "type": "git",
         "url": "ssh://git@github.com/jrunestone/nixos-secrets"
       },

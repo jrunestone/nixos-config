@@ -18,6 +18,7 @@
     ./features/system/persistence.nix
     ./features/system/reverse-proxy.nix
     ./features/system/moonlight.nix
+    ./features/system/reaper.nix
   ];
 
   host-options.system = {

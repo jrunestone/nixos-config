@@ -5,6 +5,8 @@
     hostName = "jr-home";
   };
 
+  services.flatpak.enable = true;
+
   # quemu
   virtualisation.spiceUSBRedirection.enable = true;
 }
