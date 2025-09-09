@@ -63,6 +63,7 @@
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
+    context
     my_shell_indicator
     dir                       # current directory
     vcs                       # git status

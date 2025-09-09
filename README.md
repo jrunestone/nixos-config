@@ -38,6 +38,7 @@ TODO: do this with nixos-anywhere to transfer ssh keys etc
 8. `mkpasswd -m sha-512 "<password>" > /mnt/nix/persist/system/passwords/jr`
 9. `nixos-generate-config --no-filesystems --root /mnt` and copy hardware-info.nix to repo/host if new host
 10. Copy over ssh keys to /etc/ssh chmod 0600 and add to ssh agent to be able to authenticate with GitHub
-11. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
-12. `reboot`
-13. Make sure ssh keys are in the user folder
+11. Clone nixos-secrets and generate certs for host
+12. `nixos-install --no-root-passwd --root /mnt --flake /mnt/nix/persist/system/etc/nixos/nixos-config#<host>`
+13. `reboot`
+14. Make sure ssh keys are in the user folder
