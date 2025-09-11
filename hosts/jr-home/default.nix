@@ -14,6 +14,7 @@
     ../shared/features/system/1password.nix
 
     ./features/system
+    ./features/system/hosts.nix
     ./features/system/mounts.nix
     ./features/system/persistence.nix
     ./features/system/reverse-proxy.nix
