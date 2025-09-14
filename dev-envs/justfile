@@ -24,13 +24,14 @@ log *SERVICE:
   podman compose --file $DEVENV_PROJECT_ROOT/docker-compose.yml logs --timestamps -f {{SERVICE}}
 
 [no-cd]
-create-bare-env NAME ENV:
+create-env NAME ENV:
   cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
   find {{NAME}}/ -type f | xargs -I{} sed -i 's/projectname/{{NAME}}/g' {}
-  echo "DEVENV_PROJECT_ROOT=." >> {{NAME}}/.env
+  echo "DEVENV_PROJECT_ROOT={{NAME}}" >> {{NAME}}/.env
+  mkdir {{NAME}}/{{NAME}}
 
 [no-cd]
-create-env NAME REPO ENV:
+create-git-env NAME REPO ENV:
   #!/usr/bin/env bash
   cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
   find {{NAME}}/ -type f | xargs -I{} sed -i 's/projectname/{{NAME}}/g' {}

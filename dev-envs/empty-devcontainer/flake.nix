@@ -1,10 +1,9 @@
 {
   inputs = {
       nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-      nixos-secrets.url = "git+ssh://git@github.com/jrunestone/nixos-secrets?ref=main";
   };
 
-  outputs = { self, nixpkgs, nixos-secrets, ... }: let
+  outputs = { self, nixpkgs, ... }: let
     system = "x86_64-linux";    
   in {
     devShells."${system}".default = let
@@ -31,11 +30,6 @@
 
         if ! [ -f $DEVENV_PROJECT_ROOT/.editorconfig ]; then
           cp ./.editorconfig $DEVENV_PROJECT_ROOT/
-        fi
-
-        if ! [ -f $DEVCONTAINER_PATH/localhost.pfx ]; then
-          cp ${nixos-secrets}/hosts/$HOSTNAME/certs/localhost.pfx $DEVCONTAINER_PATH/localhost.pfx
-          chmod +w $DEVCONTAINER_PATH/localhost.pfx
         fi
 
         if [ -f $DEVCONTAINER_PATH/post-create.sh ]; then

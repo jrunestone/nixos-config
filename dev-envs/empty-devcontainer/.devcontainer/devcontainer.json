@@ -1,0 +1,41 @@
+{
+  "name": "projectname",
+  "image": "",
+
+  "features": {
+  },
+
+  "forwardPorts": [5000],
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode-remote.remote-containers",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "EditorConfig.EditorConfig"
+      ],
+
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "remote.autoForwardPorts": false,
+        "remote.autoForwardPortsSource": "hybrid"
+      }
+    }
+  },
+
+  "remoteEnv": {
+  },
+
+  "runArgs": [
+    //"--env-file=${localWorkspaceFolder}/.devcontainer/.env"
+  ],
+
+  "updateContentCommand": {
+    //"install-frontend-deps": "pnpm install --prefix src/Project.Folder",
+    //"restore-dotnet-tools": "dotnet tool restore --tool-manifest .config/dotnet-tools.json"
+  },
+
+  "postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/post-create.sh"
+  //"postStartCommand": "dotnet watch run --project src/Project.Folder"
+}
