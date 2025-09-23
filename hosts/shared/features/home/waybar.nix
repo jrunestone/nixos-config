@@ -10,7 +10,7 @@
         margin = "0 15 10 15";
         height = 40;
         modules-left = [ "hyprland/workspaces" ];
-        modules-right = [ "tray" "battery" "clock" ];
+        modules-right = [ "tray" "network" "battery" "clock" ];
 
         clock = {
           format = "{:%H:%M %a %d}";
@@ -26,6 +26,11 @@
 
         battery = {
           bat = "BAT0";
+        };
+
+        network = {
+          format = "N";
+          format-disconnected = "";
         };
 
         tray = {
