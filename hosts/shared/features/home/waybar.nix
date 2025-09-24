@@ -29,7 +29,8 @@
         };
 
         network = {
-          format = "N";
+          format-wifi = "";
+          format-ethernet = "";
           format-disconnected = "";
         };
 
@@ -56,7 +57,7 @@
         background-color: transparent;
       }
 
-      #workspaces, #clock, #battery, #tray {
+      #workspaces, #clock, #battery, #tray, #network {
         background-color: #${config.colorScheme.palette.base00};
         border-radius: 5px;
       }
@@ -75,17 +76,25 @@
         color: #${config.colorScheme.palette.base05};
       }
 
-      #clock, #battery, #tray {
+      #clock, #battery, #tray, #network {
         color: #${config.colorScheme.palette.base05};
         padding: 5px 15px;
       }
 
+      #clock {
+        padding-left: 7px;
+      }
+
       #battery {
         padding-right: 0;
+        padding-left: 6px;
       }
 
       #tray {
         margin-right: 13px;
+      }
+
+      #network {
       }
     '';
   };
