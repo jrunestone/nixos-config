@@ -32,6 +32,8 @@
           format-wifi = "";
           format-ethernet = "";
           format-disconnected = "";
+          tooltip-format-wifi = "{essid}";
+          tooltip-format-ethernet = "";
         };
 
         tray = {
