@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }: {
   fileSystems."/media/openmediavault" = {
-    device = "//openmediavault.local/media";
+    device = "//openmediavault.local/root";
     fsType = "cifs";
     options = let
       # this line prevents hanging on network split
