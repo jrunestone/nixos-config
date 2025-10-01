@@ -5,6 +5,7 @@
 
     ./features/home
     ./features/home/root-cert.nix
+    ./features/home/certs.nix
     ./features/home/zsh.nix
     ./features/home/kitty.nix
     ./features/home/fzf.nix

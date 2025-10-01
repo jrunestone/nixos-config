@@ -24,19 +24,20 @@ log *SERVICE:
   podman compose --file $DEVENV_PROJECT_ROOT/docker-compose.yml logs --timestamps -f {{SERVICE}}
 
 [no-cd]
-create-env NAME ENV:
+create-env NAME ENV *COPYCERTS='false':
+  #!/usr/bin/env bash
+
   cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
   find {{NAME}}/ -type f | xargs -I{} sed -i 's/projectname/{{NAME}}/g' {}
   echo "DEVENV_PROJECT_ROOT={{NAME}}" >> {{NAME}}/.env
-  mkdir {{NAME}}/{{NAME}}
+  
+  if [ -d {{NAME}}/.devcontainer ]; then
+    if {{COPYCERTS}}; then
+      cp /home/jr/.local/share/mkcert/localhost.pfx {{NAME}}/.devcontainer/
+      chmod +w {{NAME}}/.devcontainer/localhost.pfx
+    fi
 
-[no-cd]
-create-git-env NAME REPO ENV:
-  #!/usr/bin/env bash
-  cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
-  find {{NAME}}/ -type f | xargs -I{} sed -i 's/projectname/{{NAME}}/g' {}
-  REPO_DIR_NAME=$(echo {{REPO}} | sed 's/^.*\/\(.*\)\.git$/\1/')
-  echo "DEVENV_PROJECT_ROOT=$REPO_DIR_NAME" >> {{NAME}}/.env
-  echo "$REPO_DIR_NAME/" >> {{NAME}}/.gitignore
-  (cd {{NAME}} && git clone {{REPO}})
-
+    if [ -f {{NAME}}/.devcontainer/post-create.sh ]; then
+      chmod +x {{NAME}}/.devcontainer/post-create.sh
+    fi
+  fi
