@@ -20,3 +20,5 @@ touch ./.devcontainer/.env
 # load the variables in the env file if any
 cat ./.devcontainer/.env | xargs -I{} echo "export {}" >> ~/.bashrc
 
+dotnet new install Aspire.ProjectTemplates
+dotnet tool install -g Aspire.Cli --prerelease
