@@ -24,8 +24,8 @@
 
       "settings": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "remote.autoForwardPorts": false,
-        "remote.autoForwardPortsSource": "hybrid",
+        //"remote.autoForwardPorts": false,
+        //"remote.autoForwardPortsSource": "hybrid",
         "csharp.experimental.debug.hotReload": true
       }
     }
