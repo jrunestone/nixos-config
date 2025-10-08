@@ -29,7 +29,6 @@ create-env NAME ENV *COPYCERTS='false':
 
   cp -r $NIXCONFIG/dev-envs/{{ENV}} {{NAME}}
   find {{NAME}}/ -type f | xargs -I{} sed -i 's/projectname/{{NAME}}/g' {}
-  echo "DEVENV_PROJECT_ROOT={{NAME}}" >> {{NAME}}/.env
   
   if [ -d {{NAME}}/.devcontainer ]; then
     if {{COPYCERTS}}; then
@@ -40,4 +39,6 @@ create-env NAME ENV *COPYCERTS='false':
     if [ -f {{NAME}}/.devcontainer/post-create.sh ]; then
       chmod +x {{NAME}}/.devcontainer/post-create.sh
     fi
+  else
+    echo "DEVENV_PROJECT_ROOT={{NAME}}" >> {{NAME}}/.env
   fi
