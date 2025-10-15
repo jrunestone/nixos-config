@@ -12,6 +12,7 @@
           dbaeumer.vscode-eslint
           esbenp.prettier-vscode
           patcx.vscode-nuget-gallery
+          github.codespaces
         ];
 
         keybindings = [
@@ -47,6 +48,7 @@
           "workbench.startupEditor" = "none";
           "editor.codeLens" = false;
           "editor.inlineSuggest.enabled" = false;
+          "editor.smoothScrolling" = true;
         };
       };
     };
