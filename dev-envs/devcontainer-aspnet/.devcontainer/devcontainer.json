@@ -1,0 +1,45 @@
+{
+  "name": "projectname",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:9.0-bookworm",
+
+  "features": {
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode-remote.remote-containers",
+        "ms-dotnettools.csdevkit",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "EditorConfig.EditorConfig"
+      ],
+
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "remote.autoForwardPorts": true,
+        //"remote.autoForwardPortsSource": "hybrid",
+        "csharp.experimental.debug.hotReload": true
+      }
+    }
+  },
+
+  "containerEnv": {
+    "ASPNETCORE_Kestrel__Certificates__Default__Path": "${containerWorkspaceFolder}/.devcontainer/localhost.pfx",
+    "ASPNETCORE_Kestrel__Certificates__Default__Password": "changeit",
+    "DOTNET_WATCH_RESTART_ON_RUDE_EDIT": "true",
+    "DOTNET_WATCH_SUPPRESS_LAUNCH_BROWSER": "true"
+  },
+
+  "runArgs": [
+    //"--env-file=${localWorkspaceFolder}/.devcontainer/.env"
+  ],
+
+  "updateContentCommand": {
+    //"install-frontend-deps": "pnpm install --prefix src/Project.Folder",
+    //"restore-dotnet-tools": "dotnet tool restore --tool-manifest .config/dotnet-tools.json"
+  },
+
+  "postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/post-create.sh"
+  //"postStartCommand": "dotnet watch run --project src/Project.Folder"
+}
