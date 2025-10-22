@@ -39,7 +39,6 @@
           "dev.containers.dockerPath" = "podman";
           "dev.container.dockerSocketPath" = "/run/user/1000/podman/podman.sock";
           "explorer.confirmDragAndDrop" = false;
-          "remote.autoForwardPorts" = false;
           "remote.restoreForwardedPorts" = false;
           "remote.autoForwardPortsSource" = "hybrid";
           "update.mode" = "none";
@@ -49,6 +48,7 @@
           "editor.codeLens" = false;
           "editor.inlineSuggest.enabled" = false;
           "editor.smoothScrolling" = true;
+          "dotnet.formatting.organizeImportsOnFormat" = true;
         };
       };
     };
