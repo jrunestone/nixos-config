@@ -32,6 +32,21 @@
             key = "ctrl+alt+s";
             command = "workbench.action.files.saveAll";
           }
+
+          {
+            key = "ctrl+[Semicolon]";
+            command = "workbench.action.togglePanel";
+          }
+
+          {
+            key = "ctrl+j";
+            command = "workbench.action.terminal.toggleTerminal";
+          }
+
+          {
+            key = "ctrl+shift+j";
+            command = "workbench.action.terminal.new";
+          }
         ];
 
         userSettings = {
@@ -49,6 +64,7 @@
           "editor.inlineSuggest.enabled" = false;
           "editor.smoothScrolling" = true;
           "dotnet.formatting.organizeImportsOnFormat" = true;
+          "terminal.integrated.defaultProfile.linux" = "zsh";
         };
       };
     };
