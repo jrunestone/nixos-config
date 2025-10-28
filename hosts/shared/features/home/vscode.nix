@@ -62,9 +62,11 @@
           "workbench.startupEditor" = "none";
           "editor.codeLens" = false;
           "editor.inlineSuggest.enabled" = false;
+          "editor.inlayHints.enabled" = "off";
           "editor.smoothScrolling" = true;
           "dotnet.formatting.organizeImportsOnFormat" = true;
           "terminal.integrated.defaultProfile.linux" = "zsh";
+          "telemetry.telemetryLevel" = "off";
         };
       };
     };
