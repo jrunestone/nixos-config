@@ -20,12 +20,6 @@
       colorscheme = "tomorrow-night";
     };
 
-    # TODO: color scheme
-    #highlightOverride = {
-    #  NeoTreeNormal.bg = "#2B2D30";
-    #  NeoTreeNormalNC.bg = "#2B2D30";
-    #};
-
     globals = {
       mapleader = " ";
     };
@@ -129,17 +123,19 @@
       neo-tree = {
         enable = true;
 
-        filesystem = {
-          followCurrentFile = {
-            enabled = true;
-            leaveDirsOpen = true;
+        settings = {
+          filesystem = {
+            follow_current_file = {
+              enabled = true;
+              leave_dirs_open = true;
+            };
           };
-        };
 
-        buffers = {
-          followCurrentFile = {
-            enabled = true;
-            leaveDirsOpen = true;
+          buffers = {
+            follow_current_file = {
+              enabled = true;
+              leave_dirs_open = true;
+            };
           };
         };
       };
