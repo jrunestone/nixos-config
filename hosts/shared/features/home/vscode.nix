@@ -68,6 +68,7 @@
           "terminal.integrated.defaultProfile.linux" = "zsh";
           "telemetry.telemetryLevel" = "off";
           "git.enableSmartCommit" = true;
+          "workbench.secondarySideBar.defaultVisibility" = "hidden";
         };
       };
     };

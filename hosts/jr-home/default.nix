@@ -12,6 +12,7 @@
     ../shared
     ../shared/features/system/podman.nix
     ../shared/features/system/1password.nix
+    ../shared/features/system/twingate.nix
 
     ./features/system
     ./features/system/hosts.nix
