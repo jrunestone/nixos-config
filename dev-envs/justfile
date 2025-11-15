@@ -33,7 +33,7 @@ create-env NAME ENV *COPYCERTS='false':
   if [ -d {{NAME}}/.devcontainer ]; then
     if {{COPYCERTS}}; then
       cp $HOME/.local/share/mkcert/localhost.pfx {{NAME}}/.devcontainer/
-      cp $HOME/.local/share/mkcert/rootCA-key.pem {{NAME}}/.devcontainer/ca-key.crt
+      cp $HOME/.local/share/mkcert/rootCA.pem {{NAME}}/.devcontainer/localhost-ca.crt
       chmod +w {{NAME}}/.devcontainer/localhost.pfx
     fi
 
