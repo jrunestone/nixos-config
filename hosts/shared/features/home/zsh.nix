@@ -64,9 +64,9 @@
     };
 
     shellAliases = {
+      l = "eza -lgaa --group-directories-first";
       ls = "eza -lgaa --group-directories-first";
-      cat = "bat";
-      jd = "just develop";
+      cat = "bat --plain";
 
       nixdir = "cd $NIXCONFIG";
       nixedit = "nv $NIXCONFIG";
@@ -78,6 +78,10 @@
     };
 
     initContent = ''
+      function d() {
+          cd $(find ~/dev/src -maxdepth 2 -type d -name $1)
+      }
+
       function redraw-prompt() {
         local f
         for f in chpwd "''${chpwd_functions[@]}" precmd "''${precmd_functions[@]}"; do

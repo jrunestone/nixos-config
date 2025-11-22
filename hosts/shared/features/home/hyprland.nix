@@ -24,8 +24,8 @@
         "workspace special,title:^(Spotify)(.*)$"
         "float, title:^(Spotify)(.*)$"
 
-        "workspace special,class:^(1Password)(.*)$"
-        "float, class:^(1Password)(.*)$"
+        "workspace special,class:^(1password)(.*)$"
+        "float, class:^(1password)(.*)$"
 
         "workspace special,class:^(Notesnook)(.*)$"
         "float, class:^(Notesnook)(.*)$"
