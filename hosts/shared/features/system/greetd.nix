@@ -1,6 +1,6 @@
 { lib, config, pkgs, inputs, ...}: let
   tuigreet = "${pkgs.tuigreet}/bin/tuigreet";
-  hyprland-pkg = "${inputs.hyprland.packages.${pkgs.system}.hyprland}";
+  hyprland-pkg = "${inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}";
 in {
   services.greetd = {
     enable = true;

@@ -75,7 +75,9 @@
   services.gnome.gnome-keyring.enable = true;
   environment.variables.XDG_RUNTIME_DIR = "/run/user/$UID";
   security.polkit.enable = true;
-  security.pam.services.hyprlock = {};
+  security.pam.services.hyprlock = {
+    enableGnomeKeyring = true;
+  };
 
   # number of open files..
   security.pam.loginLimits = [{
