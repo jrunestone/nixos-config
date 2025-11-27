@@ -67,6 +67,7 @@
       l = "eza -lgaa --group-directories-first";
       ls = "eza -lgaa --group-directories-first";
       cat = "bat --plain";
+      gs = "git status";
 
       nixdir = "cd $NIXCONFIG";
       nixedit = "nv $NIXCONFIG";
