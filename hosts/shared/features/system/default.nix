@@ -78,6 +78,7 @@
   security.pam.services.hyprlock = {
     enableGnomeKeyring = true;
   };
+  security.pam.services.greetd.enableGnomeKeyring = true;
 
   # number of open files..
   security.pam.loginLimits = [{
