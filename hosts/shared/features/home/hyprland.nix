@@ -1,8 +1,12 @@
 { inputs, lib, pkgs, config, outputs, ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
-    systemd.enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    
+    systemd = {
+      enable = true;
+      variables = ["--all"];
+    };
 
     settings = {
       monitor = lib.mkDefault ",preferred,auto,auto";
