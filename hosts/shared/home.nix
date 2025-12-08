@@ -10,6 +10,7 @@
     ./features/home/kitty.nix
     ./features/home/fzf.nix
     ./features/home/git.nix
+    ./features/home/gh.nix
     ./features/home/lf.nix
     ./features/home/nixvim.nix
     ./features/home/zed.nix
