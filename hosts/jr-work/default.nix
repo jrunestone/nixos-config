@@ -8,6 +8,7 @@
     ../shared/features/system/podman.nix
     ../shared/features/system/1password.nix
     ../shared/features/system/twingate.nix
+    ../shared/features/system/insomnia.nix
     
     ./features/system
     ./features/system/persistence.nix
