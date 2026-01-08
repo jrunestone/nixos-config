@@ -19,6 +19,7 @@ in
     ./features/system/hyprland.nix
     ./features/system/greetd.nix
     ./features/system/yubikey.nix
+    ./features/system/proton-auth.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   users.mutableUsers = false;
