@@ -18,6 +18,7 @@ in
     ./features/system/printing.nix
     ./features/system/hyprland.nix
     ./features/system/greetd.nix
+    ./features/system/yubikey.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   users.mutableUsers = false;
