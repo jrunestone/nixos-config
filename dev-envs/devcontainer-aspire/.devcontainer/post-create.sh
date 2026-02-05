@@ -26,8 +26,8 @@ fi
 #fi
 
 # make azure cli volume writable (to persist login tokens)
-mkdir -p $WORKSPACE_DIR/.az
-sudo chown $USER:$USER $WORKSPACE_DIR/.az
+mkdir -p $AZURE_CONFIG_DIR
+sudo chown $USER:$USER $AZURE_CONFIG_DIR
 
 dotnet new install Aspire.ProjectTemplates
 dotnet tool install -g Aspire.Cli --prerelease
