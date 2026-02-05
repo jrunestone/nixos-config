@@ -12,6 +12,7 @@
     
     ./features/system
     ./features/system/persistence.nix
+    ./features/system/pavucontrol.nix
   ];
 
   host-options.system = {
