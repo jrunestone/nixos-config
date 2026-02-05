@@ -24,6 +24,11 @@ log *SERVICE:
   podman compose --file $DEVENV_PROJECT_ROOT/docker-compose.yml logs --timestamps -f {{SERVICE}}
 
 [no-cd]
+list-env:
+  #!/usr/bin/env bash
+  find $NIXCONFIG/dev-envs/*/ -maxdepth 0 -type d | cut -d / -f 6
+
+[no-cd]
 create-env NAME ENV *COPYCERTS='false':
   #!/usr/bin/env bash
 
