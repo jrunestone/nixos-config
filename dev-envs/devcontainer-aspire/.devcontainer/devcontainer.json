@@ -22,13 +22,8 @@
       }
     }
   },
-  "mounts": [
-    {
-      "target": "${containerWorkspaceFolder}/.az",
-      "type": "volume"
-    }
-  ],
   "remoteEnv": {
+    "WORKSPACE_DIR": "${containerWorkspaceFolder}",
     "ASPNETCORE_Kestrel__Certificates__Default__Path": "${containerWorkspaceFolder}/.devcontainer/localhost.pfx",
     "ASPNETCORE_Kestrel__Certificates__Default__Password": "changeit",
     "DOTNET_WATCH_RESTART_ON_RUDE_EDIT": "true",
