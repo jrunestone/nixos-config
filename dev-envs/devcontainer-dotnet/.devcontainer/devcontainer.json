@@ -1,6 +1,6 @@
 {
   "name": "projectname",
-  "image": "mcr.microsoft.com/devcontainers/dotnet:10",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:10.0",
   "features": {
   },
   "customizations": {
