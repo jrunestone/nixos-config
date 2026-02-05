@@ -12,10 +12,5 @@
       ],
     }
   },
-  "remoteEnv": {
-  },
-  "updateContentCommand": {
-    //"restore-dotnet-tools": "dotnet tool restore --tool-manifest .config/dotnet-tools.json"
-  },
   "postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/post-create.sh"
 }
