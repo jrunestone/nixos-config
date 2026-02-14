@@ -3,31 +3,29 @@
 # this is run on "postCreateCommand" in the container AFTER the container is CREATED for the first time
 # https://containers.dev/implementors/json_reference/
 
-# if the image doesn't load ip_tables modules dockerd will fail to launch
+DEVC_DIR=./.devcontainer
+
+# if the image doesn't load ip_tables modules dockerd will fail to launch (docker-in-docker)
 # https://github.com/devcontainers/features/issues/1235
+echo "Updating iptables"
 sudo update-alternatives --set iptables /usr/sbin/iptables-nft
 
-# create a dev https cert if not already present
-if ! [ -f ./.devcontainer/localhost.pfx ]; then
+# create a dev https cert if a custom cert is not already present
+if ! [ -f $DEVC_DIR/localhost.pfx ]; then
+  echo "Creating default ASP.NET dev cert"
   dotnet dev-certs https --trust
-  dotnet dev-certs https -ep ./.devcontainer/localhost.pfx -p 'changeit'
-  chmod +w ./.devcontainer/localhost.pfx
+  dotnet dev-certs https -ep $DEVC_DIR/localhost.pfx -p 'changeit'
 fi
 
-# copy the local CA key (if any) to the devcontainer trust store
-# this will be propagated to child processes/containers by the app host
-if [ -f ./.devcontainer/ca-key.crt ]; then
-  sudo cp ./.devcontainer/ca-key.crt /usr/local/share/ca-certificates/
-  sudo update-ca-certificates
+# do things if we are running in codespace
+if [ "$CODESPACES" = true ]; then
+  echo "Running in a Codespace"
 fi
 
-# set correct envs if we are running in codespace
-#if [ "$CODESPACES" = true ]; then
-#fi
-
-# make azure cli volume writable (to persist login tokens)
-mkdir -p $AZURE_CONFIG_DIR
-sudo chown $USER:$USER $AZURE_CONFIG_DIR
+# create azure cli folder (to persist login tokens)
+echo "Setting folder and volume permissions"
+mkdir -p ./.az
+sudo chown $USER:$USER ./.az
 
 dotnet new install Aspire.ProjectTemplates
 dotnet tool install -g Aspire.Cli --prerelease
