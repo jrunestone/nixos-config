@@ -20,6 +20,11 @@
   "remoteEnv": {
     "DOTNET_WATCH_RESTART_ON_RUDE_EDIT": "true"
   },
+  "initializeCommand": "touch .devcontainer/.env",
+  "runArgs": [
+    "--env-file",
+    ".devcontainer/.env"
+  ],
   "updateContentCommand": {
     //"restore-dotnet-tools": "dotnet tool restore --tool-manifest .config/dotnet-tools.json"
   },
