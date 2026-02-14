@@ -6,7 +6,7 @@ insert_final_newline = true
 charset = utf-8
 indent_style = space
 
-[*.{cs,csproj,sln,md}]
+[*.{cs,csproj,sln,slnx,md}]
 indent_size = 4
 
 [*.{js,jsx,ts,tsx,html,css,json,cshtml,xml}]
