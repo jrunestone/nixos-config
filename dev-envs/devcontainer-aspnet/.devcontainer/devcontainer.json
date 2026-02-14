@@ -25,6 +25,11 @@
     "DOTNET_WATCH_RESTART_ON_RUDE_EDIT": "true",
     "DOTNET_WATCH_SUPPRESS_LAUNCH_BROWSER": "true"
   },
+  "initializeCommand": "touch .devcontainer/.env",
+  "runArgs": [
+    "--env-file",
+    ".devcontainer/.env"
+  ],
   "updateContentCommand": {
     //"install-frontend-deps": "pnpm install --prefix src/Project.Folder",
     //"restore-dotnet-tools": "dotnet tool restore --tool-manifest .config/dotnet-tools.json"
