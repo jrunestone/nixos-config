@@ -33,13 +33,6 @@
         ".nuget"
         ".pki"
 
-        ".local/share/keyrings"
-        ".local/share/containers"
-        ".local/share/icons"
-        ".local/share/NuGet"
-        ".local/share/flatpak"
-        ".local/share/mkcert"
-
         # jetbrains
         ".java"
         ".local/share/JetBrains"
@@ -68,6 +61,13 @@
         ".local/share/qBittorrent"
 
         # misc
+        ".local/share/keyrings"
+        ".local/share/containers"
+        ".local/share/icons"
+        ".local/share/NuGet"
+        ".local/share/flatpak"
+        ".local/share/mkcert"
+        ".local/share/me.proton.authenticator"
         ".config/Moonlight Game Streaming Project"
         ".config/Notesnook"
         ".var/app/com.valvesoftware.Steam"
