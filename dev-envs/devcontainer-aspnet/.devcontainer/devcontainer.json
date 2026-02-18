@@ -17,8 +17,13 @@
         "remote.autoForwardPorts": true,
         "remote.autoForwardPortsSource": "hybrid",
         "csharp.experimental.debug.hotReload": true
-        "csharpOrganizeUsings.splitGroups": false
-      }
+        "csharpOrganizeUsings.splitGroups": false,
+         "[csharp]": { 
+          "editor.codeActionsOnSave": [
+            "source.organizeImports"
+          ]
+        }
+     }
     }
   },
   "containerEnv": {

@@ -15,8 +15,13 @@
 
       "settings": {
         "csharp.experimental.debug.hotReload": true,
-        "csharpOrganizeUsings.splitGroups": false
-      }
+        "csharpOrganizeUsings.splitGroups": false,
+         "[csharp]": { 
+          "editor.codeActionsOnSave": [
+            "source.organizeImports"
+          ]
+        }
+     }
     }
   },
   "remoteEnv": {
