@@ -8,12 +8,14 @@
       "extensions": [
         "ms-vscode-remote.remote-containers",
         "ms-dotnettools.csdevkit",
+        "jeremycaron.csharp-organize-usings",
         "dbaeumer.vscode-eslint",
         "EditorConfig.EditorConfig"
       ],
 
       "settings": {
-        "csharp.experimental.debug.hotReload": true
+        "csharp.experimental.debug.hotReload": true,
+        "csharpOrganizeUsings.splitGroups": false
       }
     }
   },

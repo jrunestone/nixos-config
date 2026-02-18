@@ -12,6 +12,7 @@
         "ms-vscode-remote.remote-containers",
         "ms-dotnettools.csdevkit",
         "microsoft-aspire.aspire-vscode@prerelease",
+        "jeremycaron.csharp-organize-usings",
         "dbaeumer.vscode-eslint",
         "EditorConfig.EditorConfig"
       ],
@@ -19,7 +20,8 @@
       "settings": {
         "remote.autoForwardPorts": true,
         "remote.autoForwardPortsSource": "hybrid",
-        "csharp.experimental.debug.hotReload": true
+        "csharp.experimental.debug.hotReload": true,
+        "csharpOrganizeUsings.splitGroups": false
       }
     }
   },
