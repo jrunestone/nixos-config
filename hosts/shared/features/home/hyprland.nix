@@ -34,6 +34,9 @@
         "workspace special,class:^(Notesnook)(.*)$"
         "float, class:^(Notesnook)(.*)$"
 
+        "workspace special,class:^(proton-authenticator)(.*)$"
+        "float, class:^(proton-authenticator)(.*)$"
+
         #"stayfocused, title:^()$, class:(jetbrains-)(.*), floating:1"
         #"noinitialfocus,class:(jetbrains-)(.*),title:^win(.*), initialTitle:win.*, floating:1"
 
