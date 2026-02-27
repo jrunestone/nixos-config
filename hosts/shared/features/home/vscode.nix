@@ -7,10 +7,11 @@
         extensions = with pkgs.nix-vscode-extensions.vscode-marketplace; [
           ms-dotnettools.csdevkit
           ms-dotnettools.csharp
+          ms-vscode.cpptools
+          zchrissirhcz.cmake-highlight
+          editorconfig.editorconfig
           ms-vscode-remote.remote-containers
           ms-vscode.theme-tomorrowkit
-          dbaeumer.vscode-eslint
-          esbenp.prettier-vscode
           patcx.vscode-nuget-gallery
           github.codespaces
         ];
