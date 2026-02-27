@@ -1,0 +1,16 @@
+set dotenv-load
+
+config:
+  cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_C_COMPILER_LAUNCHER=ccache -G Ninja -B build -S .
+
+build:
+  ninja -C build
+
+run *ARGS:
+  just build && ./build/projectname {{ARGS}}
+
+debug:
+  just build && gdb -ex run -ex quit -batch ./build/projectname
+
+profile:
+  just build && valgrind --leak-check=full ./build/projectname
