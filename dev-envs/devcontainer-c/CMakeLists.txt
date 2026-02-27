@@ -1,0 +1,9 @@
+set(CMAKE_C_COMPILER clang)
+cmake_minimum_required(VERSION 3.28)
+
+project(rev1 VERSION 0.1.0 LANGUAGES C)
+
+include_directories(inc)
+file(GLOB_RECURSE SOURCE_FILES "src/**/*.cpp")
+
+add_executable(${PROJECT_NAME} ${SOURCE_FILES} src/main.c)
