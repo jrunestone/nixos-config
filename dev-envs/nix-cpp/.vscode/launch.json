@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "name": "Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceRoot}/build/projectname",
+      "cwd": "${workspaceRoot}",
+      "preLaunchTask": "Build"
+    }
+  ]
+}

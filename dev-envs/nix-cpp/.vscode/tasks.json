@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Config (debug)",
+      "type": "process",
+      "command": "cmake",
+      "args": [
+        "-DCMAKE_BUILD_TYPE=Debug",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
+        "-DCMAKE_C_COMPILER_LAUNCHER=ccache",
+        "-G",
+        "Ninja",
+        "-B",
+        "build",
+        "-S",
+        "."
+      ],
+      "problemMatcher": [],
+    },
+    {
+      "label": "Build",
+      "type": "process",
+      "command": "ninja",
+      "args": [
+        "-C",
+        "build"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run",
+      "type": "process",
+      "command": "./build/projectname",
+      "dependsOn": "Build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Profile (valgrind)",
+      "type": "process",
+      "command": "valgrind",
+      "args": [
+        "--leak-check=full",
+        "./build/projectname"
+      ],
+      "problemMatcher": [],
+    }
+  ]
+}
