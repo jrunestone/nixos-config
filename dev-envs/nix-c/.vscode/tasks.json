@@ -43,6 +43,7 @@
       "label": "Profile (valgrind)",
       "type": "process",
       "command": "valgrind",
+      "dependsOn": "Build",
       "args": [
         "--leak-check=full",
         "./build/projectname"
