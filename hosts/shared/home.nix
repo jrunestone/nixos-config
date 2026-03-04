@@ -21,6 +21,7 @@
     ./features/home/waybar.nix
     ./features/home/fuzzel.nix
     ./features/home/dunst.nix
+    ./features/home/zoxide.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules );
 
   colorScheme = inputs.nix-colors.colorSchemes.tomorrow-night;
