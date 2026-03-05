@@ -68,6 +68,7 @@
         ".config/1Password"
         ".config/Insomnia"
         ".cache/hyprland"
+        ".local/share/zoxide"
       ];
 
       files = [

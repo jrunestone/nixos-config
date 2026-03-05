@@ -77,6 +77,7 @@
         ".config/VintagestoryData"
         ".local/share/PrismLauncher"
         ".cache/hyprland"
+        ".local/share/zoxide"
       ];
 
       files = [
